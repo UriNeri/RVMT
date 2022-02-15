@@ -1,0 +1,353 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	0.7, August 03, 2014
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+$Pver = "0.4";
+$Pdat = "September 08 2017";
+
+($Pnam) = ($0 =~ m/([^\/]+)$/);
+($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+$Ppid = $$;	# Process ID
+$Base = "tmp.$Pnam.$Ppid";
+$CMD = "";
+############################################################
+#	Definitions
+############################################################
+my $norm = 0;
+my $dism = 0;
+my $symm = 0;
+my $omod = 0;
+my $MAXDIS = 12;
+my $EPSILON = exp(-$MAXDIS);
+my $lcov = -1;
+$flag = 7;
+
+############################################################
+#	Global variables
+############################################################
+%matr = ();
+%matl = ();
+%mdat = ();
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam name [options]
+
+Reads HHSEARCH results; produces score/distance matrix
+
+Options:
+
+	-n=n		normalize
+			0 - no
+			1 - min self score
+			2 - max self score
+			3 - query self score
+
+	-l=x		min length coverage (default 0)
+
+	-s=n		symmetrize
+			0 - no
+			1 - maximize
+			2 - minimize
+
+	-d=n		distance
+			0 - no
+			1 - 1-s
+			2 - -ln(s)
+
+	-maxd=x		max distance in ln transform (default $MAXDIS);
+
+	-o=n		output
+			0 - square matrix
+			1 - PHYLIP style square matrix
+			2 - all pairs
+			3 - detected pairs
+
+	-f=n		fields to output in the pairs mode (default $flag)
+			1  - score
+			2  - length
+			4  - probab
+			8  - query coords
+			16 - query coords
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+my_args(@ARGV);
+-t STDIN and !@myGlobList and print $Instructions and exit 0;
+push @myGlobList,"-" unless(-t STDIN);
+
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+$norm = int $myOptList{"n"} if(int $myOptList{"n"}>0);
+$dism = int $myOptList{"d"} if(int $myOptList{"d"}>0);
+$symm = int $myOptList{"s"} if(int $myOptList{"s"}>0);
+$omod = int $myOptList{"o"} if(int $myOptList{"o"}>0);
+$flag = int $myOptList{"f"} if(int $myOptList{"f"}>0);
+$MAXDIS = $myOptList{"maxd"} + 0 if($myOptList{"maxd"}>0);
+$EPSILON = exp(-$MAXDIS);
+$lcov = $myOptList{"l"} + 0 if($myOptList{"l"}>0);
+
+# my $name = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n"; system $CMD;
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n";
+# open HAND,"<$dlst/$core.$clst" or die "Can't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+
+#---	read -----------------------------------------------
+foreach my $name (@myGlobList){
+ my $qnam = "";
+ print STDERR "$Pnam:\tReading $name\n";
+ open HAND,"<$name" or die "Can't read \"$name\"";
+ while(<HAND>){
+  chomp;
+  my ($qq) = m/^\s*Query\s+(\S+)\s*$/;
+  if($qq ne ""){
+   $qnam = $qq;
+   unless($matr{$qnam}){ my %tmp = (); $matr{$qnam} = \%tmp;}
+   unless($matl{$qnam}){ my %tmp = (); $matl{$qnam} = \%tmp;}
+   unless($mdat{$qnam}){ my %tmp = (); $mdat{$qnam} = \%tmp;}
+   next;
+  }
+  my ($ll) = m/^\s*\d+\s+(.*)/;
+  next if($ll eq "");
+  my @data = split/\s+/,$ll;
+  # 0 - query, 1 - prob, 2 - evalue, 3 - pvalue, 4 - score, 5 - ss, 6 - al. length, 7- q. range, 8 - h. range, 9 - h. length
+  next unless($data[4]>0 and $data[6]>0);		# sanity check - "Score" & "Cols"
+  my $hnam = $data[0];
+ 	#if($qnam eq "tmp.wrk_prof_align.12179.1.1500" and $hnam eq "tmp.wrk_prof_align.12179.1.1500"){
+ 	#if($qnam eq "tmp.wrk_prof_align.12179.1.1500"){
+ 	# printf "[$_]\n%.3f\t%d\n",$data[4],$data[6];
+ 	# exit;
+ 	#}
+  my $rhit = $matr{$qnam};
+  my $rhil = $matl{$qnam};
+  my $rdat = $mdat{$qnam};
+  if($data[4]>$$rhit{$hnam}){
+   $$rhit{$hnam} = $data[4];	# score
+   $$rhil{$hnam} = $data[6];	# length
+   $$rdat{$hnam} = \@data;	# other stuff
+  }
+ }
+ close HAND;
+}
+
+#---	names ----------------------------------------------
+my %nlst = ();
+foreach my $nq (keys %matr){
+ my $rhit = $matr{$nq};
+ foreach my $nh (keys %$rhit){
+  $nlst{$nh} = 1;
+ }
+}
+
+#---	normalize ------------------------------------------
+if($norm>0){
+foreach my $nq (keys %matr){
+ my $rhit = $matr{$nq};
+ my $sq = 1; $sq = $$rhit{$nq} if($$rhit{$nq}>0);
+ my $rhil = $matl{$nq};
+ my $lq = 1; $lq = $$rhil{$nq} if($$rhil{$nq}>0);
+ 	#if($nq eq "tmp.wrk_prof_align.12179.1.1500"){
+ 	# printf "%.3f\t%d\n",$sq,$lq;
+ 	# exit;
+ 	#}
+ foreach my $nh (keys %nlst){
+  next if($nh eq $nq);
+  my $rhih = $matr{$nh};
+  my $sh = 1; $sh = $$rhih{$nh} if($$rhih{$nh}>0);
+  my $rhix = $matl{$nh};
+  my $lh = 1; $lh = $$rhix{$nh} if($$rhix{$nh}>0);
+  my $qq = $sq;
+  my $ll = $lq;
+  if($norm==1){ $qq = $sh if($sh<$sq); $ll = $lh if($lh<$lq);}
+  elsif($norm==2){ $qq = $sh if($sh>$sq); $ll = $lh if($lh>$lq);}
+  $$rhit{$nh} /= $qq;
+  $$rhil{$nh} /= $ll;
+  if($$rhil{$nh}<$lcov){
+   $$rhit{$nh} = 0;
+   $$rhil{$nh} = 0;
+  }
+ }
+}
+foreach my $nq (keys %matr){
+ my $rhit = $matr{$nq};
+ $$rhit{$nq} = 1;
+ my $rhil = $matl{$nq};
+ $$rhil{$nq} = 1;
+}
+}
+
+#---	symmetry -------------------------------------------
+if($symm>0){
+foreach my $nq (sort keys %matr){
+ $nlst{$nq} = 1;
+}
+foreach my $nh (sort keys %nlst){
+ unless($matr{$nh}){ my %tmp = (); $matr{$nh} = \%tmp;}
+}
+foreach my $nq (sort keys %matr){
+ my $rhit = $matr{$nq};
+ my $rhil = $matl{$nq};
+ foreach my $nh (sort keys %nlst){
+  my $rhih = $matr{$nh};
+  my $rhix = $matl{$nh};
+  if($symm==1){
+   $$rhit{$nh} = $$rhih{$nq} if($$rhih{$nq}>$$rhit{$nh});
+   $$rhil{$nh} = $$rhix{$nq} if($$rhix{$nq}>$$rhil{$nh});
+  }elsif($symm==2){
+   $$rhit{$nh} = $$rhih{$nq} if($$rhih{$nq}<$$rhit{$nh});
+   $$rhil{$nh} = $$rhix{$nq} if($$rhix{$nq}<$$rhil{$nh});
+  }
+ }
+}
+}
+
+#---	distance -------------------------------------------
+if($dism>0){
+foreach my $nq (sort keys %matr){
+ my $rhit = $matr{$nq};
+ foreach my $nh (sort keys %nlst){
+  if($dism==1){ $$rhit{$nh} = 1 - $$rhit{$nh}}
+  else{ $$rhit{$nh} = ($$rhit{$nh}>$EPSILON)?(-log($$rhit{$nh})):$MAXDIS;}
+  $$rhit{$nh} = abs($$rhit{$nh});
+ }
+}
+}
+
+#---	output ---------------------------------------------
+if($omod==1){
+ printf "%d\n",(scalar keys %matr);
+}elsif($omod==0){
+ foreach my $nh (sort keys %nlst){
+  printf "\t%s",$nh;
+ }
+ print "\n";
+}
+
+if($omod>=2){
+ foreach my $nq (sort keys %matr){
+  my $rdat = $mdat{$nq};
+  my $rdax = $matr{$nq};
+  my @hlst = sort keys %nlst; @hlst = sort keys %$rdat if($omod>=3);
+  foreach my $nh (@hlst){
+   printf "%s\t%s",$nq,$nh;
+# 0 - query, 1 - prob, 2 - evalue, 3 - pvalue, 4 - score, 5 - ss, 6 - al. length, 7- q. range, 8 - h. range, 9 - h. length
+# 1  - score
+# 2  - length
+# 4  - probab
+# 8  - query coords
+# 16 - query coords
+   my $rres = $$rdat{$nh};
+   printf "\t%s",$$rdax{$nh} if($flag&0x01);
+   printf "\t%s",$$rres[6] if($flag&0x02);
+   printf "\t%s",$$rres[1] if($flag&0x04);
+   printf "\t%s",$$rres[7] if($flag&0x08);
+   printf "\t%s",$$rres[8] if($flag&0x10);
+   print "\n";
+  }
+ }
+}else{
+ foreach my $nq (sort keys %matr){
+  if($omod==1){  printf "%-10s",$nq;}
+  else{ printf "%s",$nq;}
+  my $rhit = $matr{$nq};
+  foreach my $nh (sort keys %nlst){
+   printf "\t%.5f",$$rhit{$nh};
+  }
+  print "\n";
+ }
+}
+
+############################################################
+#	max min
+############################################################
+sub max
+{
+ my $max = shift;
+ while(@_){
+  my $x = shift;
+  $max = $x if($x>$max);
+ }
+ return $max;
+}
+
+sub min
+{
+ my $min = shift;
+ while(@_){
+  my $x = shift;
+  $min = $x if($x<$min);
+ }
+ return $min;
+}
+
+############################################################
+#	maxr($rarr) minr($rarr)
+############################################################
+sub maxr
+{
+ my $rarr = shift;
+ my $max = $$rarr[0];
+ for(my $i=1;$i<@$rarr;$i++){
+  $max = $$rarr[$i] if($$rarr[$i]>$max);
+ }
+ return $max;
+}
+
+sub minr
+{
+ my $rarr = shift;
+ my $min = $$rarr[0];
+ for(my $i=1;$i<@$rarr;$i++){
+  $min = $$rarr[$i] if($$rarr[$i]<$min);
+ }
+ return $min;
+}
+
+############################################################
+#	my_args
+############################################################
+sub my_args
+{
+ my $nop = scalar @_;
+ for($i=0;$i<$nop;$i++){
+  if($_[$i]=~m/^-[^=]+=$/){
+   my $new = $_[$i].$_[$i+1];
+   splice @_,$i,2,$new;
+  }
+ }
+ foreach my $arg (@_){
+  my ($opt) = ($arg =~ m/^-(\w+)/);
+  my ($val) = ($arg =~ m/^-\w+=(.*)/);
+  if($opt){
+   $myOptList{$opt} = $val;
+  }else{
+   push @myGlobList,$arg;
+  }
+ }
+}

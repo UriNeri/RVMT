@@ -1,0 +1,123 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	0.2, May 02 2002
+#	Parent Path:	/net/gloin/export/home/wolf/bin/???
+############################################################
+
+############################################################
+#	System etc
+############################################################
+$Pver = "0.2";
+$Pdat = "November 06 2019";
+
+($Pnam) = ($0 =~ m/([^\/]+)$/);
+($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+############################################################
+#	Definitions
+############################################################
+$ipref = "";
+$block = 0x7fffffff;
+
+############################################################
+#	Global variables
+############################################################
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam name [options]
+
+Seqrows to FASTA.
+
+Options:
+
+	-p=pref		add prefix pref to the sequence ID
+			(e.g. "lcl|" or "gi|")
+
+	-b=n		break sequence in chunks of n (default no)
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+my_args(@ARGV);
+-t STDIN and !@myGlobList and print $Instructions and exit 0;
+push @myGlobList,"-" unless(-t STDIN);
+
+$ipref = $myOptList{"p"} if(exists $myOptList{"p"});
+$block = int($myOptList{"b"}) if(int($myOptList{"b"})>0);
+
+foreach my $xarg (@myGlobList){
+ my @xglo = glob $xarg;
+ foreach my $name (@xglo){
+  open HAND,"<$name" or die "Can't read \"$name\"";
+  while(<HAND>){
+   chomp;
+   my ($sid,$seq)=split /\s+/;
+   printf ">%s%s\n",$ipref,$sid;
+   my $lseq = length($seq);
+   my $ipos = 0;
+   while($ipos<$lseq){
+    my $lchunk = min($block,$lseq-$ipos);
+    printf "%s\n",substr($seq,$ipos,$lchunk);
+    $ipos += $lchunk;
+   }
+  }
+  close HAND;
+ }
+}
+
+############################################################
+#	max min
+############################################################
+sub max
+{
+ my $max = shift;
+ while(@_){
+  my $x = shift;
+  $max = $x if($x>$max);
+ }
+ return $max;
+}
+
+sub min
+{
+ my $min = shift;
+ while(@_){
+  my $x = shift;
+  $min = $x if($x<$min);
+ }
+ return $min;
+}
+
+
+############################################################
+#	my_args
+############################################################
+sub my_args
+{
+ my $nop = scalar @_;
+ for($i=0;$i<$nop;$i++){
+  if($_[$i]=~m/^-[^=]+=$/){
+   my $new = $_[$i].$_[$i+1];
+   splice @_,$i,2,$new;
+  }
+ }
+ foreach my $arg (@_){
+  my ($opt) = ($arg =~ m/^-(\w+)/);
+  my ($val) = ($arg =~ m/^-\w+=(.*)/);
+  if($opt){
+   $myOptList{$opt} = $val;
+  }else{
+   push @myGlobList,$arg;
+  }
+ }
+}

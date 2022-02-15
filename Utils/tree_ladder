@@ -1,0 +1,183 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	0.3, November 04 2004
+#	Parent Path:	/net/gloin/export/home/wolf/bin/???
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+use YIW::tree;
+
+$Pver = "1.0";
+$Pdat = "May 25, 2016";
+
+($Pnam) = ($0 =~ m/([^\/]+)$/);
+($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+$PID = $$;	# Process ID
+############################################################
+#	Definitions
+############################################################
+$idwrd = 0;
+$delim = "[ ,;:|]";
+$flagl = 0;
+$flagh = 0;
+$flaga = 0;
+$tnam = "tmp.tre";
+$EPSILON = "0.000001";
+
+############################################################
+#	Global variables
+############################################################
+%snod;
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Pnam $Pver, $Pdat
+
+$Pnam trefile [options]
+
+Reads trees in Newick format; outputs the ladderized tree.
+
+Options:
+
+	-agg=n		aggregate non-trunk branches in multifurcations
+			1 - only along the trunk
+			2 - all
+
+	-root		add a fake root node
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+$flaga = int $myOptList{"agg"} if($myOptList{"agg"}>=1);
+$flagr = 1 if(exists $myOptList{"root"});
+
+$ftre = shift @myGlobList;
+
+print STDERR "$Pnam:\tReading $ftre\n";
+$root = read_newick($ftre);
+
+sort_tree($root);
+
+aggregate_tree($root,$flaga) if($flaga>0);
+
+add_fake_root($root) if($flagr>0);
+
+write_newick($root,"-",6);
+
+############################################################
+#	sort_tree($root);
+############################################################
+sub sort_tree
+{
+ my $rnod = shift;
+ 
+ count_nod_rec($rnod);
+ sort_nod_rec($rnod);
+}
+
+############################################################
+#	count_nod_rec($rnod);
+############################################################
+sub count_nod_rec
+{
+ my $rnod = shift;
+ my $rdes = $$rnod{"d"};
+ 
+ if(@$rdes){				# internal node
+  my $cnt = 0;
+  for(my $i=0;$i<@$rdes;$i++){
+   $cnt += count_nod_rec($$rdes[$i]);
+  }
+  $$rnod{"cnt"} = $cnt;
+ }else{					# terminal node
+  $$rnod{"cnt"} = 1;
+ }
+ return $$rnod{"cnt"};
+}
+
+############################################################
+#	sort_nod_rec($rnod);
+############################################################
+sub sort_nod_rec
+{
+ my $rnod = shift;
+ my $rdes = $$rnod{"d"};
+ 
+ return unless(@$rdes);
+ 
+ @$rdes = sort comp_nod @$rdes;
+ 
+ for(my $i=0;$i<@$rdes;$i++){
+  sort_nod_rec($$rdes[$i]);
+ }
+}
+
+############################################################
+#	comp_nod
+############################################################
+sub comp_nod
+{
+ my $na = $$a{"cnt"};
+ my $nb = $$b{"cnt"};
+ 
+ return $nb<=>$na;
+}
+
+############################################################
+#	aggregate_tree($root,$flag);
+############################################################
+sub aggregate_tree
+{
+ my $rnod = shift;
+ my $flag = shift;
+ my $rdes = $$rnod{"d"};
+ 
+ if(@$rdes>2){
+  my %tmpn = ();
+  my @tmpd = @$rdes;
+  my $rtru = shift @tmpd;
+  @$rdes = ();
+  push @$rdes,$rtru;
+  push @$rdes,\%tmpn;
+  $tmpn{"l"} = $EPSILON;
+  $tmpn{"p"} = $rnod;
+  $tmpn{"d"} = \@tmpd;
+ }
+
+ if(@$rdes>1){
+  for(my $i=0;$i<@$rdes;$i++){
+   aggregate_tree($$rdes[$i],$flag);
+   last if($flag==1);
+  }
+ }
+}
+
+############################################################
+#	add_fake_root($root);
+############################################################
+sub add_fake_root
+{
+ my $rnod = shift;
+ my $rdes = $$rnod{"d"};
+ 
+ my %tmpn = ();
+ $tmpn{"l"} = $EPSILON;
+ $tmpn{"p"} = $rnod;
+ $tmpn{"n"} = "_root";
+ push @$rdes,\%tmpn;
+}

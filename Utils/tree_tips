@@ -1,0 +1,264 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.1, August 17, 2015
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+use YIW::tree;
+
+our $Pver = "0.6";
+our $Pdat = "May 24 2021";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+our $CMD = "";
+############################################################
+#	Definitions
+############################################################
+$MAXVAL = 1e300;
+$dcut = 0;
+$hcut = 0.5;
+$hmax = $MAXVAL;
+$qlea = 10;
+$nmin=2;
+$name = "";
+$tabout = 0;
+############################################################
+#	Global variables
+############################################################
+my $root;
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam treefile [options]
+
+Reads tree in Newick format; outputs subtrees at tips
+
+Options:
+
+	-h=x		cut tops at height x (default $hcut)
+
+	-d=x		cut tops at average depth x (overrides -h)
+
+	-m=x		restrict max height at x (default no)
+
+	-w=n		weighting for depth average
+			0 - by number of leaves (default)
+			1 - by subtree TBL
+			2 - unweighted
+
+	-q=x		inverse of leaf bonus for weighting (default $qlea)
+
+	-s		allow singletons
+
+	-tab		no brackets for header
+
+	-n=x		output file name (default STDOUT)
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+$hcut = $myOptList{"h"} + 0 if($myOptList{"h"}>0);
+$dcut = $myOptList{"d"} + 0 if($myOptList{"d"}>0);
+$hmax = $myOptList{"m"} + 0 if($myOptList{"m"}>0);
+$wmod = int $myOptList{"w"} if(int $myOptList{"w"}>0);
+$qlea = $myOptList{"q"} + 0 if($myOptList{"q"}>0);
+$nmin = 1 if(exists $myOptList{"s"});
+$tabout = 1 if(exists $myOptList{"tab"});
+$name = $myOptList{"n"} if($myOptList{"n"} ne "");
+$DEBUG = 1 if(exists $myOptList{"DEBUG"});
+
+$hcut = $MAXVAL if($dcut>0);
+
+my $ftre = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n"; system $CMD;
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n";
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+
+#---	read the tree --------------------------------------
+print STDERR "$Pnam:\tReading $ftre\n";
+$root = read_newick($ftre);
+
+#---	process the tree -----------------------------------
+tree_leaf_sets($root);						# sets "snod"
+tree_calc_height($root);					# sets "high"
+
+if($dcut>0){
+ my $rset = $$root{"snod"};
+ my $ttbl = tree_collect_tbl($root);
+ my $wadd = $ttbl/(scalar keys %$rset)/$qlea;
+ tree_collect_tbl($root,$wadd);					# sets "tbl"
+ tree_calc_depth($root,$wmod);					# sets "deep"
+}
+
+	print_tree($root,0) if $DEBUG;
+	#exit;
+
+#---	cut tips -------------------------------------------
+my $tnum = 0;
+cut_tips($root,\$tnum,$name);
+if($tnum==0){
+ print STDERR "$Pnam:\t\tNO TIPS\n";
+ $tnum++;
+ my $fout = "-";
+ if($name ne ""){
+  $fout = sprintf "%s.%d.tre",$name,$tnum;
+ }
+ my $pref = "original";
+ $pref = "[".$pref."]" if($tabout==0);
+ my $ltre = write_tree_rec($root,2);
+ open HANZ,">$fout" or die "Can't write \"$fout\"";
+ printf HANZ "%s %s;\n",$pref,$ltre;
+ close HANZ;
+}
+
+############################################################
+#	tree_calc_height($rnod)
+############################################################
+sub tree_calc_height
+{
+ my $rnod = shift;
+
+ my $rpar = $$rnod{"p"};
+ 
+ if($rpar eq ""){				# root
+  $$rnod{"high"} = 0;
+ }else{						# not root
+  $$rnod{"high"} = $$rnod{"l"} + $$rpar{"high"}
+ }
+
+ my $rdes = $$rnod{"d"};			# descendants
+
+ for(my $i=0;$i<@$rdes;$i++){			# scan descendants
+  my $rden = $$rdes[$i];
+  tree_calc_height($rden);				# continue forward
+ }
+}
+
+############################################################
+#	tree_calc_depth($rnod,$wmod)
+############################################################
+sub tree_calc_depth
+{
+ my $rnod = shift;
+
+ $$rnod{"deep"} = 0;
+
+ my $rdes = $$rnod{"d"};			# descendants
+
+ if(@$rdes==0){					# leaf
+  return;
+ }
+
+ my $wsum = 0;
+ my $lsum = 0;
+ for(my $i=0;$i<@$rdes;$i++){			# scan descendants
+  my $rden = $$rdes[$i];
+  tree_calc_depth($rden,$wmod);				# continue forward
+  my $rset = $$rden{"snod"};
+  my $dwei = scalar keys %$rset;			# number of leaves in descendant
+  $dwei = $$rden{"tbl"} if($wmod==1);			# tbl of descendant
+  $dwei = 1 if($wmod==2);				# unweighted
+  $lsum += ($$rden{"deep"}+$$rden{"l"})*$dwei;
+  $wsum += $dwei;
+ }
+ $$rnod{"deep"} = $lsum/$wsum if($wsum>0);
+ return;
+}
+
+############################################################
+#	cut_tips($rnod,$rnum,$tnam)
+############################################################
+sub cut_tips
+{
+ my $rnod = shift;
+ my $rnum = shift;
+ my $tnam = shift;
+
+ my $rset = $$rnod{"snod"};
+ my $nlea = scalar keys %$rset;
+ 
+ if((($hcut<$MAXVAL and $$rnod{"high"}>=$hcut) or ($dcut>0 and $$rnod{"deep"}<=$dcut)) and $$rnod{"high"}<=$hmax and $nlea>=$nmin){
+  $$rnum++;
+  my $fout = "-";
+  my $tout = sprintf "tree%05d",$$rnum;
+  if($tnam ne ""){
+   $tout = sprintf "%s.%d",$tnam,$$rnum;
+   $fout = sprintf "%s.%d.tre",$tnam,$$rnum;
+  }
+  my $pref = sprintf "%d,%.3f,%.3f,%s",$nlea,$$rnod{"high"},$$rnod{"deep"},$tout;
+  $pref = "[".$pref."]" if($tabout==0);
+  my $ltre = write_tree_rec($rnod,2);
+  open HANZ,">$fout" or die "Can't write \"$fout\"";
+  printf HANZ "%s %s;\n",$pref,$ltre;
+  close HANZ;
+  return;
+ }
+
+ my $rdes = $$rnod{"d"};
+
+ for(my $i=0;$i<@$rdes;$i++){			# scan descendants
+  cut_tips($$rdes[$i],$rnum,$tnam);			# calculate forward
+ }
+}
+
+############################################################
+#	print_tree($rnod,$level)
+############################################################
+# not used - debugging procedure
+sub print_tree
+{
+ my $rnod = shift;
+ my $level = shift;
+ 
+ my $blen = $$rnod{"l"};
+ my $name = $$rnod{"n"};
+ my $rdes = $$rnod{"d"};
+ if($name ne ""){
+  for(my $i=0;$i<$level;$i++){ print "\t";} print "$name\n";
+ }else{
+  for(my $i=0;$i<$level;$i++){ print "\t";} print "INTERNAL\n";
+ }
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "L= %.4f\n",$blen;
+ my $rset = $$rnod{"snod"};
+ my $nlea = scalar keys %$rset;
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "N= %d\n",$nlea;
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "T= [%.4f]\n",$$rnod{"tbl"};
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "H= [%.4f]\n",$$rnod{"high"};
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "D= [%.4f]\n",$$rnod{"deep"};
+
+ for(my $i=0;$i<@$rdes;$i++){ print_tree($$rdes[$i],$level+1);}
+}
+

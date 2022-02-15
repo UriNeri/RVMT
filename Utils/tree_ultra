@@ -1,0 +1,87 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.1, August 17, 2015
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+use YIW::tree;
+
+our $Pver = "0.1";
+our $Pdat = "January 11 2016";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+our $CMD = "";
+############################################################
+#	Definitions
+############################################################
+my $seth = 0;
+
+############################################################
+#	Global variables
+############################################################
+my $root;
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam treefile [options]
+
+TBL-preserving ultrametric tree
+
+Options:
+
+	-h=x		set tree height to x (default native)
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+$seth = $myOptList{"h"} + 0 if($myOptList{"h"}>0);
+
+my $ftre = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n"; system $CMD;
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n";
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+
+#---	read and prepare the tree --------------------------
+print STDERR "$Pnam:\tReading $ftre\n";
+$root = read_newick($ftre,1e-9);
+
+tree_ultra($root);
+if($seth>0 and $$root{"deep"}>0){
+ my $quot = $seth/$$root{"deep"};
+ tree_rescale($root,$quot);
+}
+	#print_tree($root,0);
+write_newick($root,"-",2);

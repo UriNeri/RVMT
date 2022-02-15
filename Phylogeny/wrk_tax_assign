@@ -1,0 +1,392 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.5, August 09, 2018
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+use YIW::tree;
+# uncomment the next line if better randomness is important
+# use Math::Random::MT qw/rand srand/;
+
+our $Pver = "0.1";
+our $Pdat = "Xxx 00 2021";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+{
+ my ($host) = ($ENV{"HOSTNAME"} =~ m/^(\w+)/);
+ my $salt = sprintf ".%s.%03d",$host,int(rand(1000));
+ $Base .= $salt;
+}
+our $CMD = "";
+our $DEBUG = 0;
+our $VERBOSE = 1;
+our $DOIT = 1;
+our $EXITCODE = 0;
+
+############################################################
+#	Definitions
+############################################################
+my $ftax = "ETAOIN SHRDLU";
+my $ftre = "ETAOIN SHRDLU";
+my $tlev = 1;
+my @lpre = ("p","c","o","f");
+my $pref = $lpre[$tlev-1];
+my $tnew = 0;
+my $mmin = 1;
+
+############################################################
+#	Global variables
+############################################################
+my %ttab;
+my %tcnt;			# known taxon -> assigned count
+my %tlca;			# known taxon -> LCA node
+my %tdep;			# known taxon -> depth (LCA + stem)
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam taxtab -l=n -t= tree [options]
+
+Options:
+
+	-l=n		taxon level (default $tlev)
+
+	-t=tree		newick tree file (MANDATORY)
+
+	-max		with non-ultrametric tree, use max distance to leaves
+
+	-list		list existing taxa, quit
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+if(exists $myOptList{"DEBUG"}){ 					# hidden common option
+ $DEBUG = 1;
+ $VERBOSE = 0x7fff;
+}
+$VERBOSE = int $myOptList{"VERB"} if(exists $myOptList{"VERB"});	# hidden common option
+$DOIT = 0 if(exists $myOptList{"IDLE"});				# hidden common option
+$Base = $myOptList{"BASE"} if($myOptList{"BASE"} ne "");		# hidden common option
+
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = int $myOptList{"i"} if(exists $myOptList{"i"});	# any integer <- string
+# $optr = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+# $optx = "0" if($optx==0);					# to be passed in command line
+$tlev = int $myOptList{"l"} if(int $myOptList{"l"}>0);
+$pref = $lpre[$tlev-1];
+$ftre = $myOptList{"t"} if($myOptList{"t"} ne "");
+$modl = 1 if(exists $myOptList{"list"});
+$mmin = 0 if(exists $myOptList{"max"});
+
+my $ftax = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+#
+# foreach my $xarg (@myGlobList){
+#  my @xglo = glob $xarg;
+#  foreach my $name (@xglo){
+#  }
+# }
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n" if($VERBOSE);
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+# printf STDERR "$Pnam:\t\t%s\tgenomes\n",int_commify(scalar @glist) if($VERBOSE);
+#
+# log_this_point($Pnam,"$Pnam\t$Ppid","started") if($VERBOSE>1);
+
+#---	read taxa ------------------------------------------
+print STDERR "$Pnam:\tReading $ftax\n" if($VERBOSE);
+open HAND,"<$ftax" or die "$Pnam:\tCan't read \"$ftax\"";
+while(<HAND>){
+ chomp;
+ my ($id,@data) = split/\t/;
+ next if($data[$tlev-1] eq "");
+ $ttab{$id} = $data[$tlev-1];
+ $tcnt{$data[$tlev-1]}++;
+}
+close HAND;
+printf STDERR "$Pnam:\t\t%s\tIDs\n",int_commify(scalar keys %ttab) if($VERBOSE);
+printf STDERR "$Pnam:\t\t%s\ttaxa\n",int_commify(scalar keys %tcnt) if($VERBOSE);
+
+#---	read tree ------------------------------------------
+print STDERR "$Pnam:\tReading $ftre\n" if($VERBOSE);
+$root = read_newick("$ftre",0);
+
+my @lnod; my @llea;
+list_tree_nodes($root,\@lnod,\@llea);
+
+tree_leaf_sets($root);
+
+tree_collect_depth_mm($root,$mmin);
+
+printf STDERR "$Pnam:\t\t%s\tleaves\n",int_commify(scalar @llea) if($VERBOSE);
+
+#---	taxa stats -----------------------------------------
+tree_collect_taxa($root);
+
+my $rtax = $$root{"taxa"};
+%tcnt = %$rtax;
+printf STDERR "$Pnam:\t\t%s\ttaxa at the root\n",int_commify(scalar keys %tcnt) if($VERBOSE);
+
+	#print "\n";
+	#print_tree($root,0);
+	#exit;
+
+
+#---	taxa best locations --------------------------------
+tree_locate_taxa($root);
+
+#---	repopulate taxtable --------------------------------
+%ttab = ();
+foreach my $tx (keys %tcnt){
+ my $rnod = $tlca{$tx};
+ my $rlst = $$rnod{"snod"};
+ foreach my $id (keys %$rlst){ $ttab{$id} = $tx;}
+}
+
+#---	taxa stats redux -----------------------------------
+tree_collect_taxa($root);
+
+	my %told = %tcnt;
+my $rtax = $$root{"taxa"};
+%tcnt = %$rtax;
+printf STDERR "$Pnam:\t\t%s\ttaxa repopulated\n",int_commify(scalar keys %tcnt) if($VERBOSE);
+
+	if($modl){
+	 foreach my $tx (sort keys %tcnt){
+	  printf "%d\t%.3f\t%d\t%s\n",$tcnt{$tx},$tdep{$tx},$told{$tx},$tx,
+	 }
+	 exit;
+	}
+
+#---	mark new taxa --------------------------------------
+tree_mark_new($root);
+
+#---	print ----------------------------------------------
+foreach my $rnod (@llea){
+ my $id = $$rnod{"n"};
+ printf "%s\t%s\n",$id,$ttab{$id};
+}
+printf STDERR "$Pnam:\t\t%s\ttaxa created de novo\n",int_commify($tnew) if($VERBOSE);
+
+#---	clean ----------------------------------------------
+unlink <$Base.*> unless($DEBUG);
+
+############################################################
+#	tree_collect_depth($rnod)
+############################################################
+sub tree_collect_depth
+{
+ my $rnod = shift;
+
+ my $rdes = $$rnod{"d"};
+
+ if($rdes eq ""){					# leaf
+  $$rnod{"deep"} = 0;
+  return;
+ }
+
+ my $deep = 1e300;
+
+ for(my $i=0;$i<@$rdes;$i++){				# scan descendants
+  my $rden = $$rdes[$i];
+  tree_collect_depth($rden);
+  my $dcur = $$rden{"deep"} + $$rden{"l"};
+  $deep = $dcur if($dcur<$deep);
+ }
+
+ $$rnod{"deep"} = $deep;
+}
+
+############################################################
+#	tree_collect_depth_mm($rnod,$mmin)
+############################################################
+sub tree_collect_depth_mm
+{
+ my $rnod = shift;
+ my $mmin = shift;
+
+ my $rdes = $$rnod{"d"};
+
+ if($rdes eq ""){					# leaf
+  $$rnod{"deep"} = 0;
+  return;
+ }
+
+ my $deep = 0;
+ $deep = 1e300 if($mmin!=0);
+
+ for(my $i=0;$i<@$rdes;$i++){				# scan descendants
+  my $rden = $$rdes[$i];
+  tree_collect_depth_mm($rden,$mmin);
+  my $dcur = $$rden{"deep"} + $$rden{"l"};
+  $deep = $dcur if($dcur>$deep and $mmin==0);
+  $deep = $dcur if($dcur<$deep and $mmin!=0);
+ }
+
+ $$rnod{"deep"} = $deep;
+}
+
+############################################################
+#	tree_collect_taxa($rnod)
+############################################################
+sub tree_collect_taxa
+{
+ my $rnod = shift;
+
+ my %tset = ();
+ 
+ my $rdes = $$rnod{"d"};
+
+ if($rdes eq ""){					# leaf
+  my $id = $$rnod{"n"};
+  my $tx = $ttab{$id};
+  $tset{$tx} = 1 if($tx ne "");
+ }
+ 
+ for(my $i=0;$i<@$rdes;$i++){				# scan descendants
+  my $rden = $$rdes[$i];
+  tree_collect_taxa($rden);
+  my $rtax = $$rden{"taxa"};
+  foreach my $tx (keys %$rtax){
+   $tset{$tx} += $$rtax{$tx};
+  }
+ }
+
+ $$rnod{"taxa"} = \%tset;
+}
+
+############################################################
+#	print_tree($rnod,$level)
+############################################################
+# not used - debugging procedure
+sub print_tree
+{
+ my $rnod = shift;
+ my $level = shift;
+ 
+ my $blen = $$rnod{"l"};
+ my $name = $$rnod{"n"};
+ my $rdes = $$rnod{"d"};
+ if($name ne ""){
+  for(my $i=0;$i<$level;$i++){ print "\t";} print "$name\n";
+ }else{
+  for(my $i=0;$i<$level;$i++){ print "\t";} print "INTERNAL\n";
+ }
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "L= %.4f\n",$blen;
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "D= %.4f\n",$$rnod{"deep"};
+ my $rset = $$rnod{"snod"};
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "N= %D\n",(scalar keys %$rset);
+ my $rtax = $$rnod{"taxa"};
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "T= %D\n",(scalar keys %$rtax);
+ #foreach my $tx (sort keys %$rtax){
+ # for(my $i=0;$i<$level;$i++){ print "\t";} printf "T:[%s]:%d\t%s\n",$tx,$$rtax{$tx};
+ #}
+ 
+ for(my $i=0;$i<@$rdes;$i++){ print_tree($$rdes[$i],$level+1);}
+}
+
+############################################################
+#	tree_locate_taxa($rnod)
+############################################################
+sub tree_locate_taxa
+{
+ my $rnod = shift;
+
+ my $rdes = $$rnod{"d"};
+
+ for(my $i=0;$i<@$rdes;$i++){				# scan descendants
+  my $rden = $$rdes[$i];
+  tree_locate_taxa($rden);
+ }
+
+ my $rtax = $$rnod{"taxa"};
+ 
+ return if((scalar keys %$rtax)!=1);			# no taxa or many taxa
+
+ my ($tx) = (keys %$rtax);				# THE taxon on this node
+ 
+ return if($$rtax{$tx}<$tcnt{$tx});			# not all leaves are present
+
+ return if($tlca{$tx} ne "");				# LCA already detected
+ 
+ $tlca{$tx} = $rnod;					# HERE is the LCA
+ 
+ $tdep{$tx} = $$rnod{"deep"} + $$rnod{"l"};
+}
+
+############################################################
+#	tree_mark_new($rnod)
+############################################################
+sub tree_mark_new
+{
+ my $rnod = shift;
+
+ my $rtax = $$rnod{"taxa"};
+ my $rpar = $$rnod{"p"};
+
+ my $dthr = 0;
+ if((scalar keys %$rtax)>=2){				# 2+ known taxa detected; find the deepest
+  foreach my $tx (keys %$rtax){
+   $dthr = $tdep{$tx} if($tdep{$tx}>$dthr);
+  }
+ }else{							# no known taxa; ask parent
+  $dthr = $$rpar{"dthr"};
+ }
+ $$rnod{"dthr"} = $dthr;				# localized depth threshold assigned
+
+ $$rnod{"para"} = $$rpar{"para"} if($$rpar{"para"} ne "");
+
+ if((scalar keys %$rtax)==0 and $$rnod{"deep"}<$dthr){	# new clade past the threshold
+  $tnew++;							# global count increment
+  my $name = sprintf "%s.%04d",$pref,$tnew;			# new name
+  $name .= ".base-".$$rnod{"para"} if($$rnod{"para"} ne "");	# basal to something
+  my $rlst = $$rnod{"snod"};					# list of leaves
+  foreach my $id (keys %$rlst){ $ttab{$id} = $name;}		# assign new taxon name
+  return;							# done; do not follow
+ }
+ 
+ if((scalar keys %$rtax)==1){				# clade has one taxon
+  my $rlst = $$rnod{"snod"};					# list of leaves
+  my $nn = scalar keys %$rlst;					# number of leaves
+  my ($tx) = (keys %$rtax);					# THE taxon on this node
+  my $tt = $tx; $tt =~ s/(viricota|viricetes|virales|viridae)$//;
+  $$rnod{"para"} = $tt;
+  return if($nn<=$$rtax{$tx});					# taxon LCA; do not follow
+ }
+
+ my $rdes = $$rnod{"d"};
+ for(my $i=0;$i<@$rdes;$i++){				# scan descendants
+  my $rden = $$rdes[$i];
+  tree_mark_new($rden);
+ }
+
+}

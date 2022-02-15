@@ -1,0 +1,418 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.5, August 09, 2018
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+# uncomment the next line if better randomness is important
+# use Math::Random::MT qw/rand srand/;
+
+our $Pver = "2.1";
+our $Pdat = "September 30 2020";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+{
+ my ($host) = ($ENV{"HOSTNAME"} =~ m/^(\w+)/);
+ my $salt = sprintf ".%s.%03d",$host,int(rand(1000));
+ $Base .= $salt;
+}
+our $CMD = "";
+our $DEBUG = 0;
+our $VERBOSE = 0;
+our $DOIT = 1;
+our $EXITCODE = 0;
+
+############################################################
+#	Definitions
+############################################################
+my $hhalign = "hhalign";
+my $proop1 = "-profile";
+my $proop2 = "-profile";
+my $nameout = "";
+my $nametab = "";
+my $gcut = 0.667;
+my $hcut = "0";
+my $optglob = "-glob";
+my $fast1 = 0;
+my $fast2 = 0;
+
+############################################################
+#	Global variables
+############################################################
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam name [options]
+
+Use: $Pnam seqrows1 seqrows2 [options]
+
+HHALIGN alignment in seqrows format.
+
+Options:
+
+	-fast1		1st alignment in FASTA
+
+	-fast2		2nd alignment in FASTA
+
+	-cons1		1st alignment has consensus
+
+	-cons2		2nd alignment has consensus
+
+	-gcut=x		pre-filter by gaps, then re-insert  (default $gcut)
+
+	-hcut=x		pre-filter by homogeneity, then re-insert  (default $hcut)
+
+	-o=name		save HHALIGN text output
+
+	-t=name		save HHALIGN table output
+
+	-loc		force local alignment
+
+Requirements:
+
+	hhalign, Wolf\'s scripts on path
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+if(exists $myOptList{"DEBUG"}){ 					# hidden common option
+ $DEBUG = 1;
+ $VERBOSE = 0x7fff;
+}
+$VERBOSE = int $myOptList{"VERB"} if(exists $myOptList{"VERB"});	# hidden common option
+$DOIT = 0 if(exists $myOptList{"IDLE"});				# hidden common option
+$Base = $myOptList{"BASE"} if($myOptList{"BASE"} ne "");		# hidden common option
+if((lc $Base) eq "safe"){						# slow but safe
+ while(1){
+  my $bnum = int(rand(0x7fffffff));
+  $Base = "tmp.$Pnam.$bnum";
+  last if((glob "$Base.*")==0);
+ }
+}
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = int $myOptList{"i"} if(exists $myOptList{"i"});	# any integer <- string
+# $optr = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+# $optx = "0" if($optx==0);					# to be passed in command line
+$fast1 = 1 if(exists $myOptList{"fast1"});
+$fast2 = 1 if(exists $myOptList{"fast2"});
+$proop1 = "-profake" if(exists $myOptList{"cons1"});
+$proop2 = "-profake" if(exists $myOptList{"cons2"});
+$gcut = $myOptList{"gcut"} + 0 if($myOptList{"gcut"}>0);
+$hcut = $myOptList{"hcut"} + 0 if($myOptList{"hcut"}>0);
+$nameout = $myOptList{"o"} if($myOptList{"o"} ne "");
+$nametab = $myOptList{"t"} if($myOptList{"t"} ne "");
+$optglob = "-loc" if(exists $myOptList{"loc"});
+
+my $pro1 = shift @myGlobList;
+my $pro2 = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+#
+# foreach my $xarg (@myGlobList){
+#  my @xglo = glob $xarg;
+#  foreach my $name (@xglo){
+#  }
+# }
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n" if($VERBOSE);
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+# printf STDERR "$Pnam:\t\t%s\tgenomes\n",int_commify(scalar @glist) if($VERBOSE);
+#
+# log_this_point($Pnam,"$Pnam\t$Ppid","started") if($VERBOSE>1);
+
+#---	convert input alignments ---------------------------
+{							# do filtering
+#...	sequence 1 .........................................
+ my $nam1 = $pro1; $nam1 =~ s/^.*\///; $nam1 =~ s/\.[^.]*$//;
+ $CMD = "cat $pro1";
+ $CMD = "fa2sr -w=0 $pro1" if($fast1);
+ $CMD .= " | sr_filter $proop1 -hocut=0 -conplus -hcon= 0 -gcon= 1 -ncon=\"$nam1\@_yiw_p_1\" > $Base.1.sq"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+ open HANX,">$Base.01.sq" or die "Can't write \"$Base.01.sq\"";
+ open HAND,"<$Base.1.sq" or die "Can't read \"$Base.1.sq\"";
+ while(<HAND>){
+  chomp;
+  if(m/^>/){
+   printf HANX "%s\n",$_;
+   next;
+  }
+  my ($al,$ns,$ng,$ii,$ho,$co) = split/\t/;
+  next if($ng/$ns>$gcut or $ho<$hcut);
+  printf HANX "%s\n",$_;
+ }
+ close HAND;
+ close HANX;
+ 
+ $CMD = "sq2sr $Base.01.sq | sr2fa > $Base.1.fa"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+#...	sequence 2 .........................................
+ my $nam2 = $pro2; $nam2 =~ s/^.*\///; $nam2 =~ s/\.[^.]*$//;
+ $CMD = "cat $pro2";
+ $CMD = "fa2sr -w=0 $pro2" if($fast2);
+ $CMD .= " | sr_filter $proop2 -hocut=0 -conplus -hcon= 0 -gcon= 1 -ncon=\"$nam2\@_yiw_p_2\" > $Base.2.sq"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+ open HANX,">$Base.02.sq" or die "Can't write \"$Base.02.sq\"";
+ open HAND,"<$Base.2.sq" or die "Can't read \"$Base.2.sq\"";
+ while(<HAND>){
+  chomp;
+  if(m/^>/){
+   printf HANX "%s\n",$_;
+   next;
+  }
+  my ($al,$ns,$ng,$ii,$ho,$co) = split/\t/;
+  next if($ng/$ns>$gcut or $ho<$hcut);
+  printf HANX "%s\n",$_;
+ }
+ close HAND;
+ close HANX;
+ 
+ $CMD = "sq2sr $Base.02.sq | sr2fa > $Base.2.fa"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+}
+#---	convert input alignments ---------------------------
+	
+#---	run HHALIGN ----------------------------------------
+$CMD = "$hhalign -i $Base.1.fa -t $Base.2.fa $optglob -id 100 -diff inf -M first -v 0 -o $Base.ali.out -atab $Base.ali.tab > /dev/null"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+#---	extract HHALIGN info -------------------------------
+#if($verbose){
+# $CMD = "nemp -r='\\s+(-*\\d+\\.\\d+)\\s+\\d+\\.\\d+\\s+\\d+\\s+(\\d+)-(\\d+)\\s+(\\d+)-(\\d+)\\s*(\\D.*)' $Base.ali.out";
+# print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE);
+# my ($ss,$p11,$p12,$p21,$p22,$xxx) = split/\t/,`$CMD`;
+# print STDERR "[ ".(join ",",$ss,$p11,$p12,$p21,$p22)." ]\n";
+#}
+
+#---	reconstruct full alignment -------------------------
+
+#---	read alignment table -------------------------------
+my @alt1 = (); my @alt2 = ();
+open HAND,"<$Base.ali.tab" or die "Can't read \"$Base.ali.tab\"";
+while(<HAND>){
+ chomp;
+ my ($pos1,$pos2) = m/^\s*(\d+)\s+(\d+)/;
+ next if($pos1*$pos2<=0);
+ push @alt1,$pos1;
+ push @alt2,$pos2;
+}
+close HAND;
+my $alen = @alt1;
+printf STDERR "[ %d aligned positions ]\n",$alen if($verbose);
+
+#---	read source 1 --------------------------------------
+my @de1 = (); my @al1 = (); my @ma1 = (); my @mx1 = ();
+my $nco1 = read_sq("$Base.1.sq",\@de1,\@al1,\@ma1,\@mx1);
+my $nal1 = @al1 - 1;
+
+#---	read source 2 --------------------------------------
+my @de2 = (); my @al2 = (); my @ma2 = (); my @mx2 = ();
+my $nco2 = read_sq("$Base.2.sq",\@de2,\@al2,\@ma2,\@mx2);
+my $nal2 = @al2 - 1;
+
+	#printf "# %d\t%s\n",$nal1,$pro1;
+	#for(my $i=1;$i<=$nal1;$i++){
+	# printf "%d\t%d\t%s",$i,$ma1[$i],$al1[$i];
+	# printf "\t%d\t%d",$i,$mx1[$i] if($i<=$nco1);
+	# print "\n";
+	#}
+	#printf "# %d\t%s\n",$nal2,$pro2;
+	#for(my $i=1;$i<=$nal2;$i++){
+	# printf "%d\t%d\t%s",$i,$ma2[$i],$al2[$i];
+	# printf "\t%d\t%d",$i,$mx2[$i] if($i<=$nco2);
+	# print "\n";
+	#}
+#---	map insertions -------------------------------------
+
+#---	expand gaps ----------------------------------------
+my @alp1 = (); my @alp2 = ();
+#...	N-terminal .........................................
+if($optglob eq "-glob"){
+ my $px1 = $alt1[0];
+ my $px2 = $alt2[0];
+ my $p1 = $mx1[$px1];
+ my $p2 = $mx2[$px2];
+ my $hh = max($p1,$p2) - 1;
+ my $pbe1 = $p1 - $hh;
+ my $pbe2 = $p2 - $hh;
+ for(my $i=0;$i<$hh;$i++){
+  my $pos1 = $pbe1 + $i;
+  if($pos1>=1){ push @alp1,$pos1;}
+  else{ push @alp1,-1;}
+  my $pos2 = $pbe2 + $i;
+  if($pos2>=1){ push @alp2,$pos2;}
+  else{ push @alp2,-1;}
+ }
+}
+#...	body ...............................................
+{
+ for(my $i=0;$i<$alen;$i++){
+  my $px1 = $alt1[$i];
+  my $px2 = $alt2[$i];
+  my $p1 = $mx1[$px1];
+  my $p2 = $mx2[$px2];
+  my $q1 = $p1;
+  my $q2 = $p2;
+  if($i>0){
+   my $qx1 = $alt1[$i-1];
+   my $qx2 = $alt2[$i-1];
+   $q1 = $mx1[$qx1] + 1;
+   $q2 = $mx2[$qx2] + 1;
+  }
+  my $nga1 = $p1 - $q1;
+  my $nga2 = $p2 - $q2;
+  my $gg = max($nga1,$nga2);
+  for(my $j=0;$j<$gg;$j++){
+   my $pos1 = $q1 + $j;
+   if($pos1<$p1){ push @alp1,$pos1;}
+   else{ push @alp1,-1;}
+   my $pos2 = $q2 + $j;
+   if($pos2<$p2){ push @alp2,$pos2;}
+   else{ push @alp2,-1;}
+  }
+  push @alp1,$p1;
+  push @alp2,$p2;
+ }
+}
+#...	C-terminal .........................................
+if($optglob eq "-glob"){
+ my $px1 = $alt1[$alen-1];
+ my $px2 = $alt2[$alen-1];
+ my $p1 = $mx1[$px1];
+ my $p2 = $mx2[$px2];
+ my $tt = max($nal1-$p1,$nal2-$p2);
+ my $pbe1 = $p1 + 1;
+ my $pbe2 = $p2 + 1;
+ for(my $i=0;$i<$tt;$i++){
+  my $pos1 = $pbe1 + $i;
+  if($pos1<=$nal1){ push @alp1,$pos1;}
+  else{ push @alp1,-1;}
+  my $pos2 = $pbe2 + $i;
+  if($pos2<=$nal2){ push @alp2,$pos2;}
+  else{ push @alp2,-1;}
+ }
+}
+	#printf "@\t%d\t%d\n",$nal1,$nal2;
+	#for(my $i=0;$i<@alp1;$i++){
+	# printf "%d\t%d\t%d\n",$i,$alp1[$i],$alp2[$i];
+	#}
+	#exit;
+
+#---	open output ----------------------------------------
+open HAND,">$Base.all.sq" or die "Can't write \"$Base.all.sq\"";
+
+#---	header ---------------------------------------------
+foreach my $dd (@de1){ print HAND "$dd\n";}
+foreach my $dd (@de2){ print HAND "$dd\n";}
+
+#---	alignment ------------------------------------------
+my $gap1 = "-" x (length $al1[1]);
+my $gap2 = "-" x (length $al2[1]);
+for(my $i=0;$i<@alp1;$i++){
+ my $sq = "";
+ my $p1 = $alp1[$i];
+ my $p2 = $alp2[$i];
+ if($p1>0){ $sq .= $al1[$p1];}
+ else{ $sq .= $gap1;}
+ if($p2>0){ $sq .= $al2[$p2];}
+ else{ $sq .= $gap2;}
+ print HAND "$sq\n";
+}
+
+#---	close output ---------------------------------------
+close HAND;
+
+#---	other stuff ----------------------------------------
+if($namesco ne ""){
+ open HAND,">$namesco" or die "Can't write \"$namesco\"";
+ printf HAND "%s\t%s\t%s\n",$pro1,$pro2,$ss;
+ close HAND;
+}
+
+if($nameout ne ""){
+ $CMD = "mv -f $Base.ali.out $nameout"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+}
+ 
+if($nametab ne ""){
+ $CMD = "mv -f $Base.ali.tab $nametab"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+}
+ 
+#---	main output ----------------------------------------
+$CMD = "sq2sr $Base.all.sq | grep -v \"\@_yiw_p_\""; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+#---	clean ----------------------------------------------
+unlink <$Base.*> unless($DEBUG);
+
+############################################################
+#	template_function($xxxx)
+############################################################
+#sub template_function
+#{
+# my $xxxx = shift;
+#}
+
+############################################################
+#	read_sq($name,$rdef,$rseq,$rmap,$rmax)
+############################################################
+sub read_sq
+{
+ my $name = shift;
+ my $rdef = shift;
+ my $rseq = shift;
+ my $rmap = shift;
+ my $rmax = shift;
+ 
+ push @$rseq,"";	# 1-based indexing
+ push @$rmap,-1;	# 1-based indexing
+ push @$rmax,-1;	# 1-based indexing
+ my $pali = 0;
+ my $pcor = 0;
+ open HANY,"<$name" or die "Can't read \"$name\"";
+ while(<HANY>){
+  chomp;
+  next if(m/^\#/);
+  if(m/^>/){
+   push @$rdef,$_;
+   next;
+  }
+  my ($al,$ns,$ng,$ii,$ho,$co) = split/\t/;
+  push @$rseq,$al;
+  $pali++;
+  if($ns>0 and ($ng/$ns>$gcut or $ho<$hcut)){
+   push @$rmap,-1;
+  }else{
+   $pcor++;
+   push @$rmap,$pcor;
+   push @$rmax,$pali;
+  }
+ }
+ close HANY;
+
+ return $pcor;
+}

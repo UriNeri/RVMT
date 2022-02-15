@@ -5,7 +5,7 @@
 </p>  
 
 ## Description:   
-Code, scripts, some logs and general misc. from to the RNA viruses in MetaTranscriptome discovery project, openly shared near the time of submission.
+Code, scripts, some logs and general misc. from to the RNA viruses in MetaTranscriptome discovery project (a.k.a RVMT), openly shared near the time of submission.
 
 Disclaimer  
 ---------------------------

@@ -1,0 +1,116 @@
+#!/usr/bin/perl5.16
+
+
+############################################################
+#	System etc
+############################################################
+$Pver = "0.2";
+$Pdat = "August 12 2002";
+
+($Pnam) = ($0 =~ m/([^\/]+)$/);
+($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+############################################################
+#	Definitions
+############################################################
+
+############################################################
+#	Global variables
+############################################################
+@seq;$nseq;
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam seqcols [options]
+
+Converts columnar format to seqrows.
+
+Options:
+
+	none
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+my_args(@ARGV);
+-t STDIN and !@myGlobList and print $Instructions and exit 0;
+push @myGlobList,"-" unless(-t STDIN);
+
+foreach my $name (@myGlobList){
+ @sid = (); @seq = ();
+ open HAND,"<$name" or die "Can't read \"$name\"";
+ while(<HAND>){
+  next if(m/^\#/);
+  chomp;
+  if(m/^>/){
+   my ($id) = m/>(\S+)/;
+   push @sid,$id;
+  }else{
+   my ($sq) = m/^(\S+)/;
+   die "wrong number of sequences in \"$sq\" vs ".(scalar @sid) unless(length $sq == @sid);
+   for(my $i=@sid-1;$i>=0;$i--){
+    $seq[$i] .= chop $sq;
+   }
+  }
+ }
+ close HAND;
+
+ for(my $i=0;$i<@sid;$i++){
+  print "$sid[$i]\t$seq[$i]\n";
+ }
+}
+
+############################################################
+#	max min
+############################################################
+sub max
+{
+ my $max = shift;
+ while(@_){
+  my $x = shift;
+  $max = $x if($x>$max);
+ }
+ return $max;
+}
+
+sub min
+{
+ my $min = shift;
+ while(@_){
+  my $x = shift;
+  $min = $x if($x<$min);
+ }
+ return $min;
+}
+
+
+############################################################
+#	my_args
+############################################################
+sub my_args
+{
+ my $nop = scalar @_;
+ for($i=0;$i<$nop;$i++){
+  if($_[$i]=~m/^-[^=]+=$/){
+   my $new = $_[$i].$_[$i+1];
+   splice @_,$i,2,$new;
+  }
+ }
+ foreach my $arg (@_){
+  my ($opt) = ($arg =~ m/^-(\w+)/);
+  my ($val) = ($arg =~ m/^-\w+=(.*)/);
+  if($opt){
+   $myOptList{$opt} = $val;
+  }else{
+   push @myGlobList,$arg;
+  }
+ }
+}

@@ -1,0 +1,221 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.5, August 09, 2018
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+# uncomment the next line if better randomness is important
+# use Math::Random::MT qw/rand srand/;
+
+our $Pver = "0.1";
+our $Pdat = "Xxx 00 2021";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+{
+ my ($host) = ($ENV{"HOSTNAME"} =~ m/^(\w+)/);
+ my $salt = sprintf ".%s.%03d",$host,int(rand(1000));
+ $Base .= $salt;
+}
+our $CMD = "";
+our $DEBUG = 0;
+our $VERBOSE = 1;
+our $DOIT = 1;
+our $EXITCODE = 0;
+
+############################################################
+#	Definitions
+############################################################
+my $dali = "/panfs/pan1/camera_metagenomics/yiw/rnavir/uriuri/ali.210713";
+my $pali = "";
+my $sali = "afa";
+
+############################################################
+#	Global variables
+############################################################
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam name [options]
+
+Options:
+
+	-d=dir		component alignments directory (default \"$dali\")
+
+	-sali=suff	alignment suffix (default \"$sali\")
+
+	-pali=pref	alignment prefix (default \"$pali\")
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+if(exists $myOptList{"DEBUG"}){ 					# hidden common option
+ $DEBUG = 1;
+ $VERBOSE = 0x7fff;
+}
+$VERBOSE = int $myOptList{"VERB"} if(exists $myOptList{"VERB"});	# hidden common option
+$DOIT = 0 if(exists $myOptList{"IDLE"});				# hidden common option
+$Base = $myOptList{"BASE"} if($myOptList{"BASE"} ne "");		# hidden common option
+
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = int $myOptList{"i"} if(exists $myOptList{"i"});	# any integer <- string
+# $optr = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+# $optx = "0" if($optx==0);					# to be passed in command line
+$dali = $myOptList{"d"} if($myOptList{"d"} ne "");
+$sali = $myOptList{"sali"} if($myOptList{"sali"} ne "");
+$pali = $myOptList{"pali"} if($myOptList{"pali"} ne "");
+
+my $falc = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+#
+# foreach my $xarg (@myGlobList){
+#  my @xglo = glob $xarg;
+#  foreach my $name (@xglo){
+#  }
+# }
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n" if($VERBOSE);
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+# printf STDERR "$Pnam:\t\t%s\tgenomes\n",int_commify(scalar @glist) if($VERBOSE);
+#
+# log_this_point($Pnam,"$Pnam\t$Ppid","started") if($VERBOSE>1);
+
+#---	read master alignment ------------------------------
+my @lnco = (); my @lsco = ();
+read_fasta_ali($falc,\@lnco,\@lsco);
+
+#---	cycle through components ---------------------------
+for(my $i=0;$i<@lnco;$i++){
+ my $name = $lnco[$i];
+ my @locn = (); @locs = ();
+ if(-e "$dali/$pali$name.$sali"){
+  read_fasta_ali("$dali/$pali$name.$sali",\@locn,\@locs);
+  shrink_ali(\@locs);
+  transfer_alignment(\@locs,\($lsco[$i]));
+  for(my $j=0;$j<@locn;$j++){
+   printf ">%s\n%s\n",$locn[$j],$locs[$j];
+  }
+ }else{
+  printf ">%s\n%s\n",$lnco[$i],$lsco[$i];
+ }
+}
+
+#---	clean ----------------------------------------------
+# unlink <$Base.*> unless($DEBUG);
+
+############################################################
+#	read_fasta_ali($fali,$rids,$rali)
+############################################################
+sub read_fasta_ali
+{
+ my $fali = shift;
+ my $rids = shift;
+ my $rali = shift;
+
+ my $xseq = "";
+ print STDERR "$Pnam:\tReading $fali\n" if($VERBOSE>1);
+ open HANF,"<$fali" or die "$Pnam:\tCan't read \"$fali\"";
+ while(<HANF>){
+  chomp;
+  my ($sqid) = m/^>(\S+)/;
+  if($sqid ne ""){
+   $xseq =~ tr/ \t//d; push @$rali,$xseq if($xseq ne "");
+   push @$rids,$sqid;
+   $xseq = "";
+   next;
+  }
+  $xseq .= $_;
+ }
+ close HANF;
+ $xseq =~ tr/ \t//d; push @$rali,$xseq if($xseq ne "");
+ printf STDERR "$Pnam:\t\t%s\tsequences\n",int_commify(scalar @$rids) if($VERBOSE>1);
+ printf STDERR "$Pnam:\t\t%s\tcolumns\n",int_commify(length($$rali[0])) if($VERBOSE>1);
+}
+
+############################################################
+#	shrink_ali($rali)
+############################################################
+sub shrink_ali
+{
+ my $rali = shift;
+
+ my @lali = ();
+ 
+ my $lseq = length($$rali[0]);
+ for(my $i=0;$i<$lseq;$i++){
+  my $aa = substr($$rali[0],$i,1);
+  next if($aa eq "-");
+  for(my $j=0;$j<@$rali;$j++){
+   $lali[$j] .= substr($$rali[$j],$i,1);
+  }
+ }
+ for(my $j=0;$j<@$rali;$j++){
+  $$rali[$j] = $lali[$j];
+ }
+ printf STDERR "$Pnam:\t\t%s\tcolumns\n",int_commify(length($$rali[0])) if($VERBOSE>1);
+}
+
+############################################################
+#	transfer_alignment($rali,$rcon)
+############################################################
+sub transfer_alignment
+{
+ my $rali = shift;
+ my $rcon = shift;
+
+ my @lali = ();
+ 
+ my $lseq = length($$rcon);
+ my $xpos = 0;
+ for(my $i=0;$i<$lseq;$i++){
+  my $ax = substr($$rcon,$i,1);
+  for(my $j=0;$j<@$rali;$j++){
+   my $aa = $ax;
+   $aa = substr($$rali[$j],$xpos,1) if($ax ne "-");
+   $lali[$j] .= $aa;
+  }
+  $xpos++ if($ax ne "-");
+ }
+ for(my $j=0;$j<@$rali;$j++){
+  $$rali[$j] = $lali[$j];
+ }
+ printf STDERR "$Pnam:\t\t%s\tcolumns\n",int_commify(length($$rali[0])) if($VERBOSE>1);
+}
+
+############################################################
+#	template_function($xxxx)
+############################################################
+#sub template_function
+#{
+# my $xxxx = shift;
+#}
+

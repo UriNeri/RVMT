@@ -1,0 +1,33 @@
+# arguments
+alst <- commandArgs(trailingOnly=TRUE)
+nn <- as.integer(alst[1])
+maxd <- as.double(alst[2])
+ftab <- as.character(alst[3])
+ftre <- as.character(alst[4])
+falt <- as.character(alst[5])
+meth <- as.character(alst[6])
+
+# prepare matrix
+dmat <- matrix(rep(maxd,times=nn*nn),nrow=nn,ncol=nn)
+
+# read input
+data <- read.table(ftab,header=FALSE,sep="\t")
+ndat <- dim(data)[1]						# no of points
+
+# fill matrix
+for(i in 1:ndat){
+ if(data[i,3] < dmat[data[i,1],data[i,2]]) dmat[data[i,1],data[i,2]] <- data[i,3]
+ if(data[i,3] < dmat[data[i,2],data[i,1]]) dmat[data[i,2],data[i,1]] <- data[i,3]
+}
+
+# fill diagonal
+for(i in 1:nn){
+ dmat[i,i] <- 0
+}
+
+# run hclust
+hc <- hclust(as.dist(dmat),method=meth)
+
+# save
+write(t(hc$merge),file=ftre,sep="\t",ncol=2)
+write(t(hc$height),file=falt,sep="\t",ncol=1)

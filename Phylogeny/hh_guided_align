@@ -1,0 +1,149 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.1, August 17, 2015
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+use YIW::tree;
+
+our $Pver = "0.2";
+$Pdat = "April 22 2017";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+{
+ my ($host) = ($ENV{"HOSTNAME"} =~ m/^(\w+)/);
+ my $salt = sprintf ".%s.%03d",$host,int(rand(1000));
+ $Base .= $salt;
+}
+our $CMD = "";
+############################################################
+#	Definitions
+############################################################
+$dali = ".";
+$sali = "sr";
+$gcut = 1;
+$hcut = 0;
+$DEBUG = 0;
+$consmode = "";
+############################################################
+#	Global variables
+############################################################
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam treefile [options]
+
+Options:
+
+	-gcut=x		pre-filter by gaps, then re-insert  (default $gcut)
+
+	-hcut=x		pre-filter by homogeneity, then re-insert  (default $hcut)
+
+	-d=name		source alignment directory (default \"$dali\")
+
+	-s=suff		alignment suffix (default \"$sali\")
+
+	-cons		alignments have consensus
+
+Requirements:
+
+	HHALIGN, Wolf scripts on path
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+$gcut = $myOptList{"gcut"} + 0 if($myOptList{"gcut"}>0); $gcut="0" if($gcut==0);
+$hcut = $myOptList{"hcut"} + 0 if($myOptList{"hcut"}>0); $hcut="0" if($hcut==0);
+$dali = $myOptList{"d"} if($myOptList{"d"} ne "");
+$sali = $myOptList{"s"} if($myOptList{"s"} ne "");
+$DEBUG = 1 if(exists $myOptList{"DEBUG"});
+$consmode = "-cons1 -cons2" if(exists $myOptList{"cons"});
+
+my $ftre = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n"; system $CMD;
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n";
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+# printf STDERR "$Pnam:\t\t%s\tgenomes\n",int_commify(scalar @glist);
+
+#---	read the tree --------------------------------------
+print STDERR "$Pnam:\tReading $ftre\n";
+$root = read_newick($ftre);
+
+label_tree($root,0);			# PHYLIP-style labels
+
+my $fali = run_guided_alignment($root);
+
+$CMD = "cat $fali"; print STDERR "$Pnam:\t[ $CMD ]\n"; system $CMD;
+
+unlink <$Base.*> unless($DEBUG);
+
+############################################################
+#	template_function($xxxx)
+############################################################
+#sub template_function
+#{
+# my $xxxx = shift;
+#}
+
+############################################################
+#	run_guided_alignment($rnod)
+############################################################
+sub run_guided_alignment
+{
+ my $rnod = shift;
+
+ my $rdes = $$rnod{"d"};			# descendants
+
+ if(@$rdes==0){					# terminal node
+  return $dali."/".$$rnod{"n"}.".".$sali;		# alignment exists
+ }
+
+ my @lali = ();
+ for(my $i=0;$i<@$rdes;$i++){			# scan descendants
+  $lali[$i] = run_guided_alignment($$rdes[$i]);		# obtain descendant alignments
+ }
+
+ my $fsrc = $lali[0];
+ for(my $i=1;$i<@$rdes;$i++){			# scan descendants
+  my $fadd = $lali[$i];
+  my $fdes = $Base.".".$$rnod{"lab"}.".".$i.".".$sali;
+  $CMD = "run_hhalign $consmode -gcut= $gcut -hcut= $hcut $fsrc $fadd > $fdes"; print STDERR "$Pnam:\t[ $CMD ]\n"; system $CMD;
+  $fsrc = $fdes;
+ }
+
+ return $fsrc;
+}
+

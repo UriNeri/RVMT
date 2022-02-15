@@ -1,0 +1,314 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.5, August 09, 2018
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+use YIW::tree;
+# uncomment the next line if better randomness is important
+# use Math::Random::MT qw/rand srand/;
+
+our $Pver = "0.1";
+our $Pdat = "Xxx 00 2021";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+{
+ my ($host) = ($ENV{"HOSTNAME"} =~ m/^(\w+)/);
+ my $salt = sprintf ".%s.%03d",$host,int(rand(1000));
+ $Base .= $salt;
+}
+our $CMD = "";
+our $DEBUG = 0;
+our $VERBOSE = 1;
+our $DOIT = 1;
+our $EXITCODE = 0;
+
+############################################################
+#	Definitions
+############################################################
+my $ftax = "ETAOIN SHRDLU";
+my $ftre = "ETAOIN SHRDLU";
+my $tlev = 1;
+
+############################################################
+#	Global variables
+############################################################
+my %ttab;
+my %tlst;
+my %lwei;
+my %twei;
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam taxtab -l=n -t= tree [options]
+
+Options:
+
+	-l=n		taxon level (default $tlev)
+
+	-t=tree		newick tree file (MANDATORY)
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+if(exists $myOptList{"DEBUG"}){ 					# hidden common option
+ $DEBUG = 1;
+ $VERBOSE = 0x7fff;
+}
+$VERBOSE = int $myOptList{"VERB"} if(exists $myOptList{"VERB"});	# hidden common option
+$DOIT = 0 if(exists $myOptList{"IDLE"});				# hidden common option
+$Base = $myOptList{"BASE"} if($myOptList{"BASE"} ne "");		# hidden common option
+
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = int $myOptList{"i"} if(exists $myOptList{"i"});	# any integer <- string
+# $optr = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+# $optx = "0" if($optx==0);					# to be passed in command line
+$tlev = int $myOptList{"l"} if(int $myOptList{"l"}>0);
+$ftre = $myOptList{"t"} if($myOptList{"t"} ne "");
+
+my $ftax = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+#
+# foreach my $xarg (@myGlobList){
+#  my @xglo = glob $xarg;
+#  foreach my $name (@xglo){
+#  }
+# }
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n" if($VERBOSE);
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+# printf STDERR "$Pnam:\t\t%s\tgenomes\n",int_commify(scalar @glist) if($VERBOSE);
+#
+# log_this_point($Pnam,"$Pnam\t$Ppid","started") if($VERBOSE>1);
+
+#---	read taxa ------------------------------------------
+print STDERR "$Pnam:\tReading $ftax\n" if($VERBOSE);
+open HAND,"<$ftax" or die "$Pnam:\tCan't read \"$ftax\"";
+while(<HAND>){
+ chomp;
+ my ($id,@data) = split/\t/;
+ next if($data[$tlev-1] eq "");
+ $ttab{$id} = $data[$tlev-1];
+ $tlst{$data[$tlev-1]}++;
+}
+close HAND;
+printf STDERR "$Pnam:\t\t%s\tIDs\n",int_commify(scalar keys %ttab) if($VERBOSE);
+printf STDERR "$Pnam:\t\t%s\ttaxa\n",int_commify(scalar keys %tlst) if($VERBOSE);
+
+#---	prepare trees --------------------------------------
+print STDERR "$Pnam:\tWriting $Base.lst\n" if($VERBOSE);
+open HAND,">$Base.lst" or die "$Pnam:\tCan't write \"$Base.lst\"";
+foreach my $id (keys %ttab){ print HAND $id,"\n";}
+close HAND;
+$CMD = "tree_subtree $ftre -l= $Base.lst > $Base.r.tre"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+$CMD = "tree_ultra $Base.r.tre > $Base.u.tre"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+#---	prepare weights ------------------------------------
+$CMD = "tree_listnodes -w=1 -q=-1 -o=4 $Base.u.tre > $Base.wt.tab"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+print STDERR "$Pnam:\tReading $Base.wt.tab\n" if($VERBOSE);
+open HAND,"<$Base.wt.tab" or die "$Pnam:\tCan't read \"$Base.wt.tab\"";
+while(<HAND>){
+ chomp;
+ my ($id,$wt) = split/\t/;
+ $lwei{$id} = $wt + 0;
+}
+close HAND;
+printf STDERR "$Pnam:\t\t%s\tIDs\n",int_commify(scalar keys %lwei) if($VERBOSE);
+
+#---	refresh --------------------------------------------
+%tlst = ();
+foreach my $id (keys %ttab){
+ if($lwei{$id}>0){					# valid leaf
+  $tlst{$ttab{$id}}++;
+  $twei{$ttab{$id}}+= $lwei{$id};
+ }
+}
+printf STDERR "$Pnam:\t\t%s\ttaxa\n",int_commify(scalar keys %tlst) if($VERBOSE);
+
+#---	read tree ------------------------------------------
+$root = read_newick("$Base.u.tre",0);
+
+my @lnod; my @llea;
+list_tree_nodes($root,\@lnod,\@llea);
+
+tree_leaf_sets($root);
+printf STDERR "$Pnam:\t\t%s\tleaves\n",int_commify(scalar @llea) if($VERBOSE);
+
+tree_collect_depth($root);
+
+#---	taxa stats -----------------------------------------
+tree_collect_taxa($root);
+
+foreach my $xnod (@lnod,@llea){
+ calc_quality_index($xnod);
+}
+
+#---	taxa best locations --------------------------------
+my %taxn; my %taxq;
+foreach my $xnod (@lnod,@llea){
+ my $rtax = $$xnod{"qual"};
+ foreach my $tx (keys %$rtax){
+  if($$rtax{$tx}>$taxq{$tx}){
+   $taxn{$tx} = $xnod;
+   $taxq{$tx} = $$rtax{$tx};
+  }
+ }
+}
+
+#---	taxa nodes -----------------------------------------
+foreach my $tx (sort keys %tlst){
+ my $bnod = $taxn{$tx};
+ printf "#\t%.3f\t%.3f\t%s\n",$taxq{$tx},$$bnod{"deep"},$tx;
+ my $rlst = $$bnod{"snod"};
+ foreach my $xnod (@llea){
+  my $id = $$xnod{"n"};
+  my $ntax = $ttab{$id};
+  my $inno = $$rlst{$id};
+  printf "%s\tINT:%s\n",$id,$tx if($inno>=1 and $ntax ne $tx);
+  #printf "%s\tYES:%s\n",$id,$tx if($inno>=1 and $ntax eq $tx);
+  printf "%s\tOUT:%s\n",$id,$tx if($inno==0 and $ntax eq $tx);
+ }
+}
+
+	#foreach my $tx (keys %tlst){
+	# printf "\t%s",$tx;
+	#}
+	#print "\n";
+	#my $i = 0;
+	#foreach my $xnod (@lnod,@llea){
+	# printf "%d",($i+1);
+	# my $rtax = $$xnod{"qual"};
+	# foreach my $tx (keys %tlst){
+	#  printf "\t%.3f",$$rtax{$tx};
+	# }
+	# print "\n";
+	# $i++;
+	#}
+
+#---	prune the tree to taxa -----------------------------
+open HAND,">$Base.lst" or die "$Pnam:\tCan't write \"$Base.lst\"";
+foreach my $tx (sort keys %tlst){
+ my $bnod = $taxn{$tx};
+ $$bnod{"d"} = "";
+ $$bnod{"n"} = $tx;
+ print HAND $tx."\n";
+}
+close HAND;
+
+write_newick($root,"$Base.x.tre",2);
+
+$CMD = "tree_subtree $Base.x.tre -l= $Base.lst > $Base.y.tre ; tree_ladder $Base.y.tre > $Base.z.tre ; tree_unroot $Base.z.tre"; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+
+#---	clean ----------------------------------------------
+unlink <$Base.*> unless($DEBUG);
+
+############################################################
+#	tree_collect_depth($rnod)
+############################################################
+sub tree_collect_depth
+{
+ my $rnod = shift;
+
+ my $rdes = $$rnod{"d"};
+
+ if($rdes eq ""){					# leaf
+  $$rnod{"deep"} = 0;
+  return;
+ }
+
+ my $deep = 1e300;
+
+ for(my $i=0;$i<@$rdes;$i++){				# scan descendants
+  my $rden = $$rdes[$i];
+  tree_collect_depth($rden);
+  my $dcur = $$rden{"deep"} + $$rden{"l"};
+  $deep = $dcur if($dcur<$deep);
+ }
+
+ $$rnod{"deep"} = $deep;
+}
+
+############################################################
+#	tree_collect_taxa($rnod)
+############################################################
+sub tree_collect_taxa
+{
+ my $rnod = shift;
+
+ my %tset = ();
+ 
+ my $rdes = $$rnod{"d"};
+
+ if($rdes eq ""){					# leaf
+  my $id = $$rnod{"n"};
+  my $tx = $ttab{$id};
+  $tset{$tx} = $lwei{$id};
+ }
+ 
+ for(my $i=0;$i<@$rdes;$i++){				# scan descendants
+  my $rden = $$rdes[$i];
+  tree_collect_taxa($rden);
+  my $rtax = $$rden{"taxa"};
+  foreach my $tx (keys %$rtax){
+   $tset{$tx} += $$rtax{$tx};
+  }
+ }
+
+ my $nwei = 0;
+ foreach my $tx (keys %tset){
+  $nwei += $tset{$tx};
+ }
+ 
+ $$rnod{"taxa"} = \%tset;
+ $$rnod{"tsum"} = $nwei;
+}
+
+############################################################
+#	calc_quality_index($rnod)
+############################################################
+sub calc_quality_index
+{
+ my $rnod = shift;
+
+ my %tqua = ();
+
+ my $rtax = $$rnod{"taxa"};
+
+ foreach my $tx (keys %$rtax){ 
+  my $qc = $$rtax{$tx} / $twei{$tx};
+  my $qp = $$rtax{$tx} / $$rnod{"tsum"};
+  $tqua{$tx} = $qc * $qp;
+ }
+ $$rnod{"qual"} = \%tqua;
+}

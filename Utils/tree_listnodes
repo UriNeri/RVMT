@@ -1,0 +1,234 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	1.5, July 16, 2017
+#	Parent Path:	/home/wolf/bin on frosty
+############################################################
+
+############################################################
+#	System etc
+############################################################
+use lib "/home/wolf/perl5/lib/perl5";
+use YIW::basic;
+use YIW::tree;
+# uncomment the next line if better randomness is important
+# use Math::Random::MT qw/rand srand/;
+
+our $Pver = "0.7";
+our $Pdat = "February 27 2020";
+
+our ($Pnam) = ($0 =~ m/([^\/]+)$/);
+our ($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+our $Ppid = $$;	# Process ID
+our $Base = "tmp.$Pnam.$Ppid";
+{
+ my ($host) = ($ENV{"HOSTNAME"} =~ m/^(\w+)/);
+ my $salt = sprintf ".%s.%03d",$host,int(rand(1000));
+ $Base .= $salt;
+}
+our $CMD = "";
+our $DEBUG = 0;
+our $VERBOSE = 1;
+our $DOIT = 1;
+our $EXITCODE = 0;
+
+############################################################
+#	Definitions
+############################################################
+my $flagw = 0;
+my $wadd = 0.001;
+my $flagl = 0;
+my $flago = 0;
+my $flagi = 0;
+my $flagh = 0;
+
+############################################################
+#	Global variables
+############################################################
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Path/$Pnam $Pver, $Pdat
+
+Use: $Pnam name [options]
+
+Options:
+
+	-w=x		weight mode x
+			0 - sum to total leaves (default)
+			>0 - sum to eff. leaves (TBL/height)
+			<0 - sum to -x
+
+	-q=x		leaf bonus (height*x, default $wadd)
+			<0 - 1/n
+
+	-o=n		output mode n (additive)
+			1  - print distance from root
+			2  - print subtree TBL
+			4  - print node weight
+			8  - print branch length
+			16  - print Horton-Strahler orders
+			-1 - print comma-delimited list of leaves
+
+	-l=m		label mode m
+			0 - root->leaves, internal 1st (PHYLIP style)
+			1 - root->leaves, leaves 1st (PAML style)
+			2 - leaves->root, internal 1st (COUNT style)
+			3 - leaves->root, leaves 1st (Paul HIGGS style)
+
+	-int		print internal nodes
+
+	-head		print tree header if exists with -o=-1
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+YIW::basic::my_args(\@ARGV,1);					# pass 0 to block STDIN
+!@myGlobList and print $Instructions and exit 0;
+
+if(exists $myOptList{"DEBUG"}){ 					# hidden common option
+ $DEBUG = 1;
+ $VERBOSE = 0x7fff;
+}
+$VERBOSE = int $myOptList{"VERB"} if(exists $myOptList{"VERB"});	# hidden common option
+$DOIT = 0 if(exists $myOptList{"IDLE"});				# hidden common option
+$Base = $myOptList{"BASE"} if($myOptList{"BASE"} ne "");		# hidden common option
+if((lc $Base) eq "safe"){						# slow but safe
+ while((glob "$Base.*")>0){
+  my $bnum = int(rand(0x7fffffff));
+  $Base = "tmp.$Pnam.$bnum";
+ }
+}
+# examples for using options:
+# $opts = 1 if(exists $myOptList{"q"});				# on/off
+# $opti = int $myOptList{"i"} if(int $myOptList{"i"}>0);	# positive integer
+# $opti = int $myOptList{"i"} if(exists $myOptList{"i"});	# any integer <- string
+# $optr = $myOptList{"x"} + 0 if($myOptList{"x"}>0);		# positive real
+# $optl = $myOptList{"l"} if($myOptList{"l"} ne "");		# non-empty string
+# $optx = "0" if($optx==0);					# to be passed in command line
+$flagw = $myOptList{"w"}+0 if(exists $myOptList{"w"});
+$wadd = $myOptList{"q"} + 0 if(exists $myOptList{"q"});
+$flagl = int $myOptList{"l"} if(int $myOptList{"l"}>0);
+$flago = int $myOptList{"o"} if(exists $myOptList{"o"});
+$flagi = 1 if(exists $myOptList{"int"});
+$flagh = 1 if(exists $myOptList{"head"});
+
+my $ftre = shift @myGlobList;
+
+#---	rest of the code -----------------------------------
+# $CMD = ""; print STDERR "$Pnam:\t[ $CMD ]\n" if($VERBOSE); $EXITCODE = system $CMD if($DOIT); die "$Pnam:\t[ $CMD ] failed with [ $EXITCODE ]" if($EXITCODE!=0);
+#
+# foreach my $xarg (@myGlobList){
+#  my @xglo = glob $xarg;
+#  foreach my $name (@xglo){
+#  }
+# }
+#
+# print STDERR "$Pnam:\tReading $dlst/$core.$clst\n" if($VERBOSE);
+# open HAND,"<$dlst/$core.$clst" or die "$Pnam:\tCan't read \"$dlst/$core.$clst\"";
+# while(<HAND>){
+#  chomp;
+# }
+# close HAND;
+# printf STDERR "$Pnam:\t\t%s\tgenomes\n",int_commify(scalar @glist) if($VERBOSE);
+#
+# log_this_point($Pname,$Ppid,"started") if($VERBOSE>1);
+
+#---	clean ----------------------------------------------
+# unlink <$Base.*> unless($DEBUG);
+
+#---	read, list, label ----------------------------------
+print STDERR "$Pnam:\tReading $ftre\n";
+$root = read_newick($ftre);
+
+my @lnod = (); my @llea = ();
+list_tree_nodes($root,\@lnod,\@llea);
+printf STDERR "$Pnam:\t\t%s\tleaves\n",int_commify(scalar @llea) if($VERBOSE);
+
+label_tree($root,$flagl);
+
+#---	weight ---------------------------------------------
+if($flago>0 and $flago & 0x06){
+$wadd = 1/(scalar @llea) if($wadd<0);
+my $wtot = scalar @llea;				# no of leaves
+$wtot = -$flagw if($flagw<0);				# or user-defined number
+tree_weight($root,$wtot,$wadd);
+}elsif($flago>0 and $flago & 0x01){
+ tree_height($root);
+}
+
+#---	Horton ---------------------------------------------
+tree_hortonorder($root) if($flago>0 and $flago & 0x10);
+
+#---	scale ----------------------------------------------
+if($flagw>0){
+ my $hsum = 0;
+ my $wsum = 0;
+ for(my $i=0;$i<@llea;$i++){
+  my $rnod = $llea[$i];
+  $wsum += $$rnod{"wt"};
+  $hsum += $$rnod{"wt"}*$$rnod{"high"};
+ }
+ my $have = 1; $have = $hsum/$wsum if($hsum>0 and $wsum>0);
+ my $neff = 1; $neff = $$root{"tbl"}/$have if($$root{"tbl"}>0 and $have>0);
+ my $quot = 1; $quot = $neff/$wsum if($neff>0 and $wsum>0);
+ for(my $i=0;$i<@llea;$i++){
+  my $rnod = $llea[$i];
+  $$rnod{"wt"} *= $quot;
+ }
+ for(my $i=0;$i<@lnod;$i++){
+  my $rnod = $lnod[$i];
+  $$rnod{"wt"} *= $quot;
+ }
+ 	#printf "#\t%.4f\t%.4f\t%.4f\n",$have,$neff,$quot;
+}
+
+#---	print ----------------------------------------------
+if($flago<0){						# list of leaves
+ printf "%s\t",$$root{"head"} if($flagh>0 and $$root{"head"} ne "");
+ my @nlst = ();
+ for(my $i=0;$i<@llea;$i++){
+  my $rnod = $llea[$i];
+  push @nlst,$$rnod{"n"};
+ }
+ printf "%s\n",(join ",",@nlst);
+ exit;
+}
+
+if($flagi>0){
+for(my $i=0;$i<@lnod;$i++){				# list of internal nodes
+ my $rnod = $lnod[$i];
+ printf "%s",$$rnod{"lab"};
+ printf "\t%.4e",$$rnod{"high"} if($flago & 0x01);
+ printf "\t%.4e",$$rnod{"tbl"} if($flago & 0x02);
+ printf "\t%.4e",$$rnod{"wt"} if($flago & 0x04);
+ printf "\t%.4e",$$rnod{"l"} if($flago & 0x08);
+ printf "\t%d",$$rnod{"hord"} if($flago & 0x10);
+ print "\n";
+}
+}
+for(my $i=0;$i<@llea;$i++){				# list of leaves
+ my $rnod = $llea[$i];
+ printf "%s",$$rnod{"n"};
+ printf "\t%.4e",$$rnod{"high"} if($flago & 0x01);
+ printf "\t%.4e",$$rnod{"tbl"} if($flago & 0x02);
+ printf "\t%.4e",$$rnod{"wt"} if($flago & 0x04);
+ printf "\t%.4e",$$rnod{"l"} if($flago & 0x08);
+ printf "\t%d",$$rnod{"hord"} if($flago & 0x10);
+ print "\n";
+}
+
+############################################################
+#	template_function($xxxx)
+############################################################
+#sub template_function
+#{
+# my $xxxx = shift;
+#}

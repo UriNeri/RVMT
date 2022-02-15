@@ -1,0 +1,375 @@
+#!/usr/bin/perl5.16
+
+############################################################
+#	Template:	0.3, November 04 2004
+#	Parent Path:	/net/gloin/export/home/wolf/bin/???
+############################################################
+
+############################################################
+#	System etc
+############################################################
+$Pver = "0.2";
+$Pdat = "December 19 2011";
+
+($Pnam) = ($0 =~ m/([^\/]+)$/);
+($Path) = ($0 =~ m/^(.+)\/[^\/]+$/);$Path = "." unless($Path);
+
+$PID = $$;	# Process ID
+############################################################
+#	Definitions
+############################################################
+$idwrd = 0;
+$delim = "[ ,;:|]";
+$flagl = 0;
+$flagh = 0;
+$flaga = 0;
+$EPSILON = "0.000001";
+
+$nrep = 5;
+$alpha10 = 0.75;
+$alpha90 = 0.75;
+$desex = 2;
+$qqlo = 0.05;
+$qqhi = 0.95;
+$qdes = 0.33;
+$flagp = 0;
+
+############################################################
+#	Global variables
+############################################################
+$rdxr;					# pointer to the leaf-to-root distance
+%x2de;					# desirability coefficient	
+%x2no;					# leaf name to leaf node
+
+############################################################
+#	Instructions etc
+############################################################
+$Instructions = <<EOINPUT;
+
+$Pnam $Pver, $Pdat
+
+$Pnam trefile [options]
+
+Reads a tree in Newick format;
+removes bifurcation at the root
+
+Options:
+	none
+EOINPUT
+
+############################################################
+#	code start
+############################################################
+
+#---	get and process arguments --------------------------
+my_args(@ARGV);
+!@myGlobList and print $Instructions and exit 0;
+
+#$flaga = int $myOptList{"agg"} if($myOptList{"agg"}>=1);
+#$flagp = 1 if(exists $myOptList{"print"});
+#$nrep = int $myOptList{"n"} if((int $myOptList{"n"})>0);
+#$alpha10 = $myOptList{"alo"} if($myOptList{"alo"}>0 and $myOptList{"alo"}<1);
+#$alpha90 = $myOptList{"ahi"} if($myOptList{"ahi"}>0 and $myOptList{"ahi"}<1);
+#$desex = $myOptList{"p"} if($myOptList{"p"}>1);
+#$qdes = $myOptList{"q"} if($myOptList{"q"}>0 and $myOptList{"q"}<1);
+
+$ftre = shift @myGlobList;
+
+print STDERR "Reading tree: $ftre\n";
+my $root = read_tree($ftre);
+
+my $rdes = $$root{"d"};
+
+if(@$rdes<2){
+ die "Bad tree in \"$ftre\" - single descendant at root";
+}elsif(@$rdes==2){
+ my $rson; my $rdss;
+ $rson = $$rdes[0];
+ $rdot = $$rdes[1];
+ $rdss = $$rson{"d"};
+ if(@$rdss<2){
+  $rson = $$rdes[1];
+  $rdot = $$rdes[0];
+  $rdss = $$rson{"d"};
+  if(@$rdss<2){
+   die "Bad tree in \"$ftre\" - single descendants of root bifurcation";
+  }
+ }
+ $$rdot{"l"} += $$rson{"l"};
+ $$rdot{"p"} = $rson;
+ push @$rdss,$rdot;
+ $root = $rson;
+ delete $$root{"l"};
+ delete $$root{"p"};
+ delete $$root{"b"};
+}
+
+write_tree($root,"-",0x06);
+
+#***********************************************************
+#	Basic tree reading/handling
+#***********************************************************
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#	Basic Fields
+# n	node name (must be defined at leaves) [string]
+# d	list of descendants [reference to array of references]
+# p	parent [reference]
+# l	in-branch length [real number]
+# b	in-branch bootstrap [real number]
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+############################################################
+#	read_tree($name)
+#	November 28 2013
+############################################################
+sub read_tree
+{
+ my $name = shift;
+ my $line = "";
+ 
+ open HAND,"<$name" or die "Can't read \"$name\"";
+ while(<HAND>){
+  chomp;
+  $line .= $_;
+ }
+ close HAND;
+ 
+ $line =~ s/^[^(]*//;	# clean leader
+ $line =~ s/;.*$//;	# clean trailer
+ $line =~ tr/ //d;	# clean spaces
+ $line =~ s/\):[0-9.eE+-]+$/\)/;	# clean terminal branch length
+
+ my %tmp = ();
+ my $rxxt = \%tmp;
+ 
+ parse_tree($rxxt,$line);
+ return $rxxt;
+}
+
+############################################################
+#	parse_tree($rnod,$line)
+#	April 04 2014
+############################################################
+sub parse_tree
+{
+ my $rnod = shift;
+ my $ilin = shift;
+ 
+ my $line = unwrap_line($ilin);		# strip (...)
+ my @desc = split_line($line);		# parse descendants
+ 	#print "[ $line ]\n";
+ 	#for(my $i=0;$i<@desc;$i++){
+ 	# printf "\t[ %s ]\n",$desc[$i];
+ 	#}
+ if(@desc==1){				# none - terminal node
+  $$rnod{"n"} = $desc[0];
+  return;
+ }
+ 
+ my @tmp = ();				# internal node - set up
+ $$rnod{"d"} = \@tmp;			# an array of descendants
+ my $rdes = $$rnod{"d"};
+ 
+ for(my $i=0;$i<@desc;$i++){		# descendants - one by one...
+  my %tmpn = ();
+  push @$rdes,\%tmpn;				# record in parent
+  #pure style
+  #my ($trex,$lenn) = ($desc[$i] =~ m/^(.*):(\d+\.*\d*e*[-+]*\d*)$/);	# extract branch length
+  #BEAST style
+  	#printf "***%s***\n",$desc[$i];
+  my ($trex,$lenx) = ($desc[$i] =~ m/^(.*):([^:]+)$/);			# before last ":", after
+  $trex = $desc[$i] unless($trex ne "");			# no branch length
+  	#printf "[%s|%s]\n",$trex,$lenx;
+  my ($tren,$boot) = ($trex =~ m/^(\(.+\))([^)]+)$/);			# extract bootstrap or label
+  $tren = $trex unless($tren ne "");					# no bootstrap or label
+  my ($iadd,$lenn) = ($lenx =~ m/\[([^\]]+)\](\d+\.*\d*e*[-+]*\d*)/);	# extract info and branch length
+  $lenn = $lenx unless($lenn ne "");					# no info
+  $tmpn{"l"} = $lenn+$EPSILON*(0.5+rand()/2);	# record branch length
+  $tmpn{"b"} = $boot;				# record bootstrap or label
+  $tmpn{"i"} = $iadd;				# record additional info
+  $tmpn{"p"} = $rnod;				# record parent node - just in case
+  parse_tree(\%tmpn,$tren);			# go further down the tree
+ }
+}
+
+############################################################
+#	unwrap_line($line);
+############################################################
+sub unwrap_line
+{
+ my $line = shift;
+ my $pbal = find_balance($line);
+ if($pbal<0){ die "Unbalanced expression [$line]";}
+ 
+ return $line if($pbal+1<length $line);		# not wrapped
+ $line =~ s/^\s*\(//;
+ $line =~ s/\)\s*$//;
+ return $line;
+}
+
+############################################################
+#	split_line($line);
+############################################################
+sub split_line
+{
+ my $line = shift;
+ my @lout = ();
+ while(length $line){
+  my $pbal = find_balance($line);
+  if($pbal<0){ die "Unbalanced expression [$line]";}
+  push @lout,(substr $line,0,$pbal);	# left part
+  $line = substr $line,$pbal+1;		# right part
+ }
+ return @lout;
+}
+
+############################################################
+#	find_balance($line);
+############################################################
+sub find_balance
+{
+ my $line = shift;
+ my $bal = 0;my $pos = 0;
+ while($line=~m/(.)/g){
+  if($1 eq ","){
+   last if($bal==0);
+  }elsif($1 eq "("){
+   $bal++;
+  }elsif($1 eq ")"){
+   $bal--;
+  }
+  return -1 if($bal<0);		# -1 - unbalanced
+  $pos++;
+ }
+ return -1 if($bal>0);		# -1 - unbalanced
+ return $pos;
+}
+
+############################################################
+#	write_tree($root,$name,$flag)
+#	0x01	- processed names
+#	0x02	- include lengths
+#	0x04	- include bootstraps
+#	December 19 2011
+############################################################
+sub write_tree
+{
+ my $rroo = shift;
+ my $name = shift;
+ my $flag = shift;
+ 
+ my $line = write_tree_rec($rroo,$flag);
+ open HANX,">$name" or die "Can't write \"$name\"";
+ print HANX "$line;\n";
+ close HANX;
+}
+
+############################################################
+#	write_tree_rec($root,$flag)
+#	December 19 2011
+############################################################
+sub write_tree_rec
+{
+ my $rnod = shift;
+ my $flag = shift;
+ my $rdes = $$rnod{"d"};
+ my $line = "";
+ 
+ unless(@$rdes){			# terminal node
+  $line = $$rnod{"n"};
+  $line = (split/$delim/,$line)[$idwrd-1] if($idwrd>0 and $flag&0x01);
+  return $line;
+ }
+
+ for(my $i=0;$i<@$rdes;$i++){
+  next if($$rdes[$i] eq "");
+  $line .= "," if($line ne "");
+  $line .= write_tree_rec($$rdes[$i],$flag);
+  $line .= $$rdes[$i]{"b"} if($$rdes[$i]{"b"} ne "" and $flag&0x04);
+  $line .= ":".$$rdes[$i]{"l"} if($$rdes[$i]{"l"} ne "" and $flag&0x02);
+ }
+ $line = "(".$line.")";
+ return $line;
+}
+
+############################################################
+#	print_tree($rnod,$level)
+############################################################
+# not used - debugging procedure
+sub print_tree
+{
+ my $rnod = shift;
+ my $level = shift;
+ 
+ my $blen = $$rnod{"l"};
+ my $name = $$rnod{"n"};
+ my $rdes = $$rnod{"d"};
+ if($name ne ""){
+  for(my $i=0;$i<$level;$i++){ print "\t";} print "$name\n";
+ }else{
+  for(my $i=0;$i<$level;$i++){ print "\t";} print "INTERNAL\n";
+ }
+ for(my $i=0;$i<$level;$i++){ print "\t";} printf "L= %.4f\n",$blen;
+ my $rlst = $$rnod{"dis"};
+ foreach my $name (sort keys %$rlst){
+  my $deep = $$rlst{$name};
+  for(my $i=0;$i<$level;$i++){ print "\t";} printf "d= %.4f\t%s\n",$deep,$name;
+ }
+ 
+ 	#for(my $i=0;$i<$level;$i++){ print "\t";} printf "SL= %s\n",$rrsl;
+ 	#for(my $i=0;$i<$level;$i++){ print "\t";} printf "SR= %s\n",$rrsr;
+ 
+ for(my $i=0;$i<@$rdes;$i++){ print_tree($$rdes[$i],$level+1);}
+}
+
+#***********************************************************
+#	Dusty attic
+#***********************************************************
+
+############################################################
+#	max min
+############################################################
+sub max
+{
+ my $max = shift;
+ while(@_){
+  my $x = shift;
+  $max = $x if($x>$max);
+ }
+ return $max;
+}
+
+sub min
+{
+ my $min = shift;
+ while(@_){
+  my $x = shift;
+  $min = $x if($x<$min);
+ }
+ return $min;
+}
+
+
+############################################################
+#	my_args
+############################################################
+sub my_args
+{
+ my $nop = scalar @_;
+ for($i=0;$i<$nop;$i++){
+  if($_[$i]=~m/^-[^=]+=$/){
+   my $new = $_[$i].$_[$i+1];
+   splice @_,$i,2,$new;
+  }
+ }
+ foreach my $arg (@_){
+  my ($opt) = ($arg =~ m/^-(\w+)/);
+  my ($val) = ($arg =~ m/^-\w+=(.*)/);
+  if($opt){
+   $myOptList{$opt} = $val;
+  }else{
+   push @myGlobList,$arg;
+  }
+ }
+}
