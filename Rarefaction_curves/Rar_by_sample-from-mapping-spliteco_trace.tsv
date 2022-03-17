@@ -1,0 +1,3420 @@
+Eco	N_sample	N_ANI	Min	Max
+Aquatic;Freshwater	0	0	0	0
+Aquatic;Freshwater	1	61.82	1	349
+Aquatic;Freshwater	2	199.56	8	1317
+Aquatic;Freshwater	3	312.8	14	2464
+Aquatic;Freshwater	4	499.92	34	3030
+Aquatic;Freshwater	5	586.48	35	3048
+Aquatic;Freshwater	6	702.68	132	3053
+Aquatic;Freshwater	7	811.8	140	3055
+Aquatic;Freshwater	8	954.7	206	3691
+Aquatic;Freshwater	9	1047.18	224	3792
+Aquatic;Freshwater	10	1206.66	227	3836
+Aquatic;Freshwater	11	1276.7	237	3908
+Aquatic;Freshwater	12	1365.42	294	4088
+Aquatic;Freshwater	13	1434.88	545	4453
+Aquatic;Freshwater	14	1512.3	587	4454
+Aquatic;Freshwater	15	1612.14	591	4530
+Aquatic;Freshwater	16	1693.56	595	4713
+Aquatic;Freshwater	17	1814.76	703	4757
+Aquatic;Freshwater	18	1920.16	704	4803
+Aquatic;Freshwater	19	2049.9	734	5208
+Aquatic;Freshwater	20	2125.38	818	5375
+Aquatic;Freshwater	21	2214.14	839	5389
+Aquatic;Freshwater	22	2321.44	840	5393
+Aquatic;Freshwater	23	2515.64	841	5401
+Aquatic;Freshwater	24	2634.86	926	5453
+Aquatic;Freshwater	25	2806.48	947	5890
+Aquatic;Freshwater	26	2887.06	964	6321
+Aquatic;Freshwater	27	2948.96	969	6346
+Aquatic;Freshwater	28	3044.52	1079	6381
+Aquatic;Freshwater	29	3110.14	1102	6389
+Aquatic;Freshwater	30	3162.04	1118	6390
+Aquatic;Freshwater	31	3250.28	1125	6424
+Aquatic;Freshwater	32	3314.8	1188	6499
+Aquatic;Freshwater	33	3438.3	1276	6501
+Aquatic;Freshwater	34	3508.16	1401	6501
+Aquatic;Freshwater	35	3567.08	1511	6525
+Aquatic;Freshwater	36	3648.92	1959	6563
+Aquatic;Freshwater	37	3719.34	1959	6654
+Aquatic;Freshwater	38	3756.16	1959	6777
+Aquatic;Freshwater	39	3820.42	1981	6805
+Aquatic;Freshwater	40	3897.04	2004	7545
+Aquatic;Freshwater	41	3956.56	2005	8034
+Aquatic;Freshwater	42	4015.82	2006	8041
+Aquatic;Freshwater	43	4051.64	2018	8061
+Aquatic;Freshwater	44	4102.44	2018	8140
+Aquatic;Freshwater	45	4167.86	2020	8144
+Aquatic;Freshwater	46	4287.12	2027	8217
+Aquatic;Freshwater	47	4407.9	2041	8217
+Aquatic;Freshwater	48	4460.18	2381	8284
+Aquatic;Freshwater	49	4513.86	2399	8291
+Aquatic;Freshwater	50	4576.26	2638	8292
+Aquatic;Freshwater	51	4671.28	2667	8311
+Aquatic;Freshwater	52	4741.64	2701	8311
+Aquatic;Freshwater	53	4851.6	2854	8317
+Aquatic;Freshwater	54	4894.22	2854	8382
+Aquatic;Freshwater	55	4953.42	2883	8382
+Aquatic;Freshwater	56	5013.46	2885	8391
+Aquatic;Freshwater	57	5062.78	2925	8398
+Aquatic;Freshwater	58	5097.96	2981	8403
+Aquatic;Freshwater	59	5193.98	3021	8789
+Aquatic;Freshwater	60	5235.9	3030	8789
+Aquatic;Freshwater	61	5269.6	3093	8790
+Aquatic;Freshwater	62	5310.8	3126	8839
+Aquatic;Freshwater	63	5353.96	3131	8883
+Aquatic;Freshwater	64	5388.96	3144	8885
+Aquatic;Freshwater	65	5445.68	3175	8932
+Aquatic;Freshwater	66	5473.76	3200	9145
+Aquatic;Freshwater	67	5511.88	3278	9175
+Aquatic;Freshwater	68	5580.96	3311	9216
+Aquatic;Freshwater	69	5640.58	3376	9257
+Aquatic;Freshwater	70	5694.82	3389	9257
+Aquatic;Freshwater	71	5781.24	3406	9258
+Aquatic;Freshwater	72	5805.38	3419	9261
+Aquatic;Freshwater	73	5889.08	3420	9309
+Aquatic;Freshwater	74	5928.26	3494	9311
+Aquatic;Freshwater	75	5981.14	3495	9312
+Aquatic;Freshwater	76	6074.36	3580	9388
+Aquatic;Freshwater	77	6147.3	3612	9410
+Aquatic;Freshwater	78	6222.14	4028	9627
+Aquatic;Freshwater	79	6278.96	4032	9640
+Aquatic;Freshwater	80	6388.9	4032	9691
+Aquatic;Freshwater	81	6458.02	4032	9741
+Aquatic;Freshwater	82	6520.04	4136	9792
+Aquatic;Freshwater	83	6583.94	4182	9963
+Aquatic;Freshwater	84	6663.32	4298	10128
+Aquatic;Freshwater	85	6689.74	4316	10170
+Aquatic;Freshwater	86	6743	4319	10171
+Aquatic;Freshwater	87	6807.9	4378	10171
+Aquatic;Freshwater	88	6891.18	4378	10184
+Aquatic;Freshwater	89	6977.36	4382	10550
+Aquatic;Freshwater	90	7037.3	4394	11230
+Aquatic;Freshwater	91	7101.22	4416	11239
+Aquatic;Freshwater	92	7151.78	4439	11255
+Aquatic;Freshwater	93	7294.44	4441	11273
+Aquatic;Freshwater	94	7365.34	4627	11680
+Aquatic;Freshwater	95	7465.66	4683	11680
+Aquatic;Freshwater	96	7494.5	4691	11684
+Aquatic;Freshwater	97	7559.8	4877	11689
+Aquatic;Freshwater	98	7619.48	4884	11789
+Aquatic;Freshwater	99	7706.56	4884	11799
+Aquatic;Freshwater	100	7753.2	4884	12194
+Aquatic;Freshwater	101	7806.84	4889	12296
+Aquatic;Freshwater	102	7851.4	4894	12304
+Aquatic;Freshwater	103	7895.28	4928	12306
+Aquatic;Freshwater	104	7974.42	4946	12318
+Aquatic;Freshwater	105	8027.88	4948	12632
+Aquatic;Freshwater	106	8077.82	4986	12904
+Aquatic;Freshwater	107	8135.88	5108	12904
+Aquatic;Freshwater	108	8192.02	5124	12933
+Aquatic;Freshwater	109	8294.48	5178	12933
+Aquatic;Freshwater	110	8327.72	5184	12938
+Aquatic;Freshwater	111	8404.12	5186	12938
+Aquatic;Freshwater	112	8441.84	5188	13011
+Aquatic;Freshwater	113	8515.4	5190	13016
+Aquatic;Freshwater	114	8614.32	5192	13027
+Aquatic;Freshwater	115	8646.08	5192	13039
+Aquatic;Freshwater	116	8703.62	5202	13040
+Aquatic;Freshwater	117	8752.62	5205	13188
+Aquatic;Freshwater	118	8850.86	5214	13189
+Aquatic;Freshwater	119	8896.74	5226	13195
+Aquatic;Freshwater	120	8974.42	5226	13204
+Aquatic;Freshwater	121	9063.12	5242	13204
+Aquatic;Freshwater	122	9120.24	5253	13783
+Aquatic;Freshwater	123	9137.56	5253	13829
+Aquatic;Freshwater	124	9171.18	5255	13909
+Aquatic;Freshwater	125	9220.78	5274	13952
+Aquatic;Freshwater	126	9293.94	5422	13954
+Aquatic;Freshwater	127	9380.44	5431	13958
+Aquatic;Freshwater	128	9408.42	5450	13970
+Aquatic;Freshwater	129	9481.64	5476	13981
+Aquatic;Freshwater	130	9503.72	5479	13985
+Aquatic;Freshwater	131	9545.84	5876	14016
+Aquatic;Freshwater	132	9587.6	5883	14016
+Aquatic;Freshwater	133	9613.64	6301	14029
+Aquatic;Freshwater	134	9673.3	6458	14036
+Aquatic;Freshwater	135	9743.56	6561	14037
+Aquatic;Freshwater	136	9831.66	6689	14047
+Aquatic;Freshwater	137	9863.3	6697	14047
+Aquatic;Freshwater	138	9900.44	6698	14052
+Aquatic;Freshwater	139	9947.72	6710	14066
+Aquatic;Freshwater	140	9971.58	6782	14066
+Aquatic;Freshwater	141	10046.84	6782	14067
+Aquatic;Freshwater	142	10077.76	6794	14073
+Aquatic;Freshwater	143	10155	6799	14075
+Aquatic;Freshwater	144	10201.14	6937	14076
+Aquatic;Freshwater	145	10234.94	6939	14076
+Aquatic;Freshwater	146	10275.8	6953	14077
+Aquatic;Freshwater	147	10297.34	6957	14086
+Aquatic;Freshwater	148	10322.04	7332	14086
+Aquatic;Freshwater	149	10353.46	7333	14086
+Aquatic;Freshwater	150	10426.72	7340	14086
+Aquatic;Freshwater	151	10494.04	7346	14177
+Aquatic;Freshwater	152	10545.9	7403	14211
+Aquatic;Freshwater	153	10609.06	7403	14218
+Aquatic;Freshwater	154	10696.7	7421	14227
+Aquatic;Freshwater	155	10753.82	7441	14229
+Aquatic;Freshwater	156	10794.7	7442	14277
+Aquatic;Freshwater	157	10842.84	7454	14281
+Aquatic;Freshwater	158	10885.94	7459	14333
+Aquatic;Freshwater	159	10967.18	7542	14367
+Aquatic;Freshwater	160	11029.94	7671	14367
+Aquatic;Freshwater	161	11070.42	7672	14367
+Aquatic;Freshwater	162	11112.5	7680	14398
+Aquatic;Freshwater	163	11147.52	8484	14403
+Aquatic;Freshwater	164	11180.42	8643	14421
+Aquatic;Freshwater	165	11246.2	8649	14575
+Aquatic;Freshwater	166	11308.2	8746	14577
+Aquatic;Freshwater	167	11327.68	8756	14590
+Aquatic;Freshwater	168	11358.88	8756	14591
+Aquatic;Freshwater	169	11405.06	8827	15781
+Aquatic;Freshwater	170	11454.36	8943	15839
+Aquatic;Freshwater	171	11515.88	8943	15843
+Aquatic;Freshwater	172	11543.66	8954	15875
+Aquatic;Freshwater	173	11591.14	8965	15893
+Aquatic;Freshwater	174	11629.16	8974	15893
+Aquatic;Freshwater	175	11662.46	9142	15900
+Aquatic;Freshwater	176	11729.26	9250	15921
+Aquatic;Freshwater	177	11798.7	9254	15939
+Aquatic;Freshwater	178	11866.52	9563	15940
+Aquatic;Freshwater	179	11905.22	9587	15940
+Aquatic;Freshwater	180	11946.98	9597	15940
+Aquatic;Freshwater	181	11996	9830	15942
+Aquatic;Freshwater	182	12022.98	9837	15987
+Aquatic;Freshwater	183	12082.06	9837	15992
+Aquatic;Freshwater	184	12096.58	9842	15993
+Aquatic;Freshwater	185	12122.2	9849	16005
+Aquatic;Freshwater	186	12181.76	9877	16005
+Aquatic;Freshwater	187	12223.18	9885	16014
+Aquatic;Freshwater	188	12318.92	9885	16099
+Aquatic;Freshwater	189	12364.86	9909	16164
+Aquatic;Freshwater	190	12429.68	9922	16166
+Aquatic;Freshwater	191	12471.48	9922	16166
+Aquatic;Freshwater	192	12494.52	9922	16198
+Aquatic;Freshwater	193	12521.84	9938	16205
+Aquatic;Freshwater	194	12538.52	9939	16242
+Aquatic;Freshwater	195	12581.68	9942	16242
+Aquatic;Freshwater	196	12610.02	9949	16248
+Aquatic;Freshwater	197	12653.22	9951	16355
+Aquatic;Freshwater	198	12677.58	9962	16355
+Aquatic;Freshwater	199	12757.32	9963	16366
+Aquatic;Freshwater	200	12800.1	9980	16371
+Aquatic;Freshwater	201	12835.82	9980	16371
+Aquatic;Freshwater	202	12886.68	9981	16371
+Aquatic;Freshwater	203	12902.74	9995	16437
+Aquatic;Freshwater	204	12982.34	10642	16478
+Aquatic;Freshwater	205	13040.08	10643	16487
+Aquatic;Freshwater	206	13083.74	10643	16495
+Aquatic;Freshwater	207	13114.32	10777	16504
+Aquatic;Freshwater	208	13146.52	10896	16504
+Aquatic;Freshwater	209	13196.78	10930	16629
+Aquatic;Freshwater	210	13232.1	10931	16630
+Aquatic;Freshwater	211	13257.58	10945	16631
+Aquatic;Freshwater	212	13323.86	11041	16632
+Aquatic;Freshwater	213	13419.44	11044	16639
+Aquatic;Freshwater	214	13458.78	11122	16646
+Aquatic;Freshwater	215	13497.1	11162	16646
+Aquatic;Freshwater	216	13519.62	11180	16651
+Aquatic;Freshwater	217	13563.68	11201	16701
+Aquatic;Freshwater	218	13638.74	11216	16829
+Aquatic;Freshwater	219	13678.1	11220	16840
+Aquatic;Freshwater	220	13716.72	11223	16970
+Aquatic;Freshwater	221	13793.6	11223	16973
+Aquatic;Freshwater	222	13864.96	11247	16973
+Aquatic;Freshwater	223	13933.48	11257	16976
+Aquatic;Freshwater	224	13967	11271	16976
+Aquatic;Freshwater	225	14027.7	11272	16976
+Aquatic;Freshwater	226	14069.28	11272	16981
+Aquatic;Freshwater	227	14094.96	11314	16985
+Aquatic;Freshwater	228	14126.12	11319	16988
+Aquatic;Freshwater	229	14163.86	11322	17138
+Aquatic;Freshwater	230	14195.78	11339	17138
+Aquatic;Freshwater	231	14217.84	11463	17194
+Aquatic;Freshwater	232	14239.9	11465	17196
+Aquatic;Freshwater	233	14291.96	11465	17197
+Aquatic;Freshwater	234	14330.74	11465	17199
+Aquatic;Freshwater	235	14370.8	11476	17201
+Aquatic;Freshwater	236	14409.14	11495	17203
+Aquatic;Freshwater	237	14445.52	11498	17203
+Aquatic;Freshwater	238	14492.14	11501	17349
+Aquatic;Freshwater	239	14544.64	11505	17353
+Aquatic;Freshwater	240	14568.44	11507	17355
+Aquatic;Freshwater	241	14689.3	11520	17356
+Aquatic;Freshwater	242	14745.4	11525	17503
+Aquatic;Freshwater	243	14779.56	11530	17503
+Aquatic;Freshwater	244	14852.54	11530	17517
+Aquatic;Freshwater	245	14897.7	11530	17653
+Aquatic;Freshwater	246	14934.84	11530	17659
+Aquatic;Freshwater	247	14954.6	11530	17701
+Aquatic;Freshwater	248	14987.1	11650	17736
+Aquatic;Freshwater	249	15029.48	11661	17744
+Aquatic;Freshwater	250	15083.84	11667	17853
+Aquatic;Freshwater	251	15151.44	11680	17853
+Aquatic;Freshwater	252	15235	11732	17853
+Aquatic;Freshwater	253	15280.48	11733	17942
+Aquatic;Freshwater	254	15347.18	12052	17949
+Aquatic;Freshwater	255	15436.36	12260	17952
+Aquatic;Freshwater	256	15476	12261	17953
+Aquatic;Freshwater	257	15526.7	12261	18208
+Aquatic;Freshwater	258	15555	12264	18322
+Aquatic;Freshwater	259	15595.54	12273	18325
+Aquatic;Freshwater	260	15618.66	12310	18325
+Aquatic;Freshwater	261	15654.26	12316	18345
+Aquatic;Freshwater	262	15708.86	12318	18347
+Aquatic;Freshwater	263	15729.24	12319	18347
+Aquatic;Freshwater	264	15748.64	12321	18354
+Aquatic;Freshwater	265	15821.08	12321	18360
+Aquatic;Freshwater	266	15855.06	12321	18366
+Aquatic;Freshwater	267	15882.64	12322	18380
+Aquatic;Freshwater	268	15917.52	12824	18571
+Aquatic;Freshwater	269	15996.42	13658	18669
+Aquatic;Freshwater	270	16028.64	13663	18676
+Aquatic;Freshwater	271	16074.48	13816	18676
+Aquatic;Freshwater	272	16131.1	13830	18679
+Aquatic;Freshwater	273	16178.9	13840	18684
+Aquatic;Freshwater	274	16220.24	13848	18700
+Aquatic;Freshwater	275	16256.98	13848	18904
+Aquatic;Freshwater	276	16334.82	13848	19259
+Aquatic;Freshwater	277	16384.36	13884	19260
+Aquatic;Freshwater	278	16465.84	13887	19267
+Aquatic;Freshwater	279	16501.34	13899	19267
+Aquatic;Freshwater	280	16531	13920	19267
+Aquatic;Freshwater	281	16555.52	13924	19270
+Aquatic;Freshwater	282	16575.52	13924	19369
+Aquatic;Freshwater	283	16636.14	13924	19372
+Aquatic;Freshwater	284	16678.02	13996	19372
+Aquatic;Freshwater	285	16741.76	13999	19374
+Aquatic;Freshwater	286	16781.34	14012	19387
+Aquatic;Freshwater	287	16819.34	14012	19387
+Aquatic;Freshwater	288	16852.36	14012	19513
+Aquatic;Freshwater	289	16918.02	14013	19551
+Aquatic;Freshwater	290	16949.54	14077	19570
+Aquatic;Freshwater	291	17002.64	14079	19570
+Aquatic;Freshwater	292	17031.26	14084	19570
+Aquatic;Freshwater	293	17057.92	14092	19570
+Aquatic;Freshwater	294	17083.66	14112	19570
+Aquatic;Freshwater	295	17139.9	14117	19571
+Aquatic;Freshwater	296	17171.34	14123	19621
+Aquatic;Freshwater	297	17257.36	14246	19727
+Aquatic;Freshwater	298	17273.28	14258	19727
+Aquatic;Freshwater	299	17336.84	14264	19728
+Aquatic;Freshwater	300	17379.54	14270	19757
+Aquatic;Freshwater	301	17416.72	14331	19766
+Aquatic;Freshwater	302	17491.86	14596	19767
+Aquatic;Freshwater	303	17532.84	14599	19767
+Aquatic;Freshwater	304	17554.86	14599	19807
+Aquatic;Freshwater	305	17579.88	14603	19855
+Aquatic;Freshwater	306	17622.9	14605	19855
+Aquatic;Freshwater	307	17665.3	14612	19862
+Aquatic;Freshwater	308	17694.58	14711	19870
+Aquatic;Freshwater	309	17704.66	14712	19963
+Aquatic;Freshwater	310	17738.64	14721	19967
+Aquatic;Freshwater	311	17758.78	14721	19973
+Aquatic;Freshwater	312	17808.98	14745	20059
+Aquatic;Freshwater	313	17854.68	14745	20171
+Aquatic;Freshwater	314	17903.04	14788	20175
+Aquatic;Freshwater	315	17922.74	14794	20183
+Aquatic;Freshwater	316	17940.32	14798	20184
+Aquatic;Freshwater	317	17975.14	14810	20185
+Aquatic;Freshwater	318	18004.08	14810	20243
+Aquatic;Freshwater	319	18044.16	14823	20255
+Aquatic;Freshwater	320	18080.72	14884	20299
+Aquatic;Freshwater	321	18137.52	15305	20325
+Aquatic;Freshwater	322	18177.92	15407	20327
+Aquatic;Freshwater	323	18203.84	15408	20499
+Aquatic;Freshwater	324	18218.74	15413	20516
+Aquatic;Freshwater	325	18247.9	15413	20517
+Aquatic;Freshwater	326	18281.36	15413	20534
+Aquatic;Freshwater	327	18317.28	15416	20564
+Aquatic;Freshwater	328	18338.14	15430	20658
+Aquatic;Freshwater	329	18379.86	15434	20659
+Aquatic;Freshwater	330	18395.68	15435	20670
+Aquatic;Freshwater	331	18429.86	15440	20756
+Aquatic;Freshwater	332	18443.82	15443	20758
+Aquatic;Freshwater	333	18497.3	15445	20759
+Aquatic;Freshwater	334	18523.32	15445	20768
+Aquatic;Freshwater	335	18537.04	15445	20769
+Aquatic;Freshwater	336	18558.7	15445	20937
+Aquatic;Freshwater	337	18578.16	15462	20963
+Aquatic;Freshwater	338	18607.84	15462	20972
+Aquatic;Freshwater	339	18634.52	15546	20977
+Aquatic;Freshwater	340	18653.96	15559	20982
+Aquatic;Freshwater	341	18674.44	15560	21009
+Aquatic;Freshwater	342	18698.56	15560	21022
+Aquatic;Freshwater	343	18726.92	15569	21028
+Aquatic;Freshwater	344	18744.72	15812	21029
+Aquatic;Freshwater	345	18811.28	15892	21033
+Aquatic;Freshwater	346	18840.64	15892	21033
+Aquatic;Freshwater	347	18885.48	15896	21135
+Aquatic;Freshwater	348	18905.82	16082	21135
+Aquatic;Freshwater	349	18929.7	16084	21138
+Aquatic;Freshwater	350	18963.24	16092	21138
+Aquatic;Freshwater	351	18998.5	16092	21163
+Aquatic;Freshwater	352	19036.86	16296	21179
+Aquatic;Freshwater	353	19056.74	16299	21180
+Aquatic;Freshwater	354	19102.32	16470	21193
+Aquatic;Freshwater	355	19131.54	16470	21335
+Aquatic;Freshwater	356	19176.14	16470	21337
+Aquatic;Freshwater	357	19198.76	16484	21345
+Aquatic;Freshwater	358	19259.78	16530	21645
+Aquatic;Freshwater	359	19284.18	16530	21751
+Aquatic;Freshwater	360	19325.4	16534	21789
+Aquatic;Freshwater	361	19362.86	16539	22219
+Aquatic;Freshwater	362	19394.82	16556	22236
+Aquatic;Freshwater	363	19436.86	16556	22259
+Aquatic;Freshwater	364	19478.9	16558	22259
+Aquatic;Freshwater	365	19531.86	16572	22272
+Aquatic;Freshwater	366	19560.24	16617	22342
+Aquatic;Freshwater	367	19628.16	16781	22343
+Aquatic;Freshwater	368	19649.22	16841	22349
+Aquatic;Freshwater	369	19675.26	16996	22350
+Aquatic;Freshwater	370	19699.88	17005	22350
+Aquatic;Freshwater	371	19740.32	17058	22374
+Aquatic;Freshwater	372	19770.48	17061	22374
+Aquatic;Freshwater	373	19804.68	17129	22377
+Aquatic;Freshwater	374	19826.9	17142	22476
+Aquatic;Freshwater	375	19907.74	17147	22476
+Aquatic;Freshwater	376	19962.14	17165	22476
+Aquatic;Freshwater	377	20022.5	17173	22486
+Aquatic;Freshwater	378	20053.86	17174	22492
+Aquatic;Freshwater	379	20069.76	17174	22497
+Aquatic;Freshwater	380	20095.6	17175	22499
+Aquatic;Freshwater	381	20134.02	17179	22505
+Aquatic;Freshwater	382	20207.76	17763	22505
+Aquatic;Freshwater	383	20227.22	17763	22516
+Aquatic;Freshwater	384	20247.98	17826	22516
+Aquatic;Freshwater	385	20263.46	17916	22519
+Aquatic;Freshwater	386	20293.6	17917	22519
+Aquatic;Freshwater	387	20312.62	17917	22523
+Aquatic;Freshwater	388	20359.14	17917	22538
+Aquatic;Freshwater	389	20384.6	17931	22562
+Aquatic;Freshwater	390	20405.04	17944	22566
+Aquatic;Freshwater	391	20428.32	17947	22566
+Aquatic;Freshwater	392	20471.58	17956	22657
+Aquatic;Freshwater	393	20525.9	17958	22657
+Aquatic;Freshwater	394	20556.06	17958	22661
+Aquatic;Freshwater	395	20579.62	17964	22693
+Aquatic;Freshwater	396	20595.72	17989	22693
+Aquatic;Freshwater	397	20625.66	17994	22694
+Aquatic;Freshwater	398	20637.86	17996	22695
+Aquatic;Freshwater	399	20665.56	18012	22696
+Aquatic;Freshwater	400	20692.24	18404	22699
+Aquatic;Freshwater	401	20712.12	18465	22702
+Aquatic;Freshwater	402	20727.02	18552	22768
+Aquatic;Freshwater	403	20774.62	18621	22772
+Aquatic;Freshwater	404	20794.68	18624	22772
+Aquatic;Freshwater	405	20822.18	18625	22866
+Aquatic;Freshwater	406	20870.68	18625	22866
+Aquatic;Freshwater	407	20910.62	18629	22927
+Aquatic;Freshwater	408	20974.94	18629	22928
+Aquatic;Freshwater	409	21024.3	18635	23047
+Aquatic;Freshwater	410	21061.56	18663	23047
+Aquatic;Freshwater	411	21087.22	18664	23056
+Aquatic;Freshwater	412	21126.46	18749	23057
+Aquatic;Freshwater	413	21163.1	18765	23057
+Aquatic;Freshwater	414	21194.78	18772	23089
+Aquatic;Freshwater	415	21232.6	18777	23146
+Aquatic;Freshwater	416	21246.92	18777	23152
+Aquatic;Freshwater	417	21274.32	18779	23161
+Aquatic;Freshwater	418	21288.28	18792	23166
+Aquatic;Freshwater	419	21324.86	18792	23166
+Aquatic;Freshwater	420	21336.96	18794	23212
+Aquatic;Freshwater	421	21348.32	18835	23216
+Aquatic;Freshwater	422	21366.48	18960	23223
+Aquatic;Freshwater	423	21392.44	18960	23229
+Aquatic;Freshwater	424	21412.64	18964	23234
+Aquatic;Freshwater	425	21460.6	18966	23310
+Aquatic;Freshwater	426	21492.3	19348	23311
+Aquatic;Freshwater	427	21542.28	19348	23324
+Aquatic;Freshwater	428	21590.04	19348	23324
+Aquatic;Freshwater	429	21634.6	19348	23679
+Aquatic;Freshwater	430	21673.94	19408	23681
+Aquatic;Freshwater	431	21685.72	19448	23681
+Aquatic;Freshwater	432	21735.74	19528	23686
+Aquatic;Freshwater	433	21777.2	19621	23768
+Aquatic;Freshwater	434	21850.92	19637	23769
+Aquatic;Freshwater	435	21867.18	19638	23791
+Aquatic;Freshwater	436	21914.56	19650	23791
+Aquatic;Freshwater	437	21983.56	19781	23798
+Aquatic;Freshwater	438	22006.78	19781	23798
+Aquatic;Freshwater	439	22025.66	19781	23802
+Aquatic;Freshwater	440	22088.68	19793	23803
+Aquatic;Freshwater	441	22116.24	19850	23815
+Aquatic;Freshwater	442	22157.64	19850	23938
+Aquatic;Freshwater	443	22188.02	19851	23938
+Aquatic;Freshwater	444	22211.42	19852	23938
+Aquatic;Freshwater	445	22237.18	19857	23995
+Aquatic;Freshwater	446	22306.08	19857	23995
+Aquatic;Freshwater	447	22344.8	19872	23995
+Aquatic;Freshwater	448	22388.98	19877	23997
+Aquatic;Freshwater	449	22445.04	19878	24072
+Aquatic;Freshwater	450	22503.68	19903	24072
+Aquatic;Freshwater	451	22527.52	19904	24072
+Aquatic;Freshwater	452	22571.46	19905	24073
+Aquatic;Freshwater	453	22626.2	19905	24105
+Aquatic;Freshwater	454	22654.42	19914	24118
+Aquatic;Freshwater	455	22684.58	19917	24118
+Aquatic;Freshwater	456	22714.32	19991	24132
+Aquatic;Freshwater	457	22777.84	20002	24132
+Aquatic;Freshwater	458	22785.88	20005	24133
+Aquatic;Freshwater	459	22883.14	20060	24375
+Aquatic;Freshwater	460	22921.44	20068	24421
+Aquatic;Freshwater	461	22945.96	20069	24430
+Aquatic;Freshwater	462	22989.8	20070	24431
+Aquatic;Freshwater	463	23035.84	20075	24432
+Aquatic;Freshwater	464	23056.86	20079	24433
+Aquatic;Freshwater	465	23089.84	20079	24433
+Aquatic;Freshwater	466	23150.44	20600	24434
+Aquatic;Freshwater	467	23170.86	20665	24439
+Aquatic;Freshwater	468	23206.04	21240	24453
+Aquatic;Freshwater	469	23230.96	21240	24455
+Aquatic;Freshwater	470	23267.12	21240	24518
+Aquatic;Freshwater	471	23312.4	21240	24622
+Aquatic;Freshwater	472	23324.02	21243	24622
+Aquatic;Freshwater	473	23341.66	21243	24637
+Aquatic;Freshwater	474	23395.06	21300	24638
+Aquatic;Freshwater	475	23423.4	21304	24643
+Aquatic;Freshwater	476	23455.14	21315	24643
+Aquatic;Freshwater	477	23502.48	21315	24643
+Aquatic;Freshwater	478	23529.58	21331	24644
+Aquatic;Freshwater	479	23562.42	21333	24646
+Aquatic;Freshwater	480	23587.54	21334	24654
+Aquatic;Freshwater	481	23610.7	21334	24658
+Aquatic;Freshwater	482	23632.98	21337	24907
+Aquatic;Freshwater	483	23656.68	21342	24908
+Aquatic;Freshwater	484	23700.78	21342	24967
+Aquatic;Freshwater	485	23721.28	21348	24967
+Aquatic;Freshwater	486	23747.16	21348	24967
+Aquatic;Freshwater	487	23760.04	21349	24968
+Aquatic;Freshwater	488	23783.1	21349	24968
+Aquatic;Freshwater	489	23820.4	21958	25081
+Aquatic;Freshwater	490	23861.72	21960	25126
+Aquatic;Freshwater	491	23900	21983	25127
+Aquatic;Freshwater	492	23924.26	21985	25169
+Aquatic;Freshwater	493	23984.32	23053	25169
+Aquatic;Freshwater	494	24012.5	23060	25216
+Aquatic;Freshwater	495	24046.84	23138	25217
+Aquatic;Freshwater	496	24066.8	23145	25220
+Aquatic;Freshwater	497	24086.44	23155	25220
+Aquatic;Freshwater	498	24099.26	23157	25221
+Aquatic;Freshwater	499	24120.12	23157	25221
+Aquatic;Freshwater	500	24147.68	23159	25222
+Aquatic;Freshwater	501	24171.36	23163	25227
+Aquatic;Freshwater	502	24182.06	23259	25230
+Aquatic;Freshwater	503	24213.68	23277	25238
+Aquatic;Freshwater	504	24231.48	23283	25238
+Aquatic;Freshwater	505	24246.86	23296	25251
+Aquatic;Freshwater	506	24268.18	23307	25251
+Aquatic;Freshwater	507	24276.54	23315	25264
+Aquatic;Freshwater	508	24321.7	23321	25300
+Aquatic;Freshwater	509	24346.54	23321	25300
+Aquatic;Freshwater	510	24409.76	23336	25303
+Aquatic;Freshwater	511	24421.68	23336	25306
+Aquatic;Freshwater	512	24435.66	23336	25315
+Aquatic;Freshwater	513	24472.24	23336	25315
+Aquatic;Freshwater	514	24491.72	23336	25320
+Aquatic;Freshwater	515	24554.86	23338	25334
+Aquatic;Freshwater	516	24568.26	23342	25348
+Aquatic;Freshwater	517	24592.24	23342	25348
+Aquatic;Freshwater	518	24610.64	23346	25348
+Aquatic;Freshwater	519	24657.98	23346	25467
+Aquatic;Freshwater	520	24697.76	23625	25467
+Aquatic;Freshwater	521	24718.28	23627	25471
+Aquatic;Freshwater	522	24731.6	23645	25471
+Aquatic;Freshwater	523	24763.62	23949	25471
+Aquatic;Freshwater	524	24785.3	23949	25483
+Aquatic;Freshwater	525	24799.84	23962	25484
+Aquatic;Freshwater	526	24816.58	23971	25489
+Aquatic;Freshwater	527	24832.4	24028	25494
+Aquatic;Freshwater	528	24845.06	24031	25499
+Aquatic;Freshwater	529	24862.74	24041	25500
+Aquatic;Freshwater	530	24885.2	24056	25577
+Aquatic;Freshwater	531	24910.54	24057	25608
+Aquatic;Freshwater	532	24939.7	24057	25649
+Aquatic;Freshwater	533	24965.4	24153	25656
+Aquatic;Freshwater	534	25000.06	24153	25669
+Aquatic;Freshwater	535	25032.54	24164	25673
+Aquatic;Freshwater	536	25055.48	24164	25675
+Aquatic;Freshwater	537	25083.08	24164	25681
+Aquatic;Freshwater	538	25101.8	24167	25681
+Aquatic;Freshwater	539	25124.64	24169	25749
+Aquatic;Freshwater	540	25136.64	24170	25753
+Aquatic;Freshwater	541	25157.68	24177	25753
+Aquatic;Freshwater	542	25201.16	24293	25759
+Aquatic;Freshwater	543	25210.28	24293	25807
+Aquatic;Freshwater	544	25245.88	24294	25819
+Aquatic;Freshwater	545	25265.52	24351	25821
+Aquatic;Freshwater	546	25296.42	24351	25968
+Aquatic;Freshwater	547	25347.76	24367	25968
+Aquatic;Freshwater	548	25403.52	24411	25971
+Aquatic;Freshwater	549	25426.52	24449	25981
+Aquatic;Freshwater	550	25439.5	24449	25982
+Aquatic;Freshwater	551	25456.6	24476	25984
+Aquatic;Freshwater	552	25499.2	24478	25985
+Aquatic;Freshwater	553	25525	24482	25990
+Aquatic;Freshwater	554	25550.1	24615	25993
+Aquatic;Freshwater	555	25574.58	24615	25993
+Aquatic;Freshwater	556	25608.46	24616	25993
+Aquatic;Freshwater	557	25629.48	24804	26014
+Aquatic;Freshwater	558	25648.74	24811	26015
+Aquatic;Freshwater	559	25678.18	24811	26033
+Aquatic;Freshwater	560	25694.08	24812	26033
+Aquatic;Freshwater	561	25713.22	24817	26033
+Aquatic;Freshwater	562	25748.58	24818	26034
+Aquatic;Freshwater	563	25780.82	24819	26038
+Aquatic;Freshwater	564	25822.3	24820	26040
+Aquatic;Freshwater	565	25839.54	24822	26041
+Aquatic;Freshwater	566	25855.84	24938	26044
+Aquatic;Freshwater	567	25864.12	24938	26044
+Aquatic;Freshwater	568	25887.78	24944	26044
+Aquatic;Freshwater	569	25909.68	24950	26047
+Aquatic;Freshwater	570	25930.98	24950	26047
+Aquatic;Freshwater	571	25967.86	24950	26048
+Aquatic;Freshwater	572	26005.68	25695	26048
+Aquatic;Freshwater	573	26026.36	25704	26048
+Aquatic;Freshwater	574	26048	26048	26048
+Aquatic;Marine	0	0	0	0
+Aquatic;Marine	1	68.8	1	1020
+Aquatic;Marine	2	146.88	4	1285
+Aquatic;Marine	3	210.28	7	1307
+Aquatic;Marine	4	286.3	10	1324
+Aquatic;Marine	5	334	10	1337
+Aquatic;Marine	6	397.54	30	1361
+Aquatic;Marine	7	446.38	49	1455
+Aquatic;Marine	8	503	67	1526
+Aquatic;Marine	9	563.3	84	1587
+Aquatic;Marine	10	591.24	95	1668
+Aquatic;Marine	11	641.06	96	1894
+Aquatic;Marine	12	694.06	183	1915
+Aquatic;Marine	13	770.6	233	1916
+Aquatic;Marine	14	800.26	252	1918
+Aquatic;Marine	15	843.74	254	1997
+Aquatic;Marine	16	932.22	255	2690
+Aquatic;Marine	17	1001.56	268	2691
+Aquatic;Marine	18	1067.84	405	2694
+Aquatic;Marine	19	1158.82	518	3155
+Aquatic;Marine	20	1224.88	567	3155
+Aquatic;Marine	21	1325.56	607	3176
+Aquatic;Marine	22	1369.9	680	3183
+Aquatic;Marine	23	1410.34	743	3186
+Aquatic;Marine	24	1461.14	758	3188
+Aquatic;Marine	25	1500	760	3189
+Aquatic;Marine	26	1555.06	763	3248
+Aquatic;Marine	27	1603.22	804	3283
+Aquatic;Marine	28	1654.7	879	3567
+Aquatic;Marine	29	1710.06	892	3576
+Aquatic;Marine	30	1778.12	897	3577
+Aquatic;Marine	31	1817.76	901	3590
+Aquatic;Marine	32	1910.4	902	3642
+Aquatic;Marine	33	1976.52	910	3682
+Aquatic;Marine	34	2081.22	920	3940
+Aquatic;Marine	35	2107.36	921	3995
+Aquatic;Marine	36	2138.16	943	4000
+Aquatic;Marine	37	2186.22	944	4002
+Aquatic;Marine	38	2228.62	1051	4006
+Aquatic;Marine	39	2281.76	1056	4447
+Aquatic;Marine	40	2347.7	1182	4447
+Aquatic;Marine	41	2395.68	1200	4552
+Aquatic;Marine	42	2461.6	1268	4555
+Aquatic;Marine	43	2500.76	1335	4719
+Aquatic;Marine	44	2565.96	1341	4720
+Aquatic;Marine	45	2602.22	1342	4724
+Aquatic;Marine	46	2674.24	1355	4725
+Aquatic;Marine	47	2720.48	1361	4730
+Aquatic;Marine	48	2790.28	1387	4757
+Aquatic;Marine	49	2848.7	1389	4758
+Aquatic;Marine	50	2882.78	1406	4772
+Aquatic;Marine	51	2935.02	1447	4778
+Aquatic;Marine	52	2995	1448	4952
+Aquatic;Marine	53	3053.48	1452	4954
+Aquatic;Marine	54	3118.48	1677	4958
+Aquatic;Marine	55	3168.3	1713	4959
+Aquatic;Marine	56	3214.32	1713	5087
+Aquatic;Marine	57	3262.16	1774	5087
+Aquatic;Marine	58	3284.8	1775	5087
+Aquatic;Marine	59	3330.66	1782	5303
+Aquatic;Marine	60	3370.36	1793	5400
+Aquatic;Marine	61	3424.76	1794	5401
+Aquatic;Marine	62	3465.84	1798	5401
+Aquatic;Marine	63	3520.58	1807	5645
+Aquatic;Marine	64	3605.92	1847	5658
+Aquatic;Marine	65	3655.84	1847	5663
+Aquatic;Marine	66	3715.38	1854	5675
+Aquatic;Marine	67	3751.74	1859	5677
+Aquatic;Marine	68	3789.08	1871	5725
+Aquatic;Marine	69	3822.28	1905	5746
+Aquatic;Marine	70	3877.12	1907	5903
+Aquatic;Marine	71	3934.3	1970	5905
+Aquatic;Marine	72	3993.64	2234	6207
+Aquatic;Marine	73	4081.84	2235	6213
+Aquatic;Marine	74	4116.42	2334	6213
+Aquatic;Marine	75	4145.52	2351	6214
+Aquatic;Marine	76	4209.08	2351	6292
+Aquatic;Marine	77	4265.42	2353	6292
+Aquatic;Marine	78	4312.94	2353	6292
+Aquatic;Marine	79	4360.04	2354	6292
+Aquatic;Marine	80	4430.24	2360	6341
+Aquatic;Marine	81	4449.86	2364	6341
+Aquatic;Marine	82	4478.86	2375	6341
+Aquatic;Marine	83	4510.46	2377	6341
+Aquatic;Marine	84	4538.4	2381	6342
+Aquatic;Marine	85	4576.68	2413	6343
+Aquatic;Marine	86	4605.48	2432	6345
+Aquatic;Marine	87	4643.32	2466	6384
+Aquatic;Marine	88	4680.9	2469	6416
+Aquatic;Marine	89	4703.84	2490	6452
+Aquatic;Marine	90	4740.62	2513	6458
+Aquatic;Marine	91	4801.3	2600	6679
+Aquatic;Marine	92	4819.6	2607	6688
+Aquatic;Marine	93	4850.06	2607	6689
+Aquatic;Marine	94	4879.82	2731	6690
+Aquatic;Marine	95	4937.14	2911	6956
+Aquatic;Marine	96	4959.34	2911	6968
+Aquatic;Marine	97	4996.7	2913	6969
+Aquatic;Marine	98	5031.52	2938	7128
+Aquatic;Marine	99	5053	2950	7187
+Aquatic;Marine	100	5090.12	3130	7271
+Aquatic;Marine	101	5130.68	3133	7275
+Aquatic;Marine	102	5180.82	3174	7286
+Aquatic;Marine	103	5238.16	3258	7287
+Aquatic;Marine	104	5315.24	3465	7302
+Aquatic;Marine	105	5373.16	3493	7314
+Aquatic;Marine	106	5411.92	3497	7480
+Aquatic;Marine	107	5441.26	3502	7515
+Aquatic;Marine	108	5489.52	3503	7518
+Aquatic;Marine	109	5538.6	3521	7686
+Aquatic;Marine	110	5580.4	3525	7699
+Aquatic;Marine	111	5656.82	3528	7700
+Aquatic;Marine	112	5724.08	3605	7793
+Aquatic;Marine	113	5747.3	3606	7793
+Aquatic;Marine	114	5801.62	3614	7794
+Aquatic;Marine	115	5824.64	3616	7794
+Aquatic;Marine	116	5859.48	3617	7937
+Aquatic;Marine	117	5926.26	3657	7941
+Aquatic;Marine	118	5965.72	3667	7976
+Aquatic;Marine	119	6032.42	3671	7977
+Aquatic;Marine	120	6054.08	3672	8029
+Aquatic;Marine	121	6089.86	3676	8077
+Aquatic;Marine	122	6133.5	3676	8174
+Aquatic;Marine	123	6171.32	3735	8174
+Aquatic;Marine	124	6195.52	3735	8174
+Aquatic;Marine	125	6227.54	3850	8205
+Aquatic;Marine	126	6263.68	3873	8205
+Aquatic;Marine	127	6280.5	3889	8219
+Aquatic;Marine	128	6347.92	3890	8229
+Aquatic;Marine	129	6406.24	3935	8310
+Aquatic;Marine	130	6434.68	3939	8311
+Aquatic;Marine	131	6468.38	3956	8311
+Aquatic;Marine	132	6527.66	3958	8335
+Aquatic;Marine	133	6583.26	3972	8356
+Aquatic;Marine	134	6605.36	4374	8435
+Aquatic;Marine	135	6679.66	4575	8524
+Aquatic;Marine	136	6705.18	4602	8527
+Aquatic;Marine	137	6747.68	4603	8528
+Aquatic;Marine	138	6776.58	4652	8530
+Aquatic;Marine	139	6811.22	4652	8562
+Aquatic;Marine	140	6866.22	4659	8563
+Aquatic;Marine	141	6897.38	4668	8613
+Aquatic;Marine	142	6949.1	4683	8616
+Aquatic;Marine	143	6987.7	4927	8773
+Aquatic;Marine	144	7010.4	4930	8804
+Aquatic;Marine	145	7046.3	4933	8806
+Aquatic;Marine	146	7075.02	4974	8807
+Aquatic;Marine	147	7121	4979	8890
+Aquatic;Marine	148	7155.42	4980	8890
+Aquatic;Marine	149	7196.8	4981	8987
+Aquatic;Marine	150	7228.18	4989	9031
+Aquatic;Marine	151	7264.8	4990	9035
+Aquatic;Marine	152	7294.42	4992	9060
+Aquatic;Marine	153	7331.56	5030	9062
+Aquatic;Marine	154	7382.24	5034	9469
+Aquatic;Marine	155	7397.78	5063	9470
+Aquatic;Marine	156	7441.36	5067	9558
+Aquatic;Marine	157	7478.44	5069	9563
+Aquatic;Marine	158	7509.04	5083	9564
+Aquatic;Marine	159	7556.78	5083	9568
+Aquatic;Marine	160	7603.3	5096	9573
+Aquatic;Marine	161	7621.06	5097	9579
+Aquatic;Marine	162	7650.94	5099	9580
+Aquatic;Marine	163	7680.54	5102	9587
+Aquatic;Marine	164	7711.08	5117	9611
+Aquatic;Marine	165	7733.36	5135	9614
+Aquatic;Marine	166	7758.18	5139	9615
+Aquatic;Marine	167	7792.88	5449	9642
+Aquatic;Marine	168	7820.64	5542	9647
+Aquatic;Marine	169	7844.4	5546	9671
+Aquatic;Marine	170	7880.82	5546	9795
+Aquatic;Marine	171	7917.06	5546	9797
+Aquatic;Marine	172	7944.3	5547	9797
+Aquatic;Marine	173	7973.68	5550	9799
+Aquatic;Marine	174	7997.86	5584	9838
+Aquatic;Marine	175	8021.4	5591	9839
+Aquatic;Marine	176	8046.5	5592	9839
+Aquatic;Marine	177	8103.58	5605	10102
+Aquatic;Marine	178	8135.16	5609	10123
+Aquatic;Marine	179	8169.04	5620	10128
+Aquatic;Marine	180	8196.6	5622	10131
+Aquatic;Marine	181	8214.7	5622	10133
+Aquatic;Marine	182	8237.78	5625	10152
+Aquatic;Marine	183	8277.1	5625	10162
+Aquatic;Marine	184	8306.56	5633	10175
+Aquatic;Marine	185	8327.38	5638	10180
+Aquatic;Marine	186	8392.56	5650	10864
+Aquatic;Marine	187	8441.84	5650	10867
+Aquatic;Marine	188	8465.08	5677	10873
+Aquatic;Marine	189	8491.24	5792	10914
+Aquatic;Marine	190	8511.54	5793	10979
+Aquatic;Marine	191	8544.3	5936	10987
+Aquatic;Marine	192	8617.88	5941	10989
+Aquatic;Marine	193	8642.18	5942	11086
+Aquatic;Marine	194	8654.74	5942	11086
+Aquatic;Marine	195	8672.98	5943	11087
+Aquatic;Marine	196	8701.14	5954	11098
+Aquatic;Marine	197	8734.06	5954	11186
+Aquatic;Marine	198	8768.18	5971	11186
+Aquatic;Marine	199	8812.78	5973	11191
+Aquatic;Marine	200	8839.52	5983	11197
+Aquatic;Marine	201	8856.12	5983	11197
+Aquatic;Marine	202	8904.3	5984	11349
+Aquatic;Marine	203	8943.22	5988	11368
+Aquatic;Marine	204	9009.32	6043	11370
+Aquatic;Marine	205	9026.9	6045	11404
+Aquatic;Marine	206	9048.48	6046	11417
+Aquatic;Marine	207	9070.26	6046	11422
+Aquatic;Marine	208	9092.96	6050	11424
+Aquatic;Marine	209	9121.58	6051	11425
+Aquatic;Marine	210	9170.74	6059	11444
+Aquatic;Marine	211	9191.82	6060	11449
+Aquatic;Marine	212	9218.38	6075	11465
+Aquatic;Marine	213	9255.74	6261	11470
+Aquatic;Marine	214	9300.28	6264	11501
+Aquatic;Marine	215	9350.28	6315	11572
+Aquatic;Marine	216	9373.6	6316	11614
+Aquatic;Marine	217	9405.98	6322	11616
+Aquatic;Marine	218	9424.86	6323	11654
+Aquatic;Marine	219	9461.92	7092	11679
+Aquatic;Marine	220	9508.8	7093	11685
+Aquatic;Marine	221	9534.1	7094	11685
+Aquatic;Marine	222	9569.5	7099	11695
+Aquatic;Marine	223	9584.48	7121	11697
+Aquatic;Marine	224	9602.16	7122	11699
+Aquatic;Marine	225	9631.1	7126	11709
+Aquatic;Marine	226	9654.26	7130	11710
+Aquatic;Marine	227	9676.46	7135	11743
+Aquatic;Marine	228	9700.58	7260	11803
+Aquatic;Marine	229	9724.32	7262	11807
+Aquatic;Marine	230	9760.12	7291	11808
+Aquatic;Marine	231	9798.92	7295	11810
+Aquatic;Marine	232	9827.26	7296	11816
+Aquatic;Marine	233	9845.98	7301	11816
+Aquatic;Marine	234	9877.4	7302	11816
+Aquatic;Marine	235	9912.16	7308	11891
+Aquatic;Marine	236	9938.28	7410	11902
+Aquatic;Marine	237	9979.34	7544	11902
+Aquatic;Marine	238	10017.98	7545	11932
+Aquatic;Marine	239	10027.9	7546	11935
+Aquatic;Marine	240	10043.24	7547	11946
+Aquatic;Marine	241	10060.68	7709	11948
+Aquatic;Marine	242	10082.22	7774	11962
+Aquatic;Marine	243	10109.94	7789	11972
+Aquatic;Marine	244	10140.36	7949	11973
+Aquatic;Marine	245	10163.54	7958	11979
+Aquatic;Marine	246	10180.92	8087	11982
+Aquatic;Marine	247	10244.68	8088	11994
+Aquatic;Marine	248	10285.48	8090	12345
+Aquatic;Marine	249	10334.22	8683	12345
+Aquatic;Marine	250	10365.5	8707	12349
+Aquatic;Marine	251	10380.7	8707	12351
+Aquatic;Marine	252	10407.98	8707	12354
+Aquatic;Marine	253	10456.28	8736	12872
+Aquatic;Marine	254	10480.42	8737	12874
+Aquatic;Marine	255	10505.26	8738	12875
+Aquatic;Marine	256	10537.26	8742	12907
+Aquatic;Marine	257	10563.14	8759	12990
+Aquatic;Marine	258	10587.76	8761	12994
+Aquatic;Marine	259	10637.12	8771	12996
+Aquatic;Marine	260	10658.72	8773	13000
+Aquatic;Marine	261	10686.18	8774	13025
+Aquatic;Marine	262	10715.1	8774	13030
+Aquatic;Marine	263	10732.88	8776	13104
+Aquatic;Marine	264	10748.9	8789	13105
+Aquatic;Marine	265	10778.08	8801	13106
+Aquatic;Marine	266	10796.94	8848	13106
+Aquatic;Marine	267	10849.06	8849	13106
+Aquatic;Marine	268	10863.04	8849	13108
+Aquatic;Marine	269	10875.14	8849	13108
+Aquatic;Marine	270	10904.4	8935	13140
+Aquatic;Marine	271	10913.76	8940	13141
+Aquatic;Marine	272	10940.62	8942	13144
+Aquatic;Marine	273	10975.34	8942	13146
+Aquatic;Marine	274	11011.86	8942	13147
+Aquatic;Marine	275	11032.6	8943	13167
+Aquatic;Marine	276	11066.1	9169	13170
+Aquatic;Marine	277	11083.98	9169	13186
+Aquatic;Marine	278	11099	9175	13189
+Aquatic;Marine	279	11128.18	9176	13319
+Aquatic;Marine	280	11144.08	9229	13320
+Aquatic;Marine	281	11197.14	9330	13336
+Aquatic;Marine	282	11212.08	9330	13357
+Aquatic;Marine	283	11229.06	9338	13435
+Aquatic;Marine	284	11249.32	9338	13435
+Aquatic;Marine	285	11273.64	9338	13435
+Aquatic;Marine	286	11302.68	9338	13445
+Aquatic;Marine	287	11330.44	9341	13445
+Aquatic;Marine	288	11358.44	9382	13445
+Aquatic;Marine	289	11393.92	9410	13449
+Aquatic;Marine	290	11429.62	9463	13468
+Aquatic;Marine	291	11458.5	9472	13472
+Aquatic;Marine	292	11484.52	9473	13473
+Aquatic;Marine	293	11500.78	9474	13473
+Aquatic;Marine	294	11537.24	9476	13481
+Aquatic;Marine	295	11560.2	9476	13481
+Aquatic;Marine	296	11579.46	9524	13482
+Aquatic;Marine	297	11598.8	9533	13484
+Aquatic;Marine	298	11634.32	9616	13487
+Aquatic;Marine	299	11678.96	9818	13487
+Aquatic;Marine	300	11694.16	9866	13488
+Aquatic;Marine	301	11712.58	9866	13491
+Aquatic;Marine	302	11736.72	9868	13506
+Aquatic;Marine	303	11749.12	9869	13506
+Aquatic;Marine	304	11766.86	9870	13509
+Aquatic;Marine	305	11808.68	9873	13602
+Aquatic;Marine	306	11834.88	9910	13603
+Aquatic;Marine	307	11869.24	9911	13870
+Aquatic;Marine	308	11904.88	10019	13870
+Aquatic;Marine	309	11926.48	10019	13871
+Aquatic;Marine	310	11950.82	10019	13895
+Aquatic;Marine	311	11978.5	10240	13899
+Aquatic;Marine	312	12014.28	10245	13907
+Aquatic;Marine	313	12039.66	10343	13911
+Aquatic;Marine	314	12078.52	10355	13913
+Aquatic;Marine	315	12112.04	10356	13917
+Aquatic;Marine	316	12139.06	10360	13922
+Aquatic;Marine	317	12164.4	10363	14155
+Aquatic;Marine	318	12190.4	10365	14156
+Aquatic;Marine	319	12203.88	10371	14156
+Aquatic;Marine	320	12226.36	10400	14216
+Aquatic;Marine	321	12254.26	10520	14240
+Aquatic;Marine	322	12266.36	10548	14240
+Aquatic;Marine	323	12284.2	10548	14240
+Aquatic;Marine	324	12303.46	10549	14247
+Aquatic;Marine	325	12323.6	10551	14268
+Aquatic;Marine	326	12342.86	10551	14272
+Aquatic;Marine	327	12368.68	10566	14276
+Aquatic;Marine	328	12381.14	10575	14287
+Aquatic;Marine	329	12412.74	10597	14287
+Aquatic;Marine	330	12444.36	10753	14287
+Aquatic;Marine	331	12475.34	10760	14288
+Aquatic;Marine	332	12495.94	10766	14490
+Aquatic;Marine	333	12510.38	10771	14491
+Aquatic;Marine	334	12539.04	10782	14491
+Aquatic;Marine	335	12559.84	10783	14492
+Aquatic;Marine	336	12576.38	10783	14493
+Aquatic;Marine	337	12595.54	10788	14493
+Aquatic;Marine	338	12615.88	10797	14494
+Aquatic;Marine	339	12640.4	10798	14525
+Aquatic;Marine	340	12676.16	10798	14547
+Aquatic;Marine	341	12699.16	10799	14549
+Aquatic;Marine	342	12721.5	10801	14550
+Aquatic;Marine	343	12737.34	10803	14553
+Aquatic;Marine	344	12758.18	10803	14581
+Aquatic;Marine	345	12772.84	10806	14582
+Aquatic;Marine	346	12796.12	10806	14600
+Aquatic;Marine	347	12825.08	10808	14601
+Aquatic;Marine	348	12847.02	10808	14837
+Aquatic;Marine	349	12858.06	10813	14840
+Aquatic;Marine	350	12886.14	10813	14844
+Aquatic;Marine	351	12913.76	10826	14845
+Aquatic;Marine	352	12957.74	10826	14851
+Aquatic;Marine	353	12971.38	10826	14853
+Aquatic;Marine	354	12999.64	10826	14856
+Aquatic;Marine	355	13035.98	11123	14859
+Aquatic;Marine	356	13045.48	11124	14860
+Aquatic;Marine	357	13070.6	11188	14871
+Aquatic;Marine	358	13093.82	11189	14872
+Aquatic;Marine	359	13119.56	11189	14874
+Aquatic;Marine	360	13151.3	11189	14874
+Aquatic;Marine	361	13167.08	11192	14890
+Aquatic;Marine	362	13191.78	11349	15189
+Aquatic;Marine	363	13212.56	11374	15194
+Aquatic;Marine	364	13224.2	11376	15195
+Aquatic;Marine	365	13255.08	11413	15202
+Aquatic;Marine	366	13285.02	11433	15204
+Aquatic;Marine	367	13308.94	11434	15218
+Aquatic;Marine	368	13327.96	11442	15218
+Aquatic;Marine	369	13345.04	11442	15366
+Aquatic;Marine	370	13369.3	11442	15368
+Aquatic;Marine	371	13383.72	11443	15371
+Aquatic;Marine	372	13411.18	11443	15372
+Aquatic;Marine	373	13417.96	11444	15382
+Aquatic;Marine	374	13443.04	11461	15426
+Aquatic;Marine	375	13451.84	11461	15431
+Aquatic;Marine	376	13465.82	11461	15432
+Aquatic;Marine	377	13480.94	11462	15446
+Aquatic;Marine	378	13499.2	11592	15448
+Aquatic;Marine	379	13527.42	11594	15449
+Aquatic;Marine	380	13554.3	11634	15468
+Aquatic;Marine	381	13587.72	11745	15487
+Aquatic;Marine	382	13601.96	11752	15563
+Aquatic;Marine	383	13624.98	11758	15564
+Aquatic;Marine	384	13646.06	11759	15667
+Aquatic;Marine	385	13664.72	11760	15670
+Aquatic;Marine	386	13693.78	11768	15678
+Aquatic;Marine	387	13721.96	11780	15725
+Aquatic;Marine	388	13743.04	11785	15727
+Aquatic;Marine	389	13757.14	11785	15728
+Aquatic;Marine	390	13774.24	11861	15732
+Aquatic;Marine	391	13799.06	11862	15732
+Aquatic;Marine	392	13819.42	11868	15759
+Aquatic;Marine	393	13836.68	11873	15760
+Aquatic;Marine	394	13862.88	11874	15761
+Aquatic;Marine	395	13881.8	11885	15771
+Aquatic;Marine	396	13890.06	11968	15771
+Aquatic;Marine	397	13900.28	11968	15774
+Aquatic;Marine	398	13936.26	11969	15777
+Aquatic;Marine	399	13959.98	11977	15781
+Aquatic;Marine	400	13977.62	11987	15826
+Aquatic;Marine	401	14002.26	11991	15826
+Aquatic;Marine	402	14021.34	12000	15827
+Aquatic;Marine	403	14038.04	12009	15828
+Aquatic;Marine	404	14051.48	12020	15830
+Aquatic;Marine	405	14076.84	12026	15835
+Aquatic;Marine	406	14106.24	12026	15994
+Aquatic;Marine	407	14128.32	12027	15995
+Aquatic;Marine	408	14148.68	12207	16021
+Aquatic;Marine	409	14165.94	12208	16028
+Aquatic;Marine	410	14196.38	12226	16028
+Aquatic;Marine	411	14217.14	12226	16194
+Aquatic;Marine	412	14234.06	12226	16196
+Aquatic;Marine	413	14245.66	12307	16196
+Aquatic;Marine	414	14273.22	12321	16235
+Aquatic;Marine	415	14287.48	12360	16270
+Aquatic;Marine	416	14313.68	12366	16272
+Aquatic;Marine	417	14347.46	12387	16274
+Aquatic;Marine	418	14379.36	12400	16277
+Aquatic;Marine	419	14406.4	12400	16278
+Aquatic;Marine	420	14439.12	12402	16310
+Aquatic;Marine	421	14457.22	12403	16310
+Aquatic;Marine	422	14481.82	12405	16310
+Aquatic;Marine	423	14501.72	12405	16310
+Aquatic;Marine	424	14524.28	12439	16349
+Aquatic;Marine	425	14543.46	12441	16381
+Aquatic;Marine	426	14557.8	12443	16390
+Aquatic;Marine	427	14583.02	12482	16390
+Aquatic;Marine	428	14598.94	12482	16403
+Aquatic;Marine	429	14616.78	12482	16426
+Aquatic;Marine	430	14639.7	12485	16428
+Aquatic;Marine	431	14657.34	12488	16532
+Aquatic;Marine	432	14678.14	12488	16535
+Aquatic;Marine	433	14711.86	12489	16535
+Aquatic;Marine	434	14735.32	12491	16537
+Aquatic;Marine	435	14744.02	12494	16553
+Aquatic;Marine	436	14767.48	12495	16553
+Aquatic;Marine	437	14781.92	12495	16555
+Aquatic;Marine	438	14807.06	12523	16591
+Aquatic;Marine	439	14823.04	12684	16592
+Aquatic;Marine	440	14836.68	12693	16594
+Aquatic;Marine	441	14878.2	12694	16595
+Aquatic;Marine	442	14893.36	12810	16605
+Aquatic;Marine	443	14903.64	12813	16608
+Aquatic;Marine	444	14930.8	12902	16612
+Aquatic;Marine	445	14954.1	12905	16779
+Aquatic;Marine	446	14965.36	12907	16780
+Aquatic;Marine	447	14987.68	12907	16785
+Aquatic;Marine	448	15003.76	12937	16785
+Aquatic;Marine	449	15026.66	13133	16785
+Aquatic;Marine	450	15035.08	13135	16792
+Aquatic;Marine	451	15043.98	13345	16802
+Aquatic;Marine	452	15066.76	13346	16811
+Aquatic;Marine	453	15090.38	13348	16814
+Aquatic;Marine	454	15107.7	13348	16867
+Aquatic;Marine	455	15126.2	13348	16867
+Aquatic;Marine	456	15142.2	13404	16884
+Aquatic;Marine	457	15157.78	13415	16947
+Aquatic;Marine	458	15168.02	13416	16981
+Aquatic;Marine	459	15187.62	13447	16990
+Aquatic;Marine	460	15214.46	13451	17010
+Aquatic;Marine	461	15237.08	13463	17032
+Aquatic;Marine	462	15257	13463	17135
+Aquatic;Marine	463	15272.4	13470	17141
+Aquatic;Marine	464	15302.94	13471	17157
+Aquatic;Marine	465	15328.24	13473	17159
+Aquatic;Marine	466	15349.28	13612	17160
+Aquatic;Marine	467	15358.32	13612	17163
+Aquatic;Marine	468	15367.16	13613	17175
+Aquatic;Marine	469	15379.6	13624	17176
+Aquatic;Marine	470	15400.18	13625	17176
+Aquatic;Marine	471	15424.1	13626	17177
+Aquatic;Marine	472	15456.16	13748	17177
+Aquatic;Marine	473	15478	13754	17202
+Aquatic;Marine	474	15503.24	14180	17203
+Aquatic;Marine	475	15538.76	14187	17204
+Aquatic;Marine	476	15549.78	14187	17205
+Aquatic;Marine	477	15574.34	14196	17208
+Aquatic;Marine	478	15584.56	14196	17209
+Aquatic;Marine	479	15605.06	14218	17234
+Aquatic;Marine	480	15624.42	14346	17234
+Aquatic;Marine	481	15637.74	14346	17243
+Aquatic;Marine	482	15670.58	14373	17244
+Aquatic;Marine	483	15681.06	14379	17245
+Aquatic;Marine	484	15695.7	14408	17246
+Aquatic;Marine	485	15727.08	14413	17247
+Aquatic;Marine	486	15750.2	14413	17248
+Aquatic;Marine	487	15763.66	14423	17290
+Aquatic;Marine	488	15786	14426	17291
+Aquatic;Marine	489	15796.28	14434	17336
+Aquatic;Marine	490	15811.58	14447	17337
+Aquatic;Marine	491	15842.88	14447	17485
+Aquatic;Marine	492	15874.28	14606	17490
+Aquatic;Marine	493	15890.3	14611	17643
+Aquatic;Marine	494	15903.56	14611	17651
+Aquatic;Marine	495	15928.94	14688	17652
+Aquatic;Marine	496	15951.12	14693	17652
+Aquatic;Marine	497	15989.16	14698	17704
+Aquatic;Marine	498	16009.06	14703	17704
+Aquatic;Marine	499	16020.64	14721	17705
+Aquatic;Marine	500	16039.28	14737	17706
+Aquatic;Marine	501	16069.56	14781	17706
+Aquatic;Marine	502	16090.24	14781	17758
+Aquatic;Marine	503	16102.36	14785	17808
+Aquatic;Marine	504	16116.06	14832	17832
+Aquatic;Marine	505	16127.62	14835	17836
+Aquatic;Marine	506	16142.02	14840	17856
+Aquatic;Marine	507	16156.08	14846	17857
+Aquatic;Marine	508	16170.02	14848	17858
+Aquatic;Marine	509	16178.98	14891	17859
+Aquatic;Marine	510	16198.02	14895	17996
+Aquatic;Marine	511	16231.38	14895	17998
+Aquatic;Marine	512	16257.16	15018	17999
+Aquatic;Marine	513	16267.6	15020	18002
+Aquatic;Marine	514	16284.92	15035	18004
+Aquatic;Marine	515	16294.14	15047	18028
+Aquatic;Marine	516	16307.14	15048	18029
+Aquatic;Marine	517	16323.24	15051	18029
+Aquatic;Marine	518	16342	15052	18040
+Aquatic;Marine	519	16361.36	15243	18042
+Aquatic;Marine	520	16378.76	15244	18044
+Aquatic;Marine	521	16389.5	15283	18045
+Aquatic;Marine	522	16409.98	15283	18047
+Aquatic;Marine	523	16418.04	15285	18049
+Aquatic;Marine	524	16447.68	15286	18055
+Aquatic;Marine	525	16483.02	15287	18059
+Aquatic;Marine	526	16506.86	15301	18062
+Aquatic;Marine	527	16518.56	15302	18062
+Aquatic;Marine	528	16528.3	15313	18062
+Aquatic;Marine	529	16551.82	15314	18063
+Aquatic;Marine	530	16578.14	15341	18063
+Aquatic;Marine	531	16592.66	15343	18093
+Aquatic;Marine	532	16610.94	15344	18098
+Aquatic;Marine	533	16631.72	15347	18122
+Aquatic;Marine	534	16649.76	15383	18129
+Aquatic;Marine	535	16661.24	15383	18132
+Aquatic;Marine	536	16670.58	15386	18155
+Aquatic;Marine	537	16698.68	15386	18171
+Aquatic;Marine	538	16724.08	15386	18171
+Aquatic;Marine	539	16737.16	15387	18172
+Aquatic;Marine	540	16748.94	15395	18191
+Aquatic;Marine	541	16770.82	15401	18192
+Aquatic;Marine	542	16785.52	15401	18193
+Aquatic;Marine	543	16799.92	15401	18193
+Aquatic;Marine	544	16823.06	15406	18243
+Aquatic;Marine	545	16838.16	15429	18275
+Aquatic;Marine	546	16854.04	15566	18275
+Aquatic;Marine	547	16866.4	15566	18277
+Aquatic;Marine	548	16883.82	15567	18282
+Aquatic;Marine	549	16907.4	15637	18285
+Aquatic;Marine	550	16942.3	15815	18286
+Aquatic;Marine	551	16958.26	15831	18289
+Aquatic;Marine	552	16966.3	15833	18289
+Aquatic;Marine	553	16985.52	15931	18290
+Aquatic;Marine	554	17011.58	15931	18290
+Aquatic;Marine	555	17037.26	15961	18292
+Aquatic;Marine	556	17053.3	15962	18305
+Aquatic;Marine	557	17073.02	16060	18305
+Aquatic;Marine	558	17089.56	16079	18339
+Aquatic;Marine	559	17122.18	16079	18340
+Aquatic;Marine	560	17149.94	16080	18420
+Aquatic;Marine	561	17165.86	16081	18420
+Aquatic;Marine	562	17195.62	16117	18428
+Aquatic;Marine	563	17212.22	16142	18434
+Aquatic;Marine	564	17226.4	16142	18435
+Aquatic;Marine	565	17247.48	16178	18438
+Aquatic;Marine	566	17270.26	16188	18440
+Aquatic;Marine	567	17282.28	16189	18449
+Aquatic;Marine	568	17300.02	16205	18459
+Aquatic;Marine	569	17331.14	16221	18459
+Aquatic;Marine	570	17359.46	16223	18460
+Aquatic;Marine	571	17382.08	16225	18470
+Aquatic;Marine	572	17403.96	16227	18522
+Aquatic;Marine	573	17422.24	16230	18523
+Aquatic;Marine	574	17453.46	16231	18526
+Aquatic;Marine	575	17474.1	16255	18538
+Aquatic;Marine	576	17480.96	16258	18546
+Aquatic;Marine	577	17488.96	16259	18546
+Aquatic;Marine	578	17509.06	16265	18546
+Aquatic;Marine	579	17522.12	16275	18549
+Aquatic;Marine	580	17540.1	16300	18549
+Aquatic;Marine	581	17553.28	16302	18566
+Aquatic;Marine	582	17573	16302	18572
+Aquatic;Marine	583	17588.26	16302	18573
+Aquatic;Marine	584	17598.2	16441	18587
+Aquatic;Marine	585	17616.64	16577	18650
+Aquatic;Marine	586	17629.22	16577	18658
+Aquatic;Marine	587	17646.48	16578	18659
+Aquatic;Marine	588	17654.38	16595	18662
+Aquatic;Marine	589	17667.58	16728	18665
+Aquatic;Marine	590	17682.7	16729	18665
+Aquatic;Marine	591	17709.1	16729	18737
+Aquatic;Marine	592	17727.32	16739	18737
+Aquatic;Marine	593	17738.52	16742	18737
+Aquatic;Marine	594	17751.9	16743	18754
+Aquatic;Marine	595	17759.08	16754	18754
+Aquatic;Marine	596	17781.12	16754	18803
+Aquatic;Marine	597	17799.98	16774	18873
+Aquatic;Marine	598	17815.08	16775	19100
+Aquatic;Marine	599	17825.56	16777	19100
+Aquatic;Marine	600	17845.3	16779	19180
+Aquatic;Marine	601	17854.4	16796	19183
+Aquatic;Marine	602	17883.76	16874	19254
+Aquatic;Marine	603	17901.26	16931	19279
+Aquatic;Marine	604	17912.12	16931	19279
+Aquatic;Marine	605	17922.06	16935	19279
+Aquatic;Marine	606	17941.06	16935	19280
+Aquatic;Marine	607	17955.62	16938	19282
+Aquatic;Marine	608	17962.92	16941	19288
+Aquatic;Marine	609	17973.24	16942	19288
+Aquatic;Marine	610	17980.16	16947	19289
+Aquatic;Marine	611	17997.8	16948	19302
+Aquatic;Marine	612	18010.36	16948	19354
+Aquatic;Marine	613	18023.54	16948	19370
+Aquatic;Marine	614	18039.28	16948	19375
+Aquatic;Marine	615	18054.1	16965	19375
+Aquatic;Marine	616	18073.16	16989	19376
+Aquatic;Marine	617	18089.42	16989	19376
+Aquatic;Marine	618	18104.88	16997	19376
+Aquatic;Marine	619	18117.96	16998	19376
+Aquatic;Marine	620	18128	17004	19426
+Aquatic;Marine	621	18146.22	17035	19488
+Aquatic;Marine	622	18162.94	17057	19492
+Aquatic;Marine	623	18177.06	17058	19493
+Aquatic;Marine	624	18198.72	17074	19501
+Aquatic;Marine	625	18211.72	17079	19502
+Aquatic;Marine	626	18225.64	17079	19544
+Aquatic;Marine	627	18243.12	17083	19545
+Aquatic;Marine	628	18261.28	17087	19546
+Aquatic;Marine	629	18278.7	17106	19550
+Aquatic;Marine	630	18303.24	17107	19564
+Aquatic;Marine	631	18314.4	17107	19564
+Aquatic;Marine	632	18337.22	17109	19564
+Aquatic;Marine	633	18343.08	17111	19564
+Aquatic;Marine	634	18347.1	17111	19564
+Aquatic;Marine	635	18369.5	17123	19564
+Aquatic;Marine	636	18393.96	17124	19564
+Aquatic;Marine	637	18422.96	17125	19570
+Aquatic;Marine	638	18433.76	17131	19570
+Aquatic;Marine	639	18447.1	17134	19570
+Aquatic;Marine	640	18455.88	17134	19586
+Aquatic;Marine	641	18472.76	17134	19591
+Aquatic;Marine	642	18481.62	17137	19591
+Aquatic;Marine	643	18516.56	17138	19592
+Aquatic;Marine	644	18537.78	17139	19599
+Aquatic;Marine	645	18550.78	17140	19599
+Aquatic;Marine	646	18561.8	17231	19637
+Aquatic;Marine	647	18575.36	17231	19639
+Aquatic;Marine	648	18581.82	17231	19639
+Aquatic;Marine	649	18595.98	17235	19640
+Aquatic;Marine	650	18613	17236	19652
+Aquatic;Marine	651	18634.16	17237	19653
+Aquatic;Marine	652	18654.56	17239	19653
+Aquatic;Marine	653	18665.34	17240	19654
+Aquatic;Marine	654	18685.14	17240	19655
+Aquatic;Marine	655	18704.74	17242	19670
+Aquatic;Marine	656	18720.98	17243	19673
+Aquatic;Marine	657	18746.82	17248	19674
+Aquatic;Marine	658	18762.76	17249	19714
+Aquatic;Marine	659	18770.86	17273	19714
+Aquatic;Marine	660	18784.6	17295	19854
+Aquatic;Marine	661	18794.5	17309	19854
+Aquatic;Marine	662	18802.84	17311	19856
+Aquatic;Marine	663	18818.04	17311	19861
+Aquatic;Marine	664	18830.24	17312	19863
+Aquatic;Marine	665	18838.62	17314	19863
+Aquatic;Marine	666	18849.32	17315	19865
+Aquatic;Marine	667	18864.02	17315	19888
+Aquatic;Marine	668	18879.8	17497	19905
+Aquatic;Marine	669	18894.02	17498	19910
+Aquatic;Marine	670	18909.5	17498	19914
+Aquatic;Marine	671	18923.42	17504	19914
+Aquatic;Marine	672	18953.5	17530	19970
+Aquatic;Marine	673	18962.44	17532	19972
+Aquatic;Marine	674	18969.62	17538	19973
+Aquatic;Marine	675	18978.86	17538	19973
+Aquatic;Marine	676	18997.62	17539	19974
+Aquatic;Marine	677	19013.3	17541	19979
+Aquatic;Marine	678	19025.52	17568	20004
+Aquatic;Marine	679	19038.94	17571	20027
+Aquatic;Marine	680	19058.8	17571	20045
+Aquatic;Marine	681	19077.06	17571	20045
+Aquatic;Marine	682	19094.44	17575	20046
+Aquatic;Marine	683	19107.34	17576	20051
+Aquatic;Marine	684	19122.26	17579	20054
+Aquatic;Marine	685	19149.12	17582	20054
+Aquatic;Marine	686	19161.82	17585	20056
+Aquatic;Marine	687	19188.32	17635	20058
+Aquatic;Marine	688	19194.62	17635	20067
+Aquatic;Marine	689	19203.74	17636	20074
+Aquatic;Marine	690	19223.2	17654	20076
+Aquatic;Marine	691	19237.2	17657	20203
+Aquatic;Marine	692	19252.66	17682	20203
+Aquatic;Marine	693	19271.32	17683	20204
+Aquatic;Marine	694	19289.76	17708	20210
+Aquatic;Marine	695	19304.22	17709	20210
+Aquatic;Marine	696	19317.88	17712	20211
+Aquatic;Marine	697	19347.8	17713	20213
+Aquatic;Marine	698	19368.12	17729	20213
+Aquatic;Marine	699	19377.96	17737	20213
+Aquatic;Marine	700	19396.7	17739	20213
+Aquatic;Marine	701	19419.8	17742	20216
+Aquatic;Marine	702	19449.32	17745	20235
+Aquatic;Marine	703	19465.28	17903	20269
+Aquatic;Marine	704	19474.96	17904	20270
+Aquatic;Marine	705	19490.24	17904	20270
+Aquatic;Marine	706	19511.24	17929	20323
+Aquatic;Marine	707	19541.06	17944	20548
+Aquatic;Marine	708	19560.72	17944	20550
+Aquatic;Marine	709	19581.4	17963	20554
+Aquatic;Marine	710	19603.22	17977	20554
+Aquatic;Marine	711	19617.14	17989	20568
+Aquatic;Marine	712	19640.62	17989	20568
+Aquatic;Marine	713	19654.04	17990	20569
+Aquatic;Marine	714	19668.5	17993	20614
+Aquatic;Marine	715	19678.06	17993	20620
+Aquatic;Marine	716	19692.5	17994	20621
+Aquatic;Marine	717	19718.62	17995	20621
+Aquatic;Marine	718	19738.06	18061	20621
+Aquatic;Marine	719	19746.14	18065	20622
+Aquatic;Marine	720	19764.28	18066	20636
+Aquatic;Marine	721	19779.32	18066	20636
+Aquatic;Marine	722	19790.62	18067	20731
+Aquatic;Marine	723	19807.7	18136	20731
+Aquatic;Marine	724	19817.86	18136	20744
+Aquatic;Marine	725	19827.54	18146	20745
+Aquatic;Marine	726	19849.42	18147	20746
+Aquatic;Marine	727	19862.62	18151	20749
+Aquatic;Marine	728	19873.86	18151	20749
+Aquatic;Marine	729	19890.12	18155	20762
+Aquatic;Marine	730	19906.12	18162	20769
+Aquatic;Marine	731	19918.76	18163	20769
+Aquatic;Marine	732	19937.64	18170	20786
+Aquatic;Marine	733	19946.42	18179	20786
+Aquatic;Marine	734	19959.54	18179	20787
+Aquatic;Marine	735	19984.34	18179	20815
+Aquatic;Marine	736	19995.36	18181	20815
+Aquatic;Marine	737	20005.36	18201	20839
+Aquatic;Marine	738	20016.22	18201	20853
+Aquatic;Marine	739	20033.58	18201	20858
+Aquatic;Marine	740	20042.18	18204	20859
+Aquatic;Marine	741	20052.94	18204	20859
+Aquatic;Marine	742	20070.34	18205	21010
+Aquatic;Marine	743	20095.98	18268	21029
+Aquatic;Marine	744	20121.22	18270	21050
+Aquatic;Marine	745	20130.76	18279	21096
+Aquatic;Marine	746	20137.86	18282	21099
+Aquatic;Marine	747	20149.26	18282	21099
+Aquatic;Marine	748	20167.9	18283	21102
+Aquatic;Marine	749	20184.56	18300	21128
+Aquatic;Marine	750	20199.94	18335	21129
+Aquatic;Marine	751	20224.64	18833	21167
+Aquatic;Marine	752	20234.9	18839	21230
+Aquatic;Marine	753	20251.44	18905	21230
+Aquatic;Marine	754	20262.52	18906	21230
+Aquatic;Marine	755	20275.58	18906	21362
+Aquatic;Marine	756	20287.56	18908	21392
+Aquatic;Marine	757	20317.98	18954	21401
+Aquatic;Marine	758	20325.96	18954	21403
+Aquatic;Marine	759	20341.28	18962	21403
+Aquatic;Marine	760	20346.66	18964	21406
+Aquatic;Marine	761	20356.52	18966	21444
+Aquatic;Marine	762	20369.64	18983	21447
+Aquatic;Marine	763	20377.84	19025	21453
+Aquatic;Marine	764	20400.06	19028	21453
+Aquatic;Marine	765	20418.38	19029	21453
+Aquatic;Marine	766	20434.88	19039	21454
+Aquatic;Marine	767	20448.08	19039	21470
+Aquatic;Marine	768	20467.86	19067	21474
+Aquatic;Marine	769	20484.26	19068	21474
+Aquatic;Marine	770	20499.62	19229	21474
+Aquatic;Marine	771	20509.64	19229	21490
+Aquatic;Marine	772	20529.3	19237	21498
+Aquatic;Marine	773	20541.84	19242	21501
+Aquatic;Marine	774	20552.8	19243	21513
+Aquatic;Marine	775	20565.5	19250	21550
+Aquatic;Marine	776	20576.08	19250	21552
+Aquatic;Marine	777	20596.74	19251	21585
+Aquatic;Marine	778	20609.3	19301	21611
+Aquatic;Marine	779	20622.2	19370	21615
+Aquatic;Marine	780	20629.96	19389	21615
+Aquatic;Marine	781	20639.16	19391	21618
+Aquatic;Marine	782	20648.9	19394	21622
+Aquatic;Marine	783	20656.34	19394	21622
+Aquatic;Marine	784	20668.3	19395	21645
+Aquatic;Marine	785	20685.58	19395	21659
+Aquatic;Marine	786	20695.86	19423	21659
+Aquatic;Marine	787	20703.98	19423	21659
+Aquatic;Marine	788	20722.16	19432	21663
+Aquatic;Marine	789	20737.14	19460	21663
+Aquatic;Marine	790	20765.16	19555	21663
+Aquatic;Marine	791	20780	19556	21664
+Aquatic;Marine	792	20793.46	19556	21776
+Aquatic;Marine	793	20804.86	19562	21777
+Aquatic;Marine	794	20814.82	19563	21799
+Aquatic;Marine	795	20833.2	19653	21805
+Aquatic;Marine	796	20855.88	19816	21806
+Aquatic;Marine	797	20869.08	19816	21807
+Aquatic;Marine	798	20877.78	19816	21808
+Aquatic;Marine	799	20888.76	19816	21808
+Aquatic;Marine	800	20896.4	19818	21821
+Aquatic;Marine	801	20912.34	19820	21841
+Aquatic;Marine	802	20931.14	19851	21842
+Aquatic;Marine	803	20951.12	19882	21853
+Aquatic;Marine	804	20977.7	19884	21857
+Aquatic;Marine	805	20983.48	19884	21857
+Aquatic;Marine	806	20994.9	19888	21858
+Aquatic;Marine	807	21012.08	19940	21860
+Aquatic;Marine	808	21023.38	19953	21877
+Aquatic;Marine	809	21052.3	19953	21878
+Aquatic;Marine	810	21069.88	19982	21883
+Aquatic;Marine	811	21080.72	19982	21883
+Aquatic;Marine	812	21086.1	19982	21890
+Aquatic;Marine	813	21117.62	20026	21897
+Aquatic;Marine	814	21131.54	20157	21983
+Aquatic;Marine	815	21143.92	20157	22037
+Aquatic;Marine	816	21155.78	20159	22037
+Aquatic;Marine	817	21166.42	20161	22039
+Aquatic;Marine	818	21180.66	20164	22040
+Aquatic;Marine	819	21192.02	20165	22042
+Aquatic;Marine	820	21207.5	20165	22043
+Aquatic;Marine	821	21216.52	20169	22047
+Aquatic;Marine	822	21229.36	20171	22059
+Aquatic;Marine	823	21244.96	20173	22059
+Aquatic;Marine	824	21255.84	20179	22059
+Aquatic;Marine	825	21269.8	20179	22067
+Aquatic;Marine	826	21288.14	20179	22067
+Aquatic;Marine	827	21301.94	20181	22075
+Aquatic;Marine	828	21327.6	20455	22075
+Aquatic;Marine	829	21340.6	20456	22089
+Aquatic;Marine	830	21352.5	20521	22089
+Aquatic;Marine	831	21364.92	20521	22097
+Aquatic;Marine	832	21371.18	20521	22099
+Aquatic;Marine	833	21382.94	20522	22101
+Aquatic;Marine	834	21390.94	20543	22104
+Aquatic;Marine	835	21398.34	20544	22109
+Aquatic;Marine	836	21409.96	20544	22135
+Aquatic;Marine	837	21417.44	20553	22141
+Aquatic;Marine	838	21430.64	20572	22141
+Aquatic;Marine	839	21446.02	20572	22143
+Aquatic;Marine	840	21457.94	20573	22166
+Aquatic;Marine	841	21469.72	20573	22171
+Aquatic;Marine	842	21492.72	20574	22172
+Aquatic;Marine	843	21504.56	20577	22174
+Aquatic;Marine	844	21512.34	20577	22184
+Aquatic;Marine	845	21524.04	20580	22186
+Aquatic;Marine	846	21537.58	20603	22195
+Aquatic;Marine	847	21547.72	20610	22198
+Aquatic;Marine	848	21551.42	20610	22198
+Aquatic;Marine	849	21567.62	20610	22200
+Aquatic;Marine	850	21575.18	20610	22201
+Aquatic;Marine	851	21588.56	20615	22247
+Aquatic;Marine	852	21597.66	20618	22254
+Aquatic;Marine	853	21614.22	20618	22255
+Aquatic;Marine	854	21624.78	20629	22257
+Aquatic;Marine	855	21634.76	20629	22257
+Aquatic;Marine	856	21642.24	20645	22261
+Aquatic;Marine	857	21653.8	20658	22262
+Aquatic;Marine	858	21666.1	20658	22264
+Aquatic;Marine	859	21677.54	20663	22264
+Aquatic;Marine	860	21689.54	20663	22265
+Aquatic;Marine	861	21700.2	20691	22287
+Aquatic;Marine	862	21709.26	20696	22330
+Aquatic;Marine	863	21725.52	20732	22376
+Aquatic;Marine	864	21736.72	20747	22376
+Aquatic;Marine	865	21758.7	20748	22382
+Aquatic;Marine	866	21775.34	20758	22386
+Aquatic;Marine	867	21788.48	20761	22389
+Aquatic;Marine	868	21801.56	20761	22389
+Aquatic;Marine	869	21818.98	20761	22389
+Aquatic;Marine	870	21834.24	20761	22389
+Aquatic;Marine	871	21843.46	20800	22389
+Aquatic;Marine	872	21854.56	20840	22403
+Aquatic;Marine	873	21866.46	20840	22411
+Aquatic;Marine	874	21876.4	20841	22429
+Aquatic;Marine	875	21900.34	21284	22475
+Aquatic;Marine	876	21913.74	21296	22488
+Aquatic;Marine	877	21923.98	21296	22488
+Aquatic;Marine	878	21932.44	21304	22509
+Aquatic;Marine	879	21949.54	21304	22510
+Aquatic;Marine	880	21961.06	21317	22510
+Aquatic;Marine	881	21970.52	21317	22522
+Aquatic;Marine	882	21983.82	21318	22523
+Aquatic;Marine	883	21991.54	21318	22526
+Aquatic;Marine	884	22008.92	21319	22527
+Aquatic;Marine	885	22021.62	21321	22533
+Aquatic;Marine	886	22039.4	21321	22534
+Aquatic;Marine	887	22044.62	21325	22535
+Aquatic;Marine	888	22052.72	21328	22543
+Aquatic;Marine	889	22059.78	21334	22567
+Aquatic;Marine	890	22072.52	21335	22568
+Aquatic;Marine	891	22086.36	21336	22725
+Aquatic;Marine	892	22097.48	21349	22725
+Aquatic;Marine	893	22105.54	21374	22725
+Aquatic;Marine	894	22121.94	21374	22725
+Aquatic;Marine	895	22134.66	21374	22726
+Aquatic;Marine	896	22160.82	21456	22727
+Aquatic;Marine	897	22176.44	21456	22728
+Aquatic;Marine	898	22187.78	21462	22743
+Aquatic;Marine	899	22194.02	21462	22744
+Aquatic;Marine	900	22202.1	21467	22747
+Aquatic;Marine	901	22218.06	21468	22762
+Aquatic;Marine	902	22230.68	21468	22778
+Aquatic;Marine	903	22251.46	21473	22790
+Aquatic;Marine	904	22264.56	21473	22862
+Aquatic;Marine	905	22282	21473	22862
+Aquatic;Marine	906	22298.12	21503	22941
+Aquatic;Marine	907	22313.26	21506	22943
+Aquatic;Marine	908	22325.52	21510	22943
+Aquatic;Marine	909	22334.16	21515	22943
+Aquatic;Marine	910	22343.9	21519	22957
+Aquatic;Marine	911	22352.82	21520	22957
+Aquatic;Marine	912	22372.14	21523	22959
+Aquatic;Marine	913	22387.4	21525	23032
+Aquatic;Marine	914	22398.94	21525	23039
+Aquatic;Marine	915	22412.1	21528	23051
+Aquatic;Marine	916	22421.24	21550	23052
+Aquatic;Marine	917	22431.06	21553	23061
+Aquatic;Marine	918	22437.56	21554	23061
+Aquatic;Marine	919	22449.7	21586	23061
+Aquatic;Marine	920	22458.12	21595	23061
+Aquatic;Marine	921	22478.92	21629	23071
+Aquatic;Marine	922	22493.66	21633	23180
+Aquatic;Marine	923	22506.62	21635	23184
+Aquatic;Marine	924	22521.18	21636	23187
+Aquatic;Marine	925	22529.26	21643	23207
+Aquatic;Marine	926	22555.54	21702	23208
+Aquatic;Marine	927	22561.34	21728	23208
+Aquatic;Marine	928	22571.1	21773	23219
+Aquatic;Marine	929	22584.54	21773	23219
+Aquatic;Marine	930	22599.98	21773	23219
+Aquatic;Marine	931	22612.3	21790	23384
+Aquatic;Marine	932	22636.8	21834	23387
+Aquatic;Marine	933	22647.14	21838	23388
+Aquatic;Marine	934	22666.18	21838	23388
+Aquatic;Marine	935	22676.14	21838	23389
+Aquatic;Marine	936	22687.36	21852	23390
+Aquatic;Marine	937	22698.5	21852	23394
+Aquatic;Marine	938	22705.66	21853	23394
+Aquatic;Marine	939	22717.36	21868	23398
+Aquatic;Marine	940	22727.14	21869	23398
+Aquatic;Marine	941	22737.7	21882	23398
+Aquatic;Marine	942	22744.42	21882	23401
+Aquatic;Marine	943	22761.9	21882	23401
+Aquatic;Marine	944	22777.9	21882	23401
+Aquatic;Marine	945	22794.86	21895	23401
+Aquatic;Marine	946	22800.36	21895	23401
+Aquatic;Marine	947	22805.18	21919	23426
+Aquatic;Marine	948	22812.28	21919	23428
+Aquatic;Marine	949	22823.78	21919	23428
+Aquatic;Marine	950	22839.32	21924	23437
+Aquatic;Marine	951	22848.96	21925	23438
+Aquatic;Marine	952	22852.4	21927	23438
+Aquatic;Marine	953	22873.82	21929	23439
+Aquatic;Marine	954	22892.36	21933	23439
+Aquatic;Marine	955	22904.9	21985	23442
+Aquatic;Marine	956	22915.76	22013	23447
+Aquatic;Marine	957	22922.76	22013	23447
+Aquatic;Marine	958	22942.44	22022	23447
+Aquatic;Marine	959	22953.38	22022	23448
+Aquatic;Marine	960	22975.16	22022	23451
+Aquatic;Marine	961	22982.82	22023	23479
+Aquatic;Marine	962	22992.4	22024	23479
+Aquatic;Marine	963	22998.24	22034	23479
+Aquatic;Marine	964	23008.02	22046	23518
+Aquatic;Marine	965	23023.2	22196	23520
+Aquatic;Marine	966	23040.92	22198	23521
+Aquatic;Marine	967	23052.16	22198	23528
+Aquatic;Marine	968	23059.18	22198	23528
+Aquatic;Marine	969	23069.92	22198	23537
+Aquatic;Marine	970	23083.78	22239	23537
+Aquatic;Marine	971	23098.56	22291	23543
+Aquatic;Marine	972	23104.2	22296	23544
+Aquatic;Marine	973	23113.5	22321	23553
+Aquatic;Marine	974	23129.54	22323	23555
+Aquatic;Marine	975	23137.34	22323	23561
+Aquatic;Marine	976	23145.06	22323	23571
+Aquatic;Marine	977	23156.4	22336	23606
+Aquatic;Marine	978	23166.28	22343	23607
+Aquatic;Marine	979	23174.78	22344	23613
+Aquatic;Marine	980	23187.88	22350	23614
+Aquatic;Marine	981	23198.82	22350	23614
+Aquatic;Marine	982	23214.6	22351	23708
+Aquatic;Marine	983	23227.38	22351	23746
+Aquatic;Marine	984	23239.82	22373	23746
+Aquatic;Marine	985	23247.3	22380	23757
+Aquatic;Marine	986	23256.08	22382	23757
+Aquatic;Marine	987	23269.2	22383	23757
+Aquatic;Marine	988	23286.78	22403	23757
+Aquatic;Marine	989	23294.66	22405	23762
+Aquatic;Marine	990	23305.64	22406	23762
+Aquatic;Marine	991	23319.4	22407	23769
+Aquatic;Marine	992	23328.94	22413	23769
+Aquatic;Marine	993	23338.7	22415	23771
+Aquatic;Marine	994	23362.78	22640	23771
+Aquatic;Marine	995	23382.34	22641	23774
+Aquatic;Marine	996	23398.48	22642	23796
+Aquatic;Marine	997	23411.46	22837	23797
+Aquatic;Marine	998	23421.14	22842	23873
+Aquatic;Marine	999	23429.28	22842	23876
+Aquatic;Marine	1000	23440.8	22847	23876
+Aquatic;Marine	1001	23454.8	22848	23930
+Aquatic;Marine	1002	23471.6	22929	23932
+Aquatic;Marine	1003	23479.36	22934	23935
+Aquatic;Marine	1004	23490.06	22937	23935
+Aquatic;Marine	1005	23496.76	22939	23968
+Aquatic;Marine	1006	23510.04	22940	23976
+Aquatic;Marine	1007	23523.66	22966	23976
+Aquatic;Marine	1008	23533.16	23042	23979
+Aquatic;Marine	1009	23544.6	23054	23980
+Aquatic;Marine	1010	23551.66	23054	23984
+Aquatic;Marine	1011	23562.24	23055	23984
+Aquatic;Marine	1012	23577.36	23055	23987
+Aquatic;Marine	1013	23595.12	23059	24001
+Aquatic;Marine	1014	23606.12	23063	24002
+Aquatic;Marine	1015	23616.06	23063	24017
+Aquatic;Marine	1016	23628.44	23063	24017
+Aquatic;Marine	1017	23638.14	23063	24017
+Aquatic;Marine	1018	23645.78	23063	24021
+Aquatic;Marine	1019	23655.02	23063	24032
+Aquatic;Marine	1020	23665.98	23160	24032
+Aquatic;Marine	1021	23675.22	23161	24035
+Aquatic;Marine	1022	23689.38	23161	24040
+Aquatic;Marine	1023	23700.5	23161	24042
+Aquatic;Marine	1024	23719.02	23229	24070
+Aquatic;Marine	1025	23733.84	23332	24073
+Aquatic;Marine	1026	23742.08	23333	24073
+Aquatic;Marine	1027	23751.14	23341	24073
+Aquatic;Marine	1028	23763.8	23346	24073
+Aquatic;Marine	1029	23776.54	23354	24075
+Aquatic;Marine	1030	23787.8	23357	24081
+Aquatic;Marine	1031	23799.08	23357	24089
+Aquatic;Marine	1032	23808.38	23358	24089
+Aquatic;Marine	1033	23817.72	23359	24097
+Aquatic;Marine	1034	23832.7	23379	24102
+Aquatic;Marine	1035	23843.16	23403	24117
+Aquatic;Marine	1036	23848.6	23406	24117
+Aquatic;Marine	1037	23860.24	23407	24120
+Aquatic;Marine	1038	23870.64	23414	24121
+Aquatic;Marine	1039	23881.76	23414	24122
+Aquatic;Marine	1040	23897.34	23419	24123
+Aquatic;Marine	1041	23904.34	23426	24127
+Aquatic;Marine	1042	23912.02	23428	24127
+Aquatic;Marine	1043	23924.64	23431	24128
+Aquatic;Marine	1044	23935.1	23435	24133
+Aquatic;Marine	1045	23942.74	23439	24133
+Aquatic;Marine	1046	23958.2	23457	24147
+Aquatic;Marine	1047	23977.2	23460	24155
+Aquatic;Marine	1048	23996.1	23594	24155
+Aquatic;Marine	1049	24003.2	23596	24157
+Aquatic;Marine	1050	24015.42	23596	24176
+Aquatic;Marine	1051	24029.04	23611	24179
+Aquatic;Marine	1052	24037.9	23660	24181
+Aquatic;Marine	1053	24047.38	23662	24183
+Aquatic;Marine	1054	24055.14	23664	24185
+Aquatic;Marine	1055	24068.08	23665	24195
+Aquatic;Marine	1056	24076.7	23665	24203
+Aquatic;Marine	1057	24096.46	23691	24211
+Aquatic;Marine	1058	24113.74	23707	24211
+Aquatic;Marine	1059	24126.9	23707	24212
+Aquatic;Marine	1060	24139.5	23708	24212
+Aquatic;Marine	1061	24144.92	23709	24220
+Aquatic;Marine	1062	24155.22	23709	24220
+Aquatic;Marine	1063	24167.9	23713	24221
+Aquatic;Marine	1064	24178.8	23713	24223
+Aquatic;Marine	1065	24203.68	24108	24223
+Aquatic;Marine	1066	24212.16	24109	24223
+Aquatic;Marine	1067	24223	24223	24223
+Aquatic;Other	0	0	0	0
+Aquatic;Other	1	33.36	1	201
+Aquatic;Other	2	69.64	2	265
+Aquatic;Other	3	96.46	3	345
+Aquatic;Other	4	126.94	12	391
+Aquatic;Other	5	150.04	19	396
+Aquatic;Other	6	170.98	21	402
+Aquatic;Other	7	187.02	24	408
+Aquatic;Other	8	211.4	26	410
+Aquatic;Other	9	227.78	32	472
+Aquatic;Other	10	243.5	40	477
+Aquatic;Other	11	260.34	46	480
+Aquatic;Other	12	278.46	58	486
+Aquatic;Other	13	293.26	59	490
+Aquatic;Other	14	309.84	60	495
+Aquatic;Other	15	325.7	159	496
+Aquatic;Other	16	334.12	161	501
+Aquatic;Other	17	344.44	171	505
+Aquatic;Other	18	355.44	173	506
+Aquatic;Other	19	365.92	177	525
+Aquatic;Other	20	370.22	177	526
+Aquatic;Other	21	378.82	178	609
+Aquatic;Other	22	391.7	178	610
+Aquatic;Other	23	404.78	192	612
+Aquatic;Other	24	412.7	199	612
+Aquatic;Other	25	421.9	216	614
+Aquatic;Other	26	432.92	314	620
+Aquatic;Other	27	440.8	315	622
+Aquatic;Other	28	446.52	319	626
+Aquatic;Other	29	452.24	321	628
+Aquatic;Other	30	459.36	322	631
+Aquatic;Other	31	466.92	323	631
+Aquatic;Other	32	474.44	325	636
+Aquatic;Other	33	485.32	325	651
+Aquatic;Other	34	490.82	328	655
+Aquatic;Other	35	499.06	332	660
+Aquatic;Other	36	503.18	339	662
+Aquatic;Other	37	506.96	340	663
+Aquatic;Other	38	512.98	344	665
+Aquatic;Other	39	523.3	344	668
+Aquatic;Other	40	533.62	344	670
+Aquatic;Other	41	538.22	344	673
+Aquatic;Other	42	543.62	344	673
+Aquatic;Other	43	545.48	348	677
+Aquatic;Other	44	550.54	349	678
+Aquatic;Other	45	556.54	351	679
+Aquatic;Other	46	566.5	389	684
+Aquatic;Other	47	569.42	389	693
+Aquatic;Other	48	572.82	390	696
+Aquatic;Other	49	575.5	395	701
+Aquatic;Other	50	582.74	396	702
+Aquatic;Other	51	591.42	399	716
+Aquatic;Other	52	596.74	467	716
+Aquatic;Other	53	601.56	467	716
+Aquatic;Other	54	603.76	468	717
+Aquatic;Other	55	610.2	468	721
+Aquatic;Other	56	617.18	469	724
+Aquatic;Other	57	622.3	474	725
+Aquatic;Other	58	625.24	475	725
+Aquatic;Other	59	631.1	475	728
+Aquatic;Other	60	633.9	493	728
+Aquatic;Other	61	638.62	517	737
+Aquatic;Other	62	643.94	518	740
+Aquatic;Other	63	650.84	552	740
+Aquatic;Other	64	658.84	562	751
+Aquatic;Other	65	661.9	564	751
+Aquatic;Other	66	664.64	566	751
+Aquatic;Other	67	670.58	566	756
+Aquatic;Other	68	672.58	568	757
+Aquatic;Other	69	680.14	572	762
+Aquatic;Other	70	686.1	572	762
+Aquatic;Other	71	691.14	573	770
+Aquatic;Other	72	694.66	573	773
+Aquatic;Other	73	697.34	574	773
+Aquatic;Other	74	702.38	579	773
+Aquatic;Other	75	704.4	580	774
+Aquatic;Other	76	708.94	581	774
+Aquatic;Other	77	711.84	581	774
+Aquatic;Other	78	713.66	588	778
+Aquatic;Other	79	715.9	588	778
+Aquatic;Other	80	719.86	590	778
+Aquatic;Other	81	722.84	590	783
+Aquatic;Other	82	726.56	590	785
+Aquatic;Other	83	731.78	590	785
+Aquatic;Other	84	735.68	592	787
+Aquatic;Other	85	740.14	592	794
+Aquatic;Other	86	742.6	592	794
+Aquatic;Other	87	744.64	593	796
+Aquatic;Other	88	751.6	654	796
+Aquatic;Other	89	756.32	655	798
+Aquatic;Other	90	763.1	656	798
+Aquatic;Other	91	770.02	656	799
+Aquatic;Other	92	775.12	674	803
+Aquatic;Other	93	780.02	695	804
+Aquatic;Other	94	783.32	709	805
+Aquatic;Other	95	787.16	713	809
+Aquatic;Other	96	789.7	714	810
+Aquatic;Other	97	794.82	714	810
+Aquatic;Other	98	796.48	715	811
+Aquatic;Other	99	798.88	729	811
+Aquatic;Other	100	801.66	731	811
+Aquatic;Other	101	807.76	732	811
+Aquatic;Other	102	811	811	811
+Engineered	0	0	0	0
+Engineered	1	124.66	1	538
+Engineered	2	205.62	9	716
+Engineered	3	291.06	13	717
+Engineered	4	385.56	78	887
+Engineered	5	470.56	99	1104
+Engineered	6	557.66	126	1122
+Engineered	7	653.78	128	1261
+Engineered	8	770.36	205	1584
+Engineered	9	871.8	258	1594
+Engineered	10	964.14	270	1690
+Engineered	11	1062	306	1690
+Engineered	12	1114.94	306	1695
+Engineered	13	1172.52	347	2035
+Engineered	14	1241.64	348	2099
+Engineered	15	1316.14	356	2103
+Engineered	16	1385.72	358	2156
+Engineered	17	1441.96	360	2222
+Engineered	18	1523.22	611	2241
+Engineered	19	1590.84	766	2642
+Engineered	20	1683.8	885	2892
+Engineered	21	1731.4	927	2893
+Engineered	22	1768.58	927	2893
+Engineered	23	1814.26	928	2904
+Engineered	24	1855.72	928	2905
+Engineered	25	1893.5	1142	2907
+Engineered	26	1948.44	1142	2939
+Engineered	27	2011.26	1223	3062
+Engineered	28	2084.28	1223	3255
+Engineered	29	2107.76	1227	3317
+Engineered	30	2150.08	1227	3332
+Engineered	31	2194.06	1388	3365
+Engineered	32	2230.12	1393	3367
+Engineered	33	2295.46	1399	3560
+Engineered	34	2356.94	1408	3744
+Engineered	35	2400.46	1409	3759
+Engineered	36	2430.54	1417	3763
+Engineered	37	2476.38	1452	3763
+Engineered	38	2529.1	1742	3767
+Engineered	39	2563.12	1743	3886
+Engineered	40	2605.38	1795	4117
+Engineered	41	2647.28	1795	4121
+Engineered	42	2698.64	1804	4129
+Engineered	43	2734.44	1804	4132
+Engineered	44	2797.38	1841	4151
+Engineered	45	2841.02	1842	4153
+Engineered	46	2874.88	1842	4153
+Engineered	47	2916.14	1963	4198
+Engineered	48	2969.56	1964	4258
+Engineered	49	2996.94	2075	4258
+Engineered	50	3042.38	2118	4265
+Engineered	51	3074.2	2169	4410
+Engineered	52	3111.08	2180	4513
+Engineered	53	3171.24	2200	4513
+Engineered	54	3194.5	2203	4663
+Engineered	55	3238.72	2208	4664
+Engineered	56	3268.48	2223	4720
+Engineered	57	3307.38	2223	4722
+Engineered	58	3359.54	2233	4724
+Engineered	59	3386.96	2233	4777
+Engineered	60	3412.8	2235	4837
+Engineered	61	3451.64	2243	4840
+Engineered	62	3482.08	2243	4843
+Engineered	63	3519.48	2261	4886
+Engineered	64	3551.2	2262	4888
+Engineered	65	3586.94	2262	4891
+Engineered	66	3601.24	2262	4892
+Engineered	67	3658.2	2282	4909
+Engineered	68	3690.42	2283	4910
+Engineered	69	3711.46	2683	4911
+Engineered	70	3734.16	2683	4912
+Engineered	71	3763.1	2690	4912
+Engineered	72	3803.02	2741	4912
+Engineered	73	3820.72	2747	4917
+Engineered	74	3857.34	2867	5011
+Engineered	75	3884.6	2871	5011
+Engineered	76	3920.24	2926	5011
+Engineered	77	3949.62	2952	5016
+Engineered	78	3989.62	3048	5025
+Engineered	79	4010.14	3051	5028
+Engineered	80	4046	3233	5028
+Engineered	81	4074.42	3235	5120
+Engineered	82	4104.54	3236	5120
+Engineered	83	4154.2	3240	5186
+Engineered	84	4178.7	3240	5220
+Engineered	85	4202.42	3242	5281
+Engineered	86	4224.54	3243	5282
+Engineered	87	4259.48	3246	5309
+Engineered	88	4297.54	3405	5309
+Engineered	89	4321	3405	5310
+Engineered	90	4349.18	3410	5310
+Engineered	91	4377.82	3509	5315
+Engineered	92	4393.5	3551	5317
+Engineered	93	4418.8	3552	5318
+Engineered	94	4451.28	3553	5318
+Engineered	95	4489.02	3560	5322
+Engineered	96	4512.6	3571	5347
+Engineered	97	4532.52	3573	5350
+Engineered	98	4560.52	3624	5392
+Engineered	99	4576.76	3626	5399
+Engineered	100	4594.88	3626	5399
+Engineered	101	4605.18	3627	5401
+Engineered	102	4622.7	3631	5401
+Engineered	103	4645.04	3649	5477
+Engineered	104	4660.54	3649	5510
+Engineered	105	4690.6	3653	5510
+Engineered	106	4731.74	3795	5510
+Engineered	107	4756.88	3814	5510
+Engineered	108	4779.92	3815	5512
+Engineered	109	4814.42	3816	5553
+Engineered	110	4830.22	3818	5555
+Engineered	111	4846.68	3819	5577
+Engineered	112	4869.36	3875	5578
+Engineered	113	4891.88	3880	5656
+Engineered	114	4911.6	3880	5660
+Engineered	115	4948.2	3880	5710
+Engineered	116	4979.36	4082	5717
+Engineered	117	4996.78	4088	5717
+Engineered	118	5008.54	4111	5730
+Engineered	119	5027.52	4111	5737
+Engineered	120	5043.9	4130	5738
+Engineered	121	5069.08	4131	5761
+Engineered	122	5090.62	4131	5769
+Engineered	123	5103.26	4196	5769
+Engineered	124	5122.68	4304	5769
+Engineered	125	5141.74	4312	5799
+Engineered	126	5160.14	4314	5804
+Engineered	127	5177.44	4348	5805
+Engineered	128	5187.7	4349	5866
+Engineered	129	5197.7	4352	5866
+Engineered	130	5220.62	4353	5890
+Engineered	131	5247	4527	5890
+Engineered	132	5268.94	4534	5890
+Engineered	133	5281.5	4586	5932
+Engineered	134	5308.1	4586	6013
+Engineered	135	5319.76	4586	6031
+Engineered	136	5336.24	4586	6033
+Engineered	137	5349.98	4607	6036
+Engineered	138	5366.4	4678	6039
+Engineered	139	5390.26	4678	6041
+Engineered	140	5408.44	4678	6111
+Engineered	141	5431.66	4678	6113
+Engineered	142	5450.22	4678	6117
+Engineered	143	5464.32	4690	6123
+Engineered	144	5492.86	4781	6123
+Engineered	145	5510.26	4783	6167
+Engineered	146	5523.9	4790	6167
+Engineered	147	5532.28	4839	6167
+Engineered	148	5543.54	4839	6167
+Engineered	149	5558.06	4839	6170
+Engineered	150	5578.8	4839	6175
+Engineered	151	5598.04	4843	6178
+Engineered	152	5623.54	4988	6179
+Engineered	153	5641.54	4993	6181
+Engineered	154	5673.3	5070	6186
+Engineered	155	5693.14	5070	6196
+Engineered	156	5707.62	5077	6224
+Engineered	157	5721.64	5077	6230
+Engineered	158	5751.28	5079	6230
+Engineered	159	5769.62	5079	6230
+Engineered	160	5797.96	5162	6232
+Engineered	161	5809.98	5162	6309
+Engineered	162	5825.04	5162	6311
+Engineered	163	5845.08	5164	6313
+Engineered	164	5856.04	5165	6333
+Engineered	165	5882.28	5166	6333
+Engineered	166	5897.64	5168	6335
+Engineered	167	5906.16	5181	6338
+Engineered	168	5918.54	5181	6339
+Engineered	169	5936.76	5181	6341
+Engineered	170	5949.3	5181	6341
+Engineered	171	5969.02	5259	6341
+Engineered	172	5985.5	5264	6353
+Engineered	173	6001.32	5321	6356
+Engineered	174	6016.06	5321	6384
+Engineered	175	6027.7	5339	6384
+Engineered	176	6046.06	5371	6389
+Engineered	177	6065.58	5371	6389
+Engineered	178	6079.94	5376	6389
+Engineered	179	6104.6	5376	6389
+Engineered	180	6120.94	5376	6402
+Engineered	181	6130.16	5417	6424
+Engineered	182	6159.46	5747	6464
+Engineered	183	6165.84	5747	6466
+Engineered	184	6175.52	5755	6466
+Engineered	185	6182.66	5756	6467
+Engineered	186	6201.76	5774	6467
+Engineered	187	6219.2	5774	6467
+Engineered	188	6239.02	5847	6467
+Engineered	189	6257.02	5936	6492
+Engineered	190	6278.42	5947	6505
+Engineered	191	6285.34	5950	6505
+Engineered	192	6296.18	5954	6507
+Engineered	193	6307.1	5957	6507
+Engineered	194	6314.06	5958	6526
+Engineered	195	6323.88	5960	6526
+Engineered	196	6344	6019	6526
+Engineered	197	6356.92	6020	6527
+Engineered	198	6367.2	6024	6527
+Engineered	199	6376.22	6024	6534
+Engineered	200	6388.12	6026	6539
+Engineered	201	6400.66	6038	6541
+Engineered	202	6413.98	6105	6542
+Engineered	203	6421.16	6105	6545
+Engineered	204	6444.34	6120	6551
+Engineered	205	6457.6	6120	6551
+Engineered	206	6466.22	6123	6554
+Engineered	207	6476.98	6143	6554
+Engineered	208	6492.92	6143	6557
+Engineered	209	6504.2	6143	6560
+Engineered	210	6522.34	6185	6560
+Engineered	211	6536.88	6187	6560
+Engineered	212	6560	6560	6560
+Host-associated;Animal microbiome	0	0	0	0
+Host-associated;Animal microbiome	1	40	1	337
+Host-associated;Animal microbiome	2	73.56	1	379
+Host-associated;Animal microbiome	3	86.82	1	385
+Host-associated;Animal microbiome	4	111.12	1	433
+Host-associated;Animal microbiome	5	135.82	3	449
+Host-associated;Animal microbiome	6	168.38	19	583
+Host-associated;Animal microbiome	7	185.14	20	584
+Host-associated;Animal microbiome	8	205.46	26	585
+Host-associated;Animal microbiome	9	225.74	28	586
+Host-associated;Animal microbiome	10	255.84	28	587
+Host-associated;Animal microbiome	11	287.7	29	600
+Host-associated;Animal microbiome	12	302.2	29	670
+Host-associated;Animal microbiome	13	322.52	29	670
+Host-associated;Animal microbiome	14	341.76	39	670
+Host-associated;Animal microbiome	15	360.64	40	882
+Host-associated;Animal microbiome	16	382.76	46	887
+Host-associated;Animal microbiome	17	404.26	100	888
+Host-associated;Animal microbiome	18	438.88	102	921
+Host-associated;Animal microbiome	19	458.32	104	921
+Host-associated;Animal microbiome	20	480.06	104	970
+Host-associated;Animal microbiome	21	492.18	104	1041
+Host-associated;Animal microbiome	22	509.9	107	1084
+Host-associated;Animal microbiome	23	517.94	108	1084
+Host-associated;Animal microbiome	24	555.26	117	1213
+Host-associated;Animal microbiome	25	570.48	117	1231
+Host-associated;Animal microbiome	26	585.3	163	1231
+Host-associated;Animal microbiome	27	626.08	178	1231
+Host-associated;Animal microbiome	28	653.66	180	1231
+Host-associated;Animal microbiome	29	666.76	182	1233
+Host-associated;Animal microbiome	30	676.7	187	1233
+Host-associated;Animal microbiome	31	703.46	195	1235
+Host-associated;Animal microbiome	32	725.94	195	1286
+Host-associated;Animal microbiome	33	745.76	200	1286
+Host-associated;Animal microbiome	34	756.34	200	1301
+Host-associated;Animal microbiome	35	768.54	200	1302
+Host-associated;Animal microbiome	36	781.34	254	1311
+Host-associated;Animal microbiome	37	800.46	255	1313
+Host-associated;Animal microbiome	38	813.9	285	1313
+Host-associated;Animal microbiome	39	833.28	291	1435
+Host-associated;Animal microbiome	40	855.86	291	1443
+Host-associated;Animal microbiome	41	870.6	293	1449
+Host-associated;Animal microbiome	42	881.76	307	1449
+Host-associated;Animal microbiome	43	898.04	307	1462
+Host-associated;Animal microbiome	44	904.52	311	1462
+Host-associated;Animal microbiome	45	913.42	311	1462
+Host-associated;Animal microbiome	46	922.04	312	1472
+Host-associated;Animal microbiome	47	943.02	313	1472
+Host-associated;Animal microbiome	48	974.7	444	1482
+Host-associated;Animal microbiome	49	988.34	445	1487
+Host-associated;Animal microbiome	50	1002.78	450	1497
+Host-associated;Animal microbiome	51	1020.04	450	1536
+Host-associated;Animal microbiome	52	1051.32	450	1537
+Host-associated;Animal microbiome	53	1069.52	450	1537
+Host-associated;Animal microbiome	54	1084.16	470	1538
+Host-associated;Animal microbiome	55	1097.32	471	1544
+Host-associated;Animal microbiome	56	1107.58	501	1544
+Host-associated;Animal microbiome	57	1118.64	507	1544
+Host-associated;Animal microbiome	58	1129.7	530	1550
+Host-associated;Animal microbiome	59	1141.34	530	1554
+Host-associated;Animal microbiome	60	1148.3	530	1554
+Host-associated;Animal microbiome	61	1155.94	530	1571
+Host-associated;Animal microbiome	62	1168.78	535	1572
+Host-associated;Animal microbiome	63	1190.14	617	1579
+Host-associated;Animal microbiome	64	1203.48	627	1580
+Host-associated;Animal microbiome	65	1213.64	629	1580
+Host-associated;Animal microbiome	66	1239.76	630	1712
+Host-associated;Animal microbiome	67	1252.14	639	1713
+Host-associated;Animal microbiome	68	1258.96	640	1714
+Host-associated;Animal microbiome	69	1277.32	640	1755
+Host-associated;Animal microbiome	70	1297.6	642	1755
+Host-associated;Animal microbiome	71	1316.46	642	1755
+Host-associated;Animal microbiome	72	1330.98	643	1755
+Host-associated;Animal microbiome	73	1345.98	643	1760
+Host-associated;Animal microbiome	74	1352.74	644	1760
+Host-associated;Animal microbiome	75	1366.18	646	1761
+Host-associated;Animal microbiome	76	1383.52	769	1761
+Host-associated;Animal microbiome	77	1394.34	771	1761
+Host-associated;Animal microbiome	78	1412.18	867	1763
+Host-associated;Animal microbiome	79	1422.38	877	1764
+Host-associated;Animal microbiome	80	1435.86	979	1765
+Host-associated;Animal microbiome	81	1448.84	980	1844
+Host-associated;Animal microbiome	82	1461.64	1134	1855
+Host-associated;Animal microbiome	83	1472.42	1136	1855
+Host-associated;Animal microbiome	84	1484.8	1136	1870
+Host-associated;Animal microbiome	85	1493.08	1137	1878
+Host-associated;Animal microbiome	86	1502.3	1137	1878
+Host-associated;Animal microbiome	87	1513.6	1144	1925
+Host-associated;Animal microbiome	88	1521.96	1151	1925
+Host-associated;Animal microbiome	89	1535.28	1167	1926
+Host-associated;Animal microbiome	90	1545.44	1170	1926
+Host-associated;Animal microbiome	91	1559.84	1170	1990
+Host-associated;Animal microbiome	92	1572.66	1170	1990
+Host-associated;Animal microbiome	93	1581.2	1172	1991
+Host-associated;Animal microbiome	94	1596.16	1226	1991
+Host-associated;Animal microbiome	95	1604.68	1226	1991
+Host-associated;Animal microbiome	96	1615.86	1228	1993
+Host-associated;Animal microbiome	97	1621.04	1229	1993
+Host-associated;Animal microbiome	98	1634.08	1234	1999
+Host-associated;Animal microbiome	99	1648.52	1235	1999
+Host-associated;Animal microbiome	100	1659.74	1240	2004
+Host-associated;Animal microbiome	101	1673.5	1297	2004
+Host-associated;Animal microbiome	102	1684.16	1298	2017
+Host-associated;Animal microbiome	103	1706.82	1299	2050
+Host-associated;Animal microbiome	104	1711.9	1327	2050
+Host-associated;Animal microbiome	105	1721.06	1380	2116
+Host-associated;Animal microbiome	106	1735.68	1388	2116
+Host-associated;Animal microbiome	107	1748.08	1398	2116
+Host-associated;Animal microbiome	108	1755.54	1398	2116
+Host-associated;Animal microbiome	109	1767.72	1398	2143
+Host-associated;Animal microbiome	110	1785.4	1399	2146
+Host-associated;Animal microbiome	111	1796.74	1399	2152
+Host-associated;Animal microbiome	112	1818.9	1412	2154
+Host-associated;Animal microbiome	113	1830.34	1485	2154
+Host-associated;Animal microbiome	114	1842.72	1485	2161
+Host-associated;Animal microbiome	115	1849.02	1553	2161
+Host-associated;Animal microbiome	116	1861.7	1593	2161
+Host-associated;Animal microbiome	117	1884.86	1597	2169
+Host-associated;Animal microbiome	118	1893.66	1621	2170
+Host-associated;Animal microbiome	119	1906.04	1623	2170
+Host-associated;Animal microbiome	120	1914.18	1623	2170
+Host-associated;Animal microbiome	121	1926.18	1623	2170
+Host-associated;Animal microbiome	122	1931.5	1623	2170
+Host-associated;Animal microbiome	123	1941.34	1625	2185
+Host-associated;Animal microbiome	124	1948.74	1662	2187
+Host-associated;Animal microbiome	125	1954.08	1672	2187
+Host-associated;Animal microbiome	126	1957.68	1673	2187
+Host-associated;Animal microbiome	127	1969.8	1678	2188
+Host-associated;Animal microbiome	128	1978.84	1735	2188
+Host-associated;Animal microbiome	129	1995.08	1735	2196
+Host-associated;Animal microbiome	130	2002.94	1735	2196
+Host-associated;Animal microbiome	131	2012.16	1736	2208
+Host-associated;Animal microbiome	132	2023.26	1772	2209
+Host-associated;Animal microbiome	133	2034.34	1773	2210
+Host-associated;Animal microbiome	134	2057.06	1843	2210
+Host-associated;Animal microbiome	135	2065.38	1844	2212
+Host-associated;Animal microbiome	136	2082.38	1849	2217
+Host-associated;Animal microbiome	137	2092.96	1849	2218
+Host-associated;Animal microbiome	138	2108.34	1851	2218
+Host-associated;Animal microbiome	139	2126	1853	2219
+Host-associated;Animal microbiome	140	2138.14	1854	2220
+Host-associated;Animal microbiome	141	2146.12	1855	2221
+Host-associated;Animal microbiome	142	2154.26	1868	2221
+Host-associated;Animal microbiome	143	2164.36	1868	2222
+Host-associated;Animal microbiome	144	2172.22	1869	2222
+Host-associated;Animal microbiome	145	2178.26	1874	2223
+Host-associated;Animal microbiome	146	2181.64	1875	2223
+Host-associated;Animal microbiome	147	2194.76	2035	2223
+Host-associated;Animal microbiome	148	2201.2	2043	2223
+Host-associated;Animal microbiome	149	2212.18	2043	2223
+Host-associated;Animal microbiome	150	2223	2223	2223
+Host-associated;Plant Phyllosphere	0	0	0	0
+Host-associated;Plant Phyllosphere	1	86.72	2	276
+Host-associated;Plant Phyllosphere	2	160.32	6	390
+Host-associated;Plant Phyllosphere	3	214.16	13	523
+Host-associated;Plant Phyllosphere	4	261.5	46	533
+Host-associated;Plant Phyllosphere	5	313.66	144	551
+Host-associated;Plant Phyllosphere	6	347.16	164	557
+Host-associated;Plant Phyllosphere	7	384.26	188	594
+Host-associated;Plant Phyllosphere	8	429.04	212	653
+Host-associated;Plant Phyllosphere	9	467.42	253	669
+Host-associated;Plant Phyllosphere	10	491.26	259	723
+Host-associated;Plant Phyllosphere	11	513	275	764
+Host-associated;Plant Phyllosphere	12	541.44	306	774
+Host-associated;Plant Phyllosphere	13	570.26	308	823
+Host-associated;Plant Phyllosphere	14	599	309	845
+Host-associated;Plant Phyllosphere	15	624.5	331	897
+Host-associated;Plant Phyllosphere	16	649.18	347	973
+Host-associated;Plant Phyllosphere	17	672.72	480	975
+Host-associated;Plant Phyllosphere	18	706.78	492	1004
+Host-associated;Plant Phyllosphere	19	731.14	493	1015
+Host-associated;Plant Phyllosphere	20	751.22	504	1095
+Host-associated;Plant Phyllosphere	21	781.54	504	1121
+Host-associated;Plant Phyllosphere	22	797.16	505	1145
+Host-associated;Plant Phyllosphere	23	814.02	505	1147
+Host-associated;Plant Phyllosphere	24	834.86	512	1149
+Host-associated;Plant Phyllosphere	25	856.7	539	1151
+Host-associated;Plant Phyllosphere	26	885	618	1170
+Host-associated;Plant Phyllosphere	27	907.74	645	1192
+Host-associated;Plant Phyllosphere	28	922.64	650	1201
+Host-associated;Plant Phyllosphere	29	943.76	660	1213
+Host-associated;Plant Phyllosphere	30	963.88	676	1231
+Host-associated;Plant Phyllosphere	31	985.54	702	1235
+Host-associated;Plant Phyllosphere	32	1005.1	703	1236
+Host-associated;Plant Phyllosphere	33	1027	707	1253
+Host-associated;Plant Phyllosphere	34	1039.84	709	1257
+Host-associated;Plant Phyllosphere	35	1052.14	711	1269
+Host-associated;Plant Phyllosphere	36	1071.88	721	1280
+Host-associated;Plant Phyllosphere	37	1094.62	805	1319
+Host-associated;Plant Phyllosphere	38	1108.08	808	1340
+Host-associated;Plant Phyllosphere	39	1125.18	860	1360
+Host-associated;Plant Phyllosphere	40	1144.06	899	1374
+Host-associated;Plant Phyllosphere	41	1161.3	903	1382
+Host-associated;Plant Phyllosphere	42	1173.1	905	1385
+Host-associated;Plant Phyllosphere	43	1187.14	959	1391
+Host-associated;Plant Phyllosphere	44	1203.98	959	1394
+Host-associated;Plant Phyllosphere	45	1221.88	959	1394
+Host-associated;Plant Phyllosphere	46	1240.16	966	1429
+Host-associated;Plant Phyllosphere	47	1250.56	979	1439
+Host-associated;Plant Phyllosphere	48	1262.84	992	1463
+Host-associated;Plant Phyllosphere	49	1276.76	1029	1465
+Host-associated;Plant Phyllosphere	50	1289.7	1038	1470
+Host-associated;Plant Phyllosphere	51	1307.72	1040	1480
+Host-associated;Plant Phyllosphere	52	1327.2	1090	1503
+Host-associated;Plant Phyllosphere	53	1341.6	1154	1511
+Host-associated;Plant Phyllosphere	54	1355.52	1160	1515
+Host-associated;Plant Phyllosphere	55	1366.54	1175	1515
+Host-associated;Plant Phyllosphere	56	1375.4	1188	1526
+Host-associated;Plant Phyllosphere	57	1391.94	1199	1540
+Host-associated;Plant Phyllosphere	58	1413.18	1242	1574
+Host-associated;Plant Phyllosphere	59	1423.6	1251	1574
+Host-associated;Plant Phyllosphere	60	1442.04	1256	1578
+Host-associated;Plant Phyllosphere	61	1455.2	1260	1592
+Host-associated;Plant Phyllosphere	62	1469.12	1289	1599
+Host-associated;Plant Phyllosphere	63	1490.7	1289	1601
+Host-associated;Plant Phyllosphere	64	1503.84	1302	1624
+Host-associated;Plant Phyllosphere	65	1518.4	1312	1634
+Host-associated;Plant Phyllosphere	66	1532.8	1386	1640
+Host-associated;Plant Phyllosphere	67	1546.2	1386	1651
+Host-associated;Plant Phyllosphere	68	1565.08	1446	1666
+Host-associated;Plant Phyllosphere	69	1578.62	1448	1674
+Host-associated;Plant Phyllosphere	70	1593.6	1468	1686
+Host-associated;Plant Phyllosphere	71	1601.74	1479	1686
+Host-associated;Plant Phyllosphere	72	1614.28	1485	1694
+Host-associated;Plant Phyllosphere	73	1625.54	1493	1707
+Host-associated;Plant Phyllosphere	74	1632.48	1499	1714
+Host-associated;Plant Phyllosphere	75	1644.22	1517	1715
+Host-associated;Plant Phyllosphere	76	1653.62	1520	1717
+Host-associated;Plant Phyllosphere	77	1663.02	1532	1721
+Host-associated;Plant Phyllosphere	78	1673.56	1548	1723
+Host-associated;Plant Phyllosphere	79	1688.06	1596	1729
+Host-associated;Plant Phyllosphere	80	1702.48	1617	1732
+Host-associated;Plant Phyllosphere	81	1718.34	1625	1732
+Host-associated;Plant Phyllosphere	82	1732	1732	1732
+Host-associated;Plant Rhizosphere	0	0	0	0
+Host-associated;Plant Rhizosphere	1	220.98	1	1077
+Host-associated;Plant Rhizosphere	2	383.44	21	1385
+Host-associated;Plant Rhizosphere	3	537.98	78	1769
+Host-associated;Plant Rhizosphere	4	665.98	92	1895
+Host-associated;Plant Rhizosphere	5	882.98	116	2720
+Host-associated;Plant Rhizosphere	6	1039.32	148	3034
+Host-associated;Plant Rhizosphere	7	1160.52	172	3362
+Host-associated;Plant Rhizosphere	8	1289.18	193	3365
+Host-associated;Plant Rhizosphere	9	1411.7	286	3383
+Host-associated;Plant Rhizosphere	10	1539.88	311	3560
+Host-associated;Plant Rhizosphere	11	1633.5	317	3565
+Host-associated;Plant Rhizosphere	12	1776.08	355	3599
+Host-associated;Plant Rhizosphere	13	1872.54	454	3615
+Host-associated;Plant Rhizosphere	14	1965.88	469	3807
+Host-associated;Plant Rhizosphere	15	2042.88	473	3808
+Host-associated;Plant Rhizosphere	16	2171.6	473	4080
+Host-associated;Plant Rhizosphere	17	2305.54	501	4268
+Host-associated;Plant Rhizosphere	18	2394.66	513	4619
+Host-associated;Plant Rhizosphere	19	2506.04	841	4633
+Host-associated;Plant Rhizosphere	20	2584.06	846	4822
+Host-associated;Plant Rhizosphere	21	2664.04	865	5332
+Host-associated;Plant Rhizosphere	22	2739.28	882	5360
+Host-associated;Plant Rhizosphere	23	2821.16	951	5371
+Host-associated;Plant Rhizosphere	24	2881.66	1213	5381
+Host-associated;Plant Rhizosphere	25	2954.76	1228	5405
+Host-associated;Plant Rhizosphere	26	3116.12	1427	5412
+Host-associated;Plant Rhizosphere	27	3205.52	1539	5433
+Host-associated;Plant Rhizosphere	28	3328.18	1539	5462
+Host-associated;Plant Rhizosphere	29	3398.5	1630	5495
+Host-associated;Plant Rhizosphere	30	3448.76	1633	5517
+Host-associated;Plant Rhizosphere	31	3540.76	1635	5521
+Host-associated;Plant Rhizosphere	32	3607.74	1648	5549
+Host-associated;Plant Rhizosphere	33	3678.06	1661	5635
+Host-associated;Plant Rhizosphere	34	3727.34	1666	5646
+Host-associated;Plant Rhizosphere	35	3810.24	1706	5762
+Host-associated;Plant Rhizosphere	36	3900.98	1710	5791
+Host-associated;Plant Rhizosphere	37	3967.8	1729	5795
+Host-associated;Plant Rhizosphere	38	4013.68	1744	5823
+Host-associated;Plant Rhizosphere	39	4084.92	1747	5835
+Host-associated;Plant Rhizosphere	40	4154.98	1779	5857
+Host-associated;Plant Rhizosphere	41	4253.12	2059	5889
+Host-associated;Plant Rhizosphere	42	4328.86	2104	5899
+Host-associated;Plant Rhizosphere	43	4411.68	2667	5901
+Host-associated;Plant Rhizosphere	44	4480.64	2673	5910
+Host-associated;Plant Rhizosphere	45	4586.22	2673	6079
+Host-associated;Plant Rhizosphere	46	4694.64	3015	6235
+Host-associated;Plant Rhizosphere	47	4800.26	3024	6254
+Host-associated;Plant Rhizosphere	48	4890.86	3036	6446
+Host-associated;Plant Rhizosphere	49	4975	3039	6462
+Host-associated;Plant Rhizosphere	50	5070.08	3123	6464
+Host-associated;Plant Rhizosphere	51	5139.12	3137	6471
+Host-associated;Plant Rhizosphere	52	5191.9	3154	6475
+Host-associated;Plant Rhizosphere	53	5228.26	3155	6515
+Host-associated;Plant Rhizosphere	54	5288.78	3157	6516
+Host-associated;Plant Rhizosphere	55	5346.98	3158	6578
+Host-associated;Plant Rhizosphere	56	5404.26	3221	6604
+Host-associated;Plant Rhizosphere	57	5470.58	3293	6683
+Host-associated;Plant Rhizosphere	58	5546.36	3957	6758
+Host-associated;Plant Rhizosphere	59	5609.04	3965	6769
+Host-associated;Plant Rhizosphere	60	5664.28	3970	6770
+Host-associated;Plant Rhizosphere	61	5692.04	3974	6823
+Host-associated;Plant Rhizosphere	62	5747.92	3976	6833
+Host-associated;Plant Rhizosphere	63	5841.16	4065	6994
+Host-associated;Plant Rhizosphere	64	5894.06	4067	7038
+Host-associated;Plant Rhizosphere	65	5945.7	4073	7257
+Host-associated;Plant Rhizosphere	66	6007.24	4088	7265
+Host-associated;Plant Rhizosphere	67	6052.6	4099	7266
+Host-associated;Plant Rhizosphere	68	6098.72	4128	7384
+Host-associated;Plant Rhizosphere	69	6158.54	4128	7388
+Host-associated;Plant Rhizosphere	70	6224.8	4582	7389
+Host-associated;Plant Rhizosphere	71	6267.92	4603	7393
+Host-associated;Plant Rhizosphere	72	6296.4	4608	7633
+Host-associated;Plant Rhizosphere	73	6376.76	4675	7652
+Host-associated;Plant Rhizosphere	74	6411.88	4679	7938
+Host-associated;Plant Rhizosphere	75	6453.46	4679	7942
+Host-associated;Plant Rhizosphere	76	6479.6	4684	7954
+Host-associated;Plant Rhizosphere	77	6527.44	4715	7959
+Host-associated;Plant Rhizosphere	78	6571.28	4803	7961
+Host-associated;Plant Rhizosphere	79	6608.98	4808	7962
+Host-associated;Plant Rhizosphere	80	6676.64	4809	7966
+Host-associated;Plant Rhizosphere	81	6746.66	4849	8000
+Host-associated;Plant Rhizosphere	82	6823.08	5592	8087
+Host-associated;Plant Rhizosphere	83	6865.62	5719	8096
+Host-associated;Plant Rhizosphere	84	6926.06	5727	8103
+Host-associated;Plant Rhizosphere	85	6965	5747	8109
+Host-associated;Plant Rhizosphere	86	7024.7	5749	8122
+Host-associated;Plant Rhizosphere	87	7061.7	5755	8132
+Host-associated;Plant Rhizosphere	88	7086.68	5757	8135
+Host-associated;Plant Rhizosphere	89	7143.1	5821	8135
+Host-associated;Plant Rhizosphere	90	7192.78	5828	8183
+Host-associated;Plant Rhizosphere	91	7251.14	6086	8186
+Host-associated;Plant Rhizosphere	92	7321.32	6110	8282
+Host-associated;Plant Rhizosphere	93	7348.02	6132	8339
+Host-associated;Plant Rhizosphere	94	7383.06	6135	8346
+Host-associated;Plant Rhizosphere	95	7442.48	6155	8354
+Host-associated;Plant Rhizosphere	96	7465.16	6192	8357
+Host-associated;Plant Rhizosphere	97	7508.9	6344	8384
+Host-associated;Plant Rhizosphere	98	7586.12	6348	8406
+Host-associated;Plant Rhizosphere	99	7624.84	6352	8412
+Host-associated;Plant Rhizosphere	100	7678.98	6703	8440
+Host-associated;Plant Rhizosphere	101	7721.1	6711	8448
+Host-associated;Plant Rhizosphere	102	7753.1	6749	8488
+Host-associated;Plant Rhizosphere	103	7797.8	6757	8667
+Host-associated;Plant Rhizosphere	104	7868.66	6763	8727
+Host-associated;Plant Rhizosphere	105	7910.98	6808	8770
+Host-associated;Plant Rhizosphere	106	7948.18	6825	8786
+Host-associated;Plant Rhizosphere	107	7983.16	6826	8831
+Host-associated;Plant Rhizosphere	108	8022.92	6826	8832
+Host-associated;Plant Rhizosphere	109	8073.2	6841	8854
+Host-associated;Plant Rhizosphere	110	8118.16	6969	8855
+Host-associated;Plant Rhizosphere	111	8154.14	6971	8859
+Host-associated;Plant Rhizosphere	112	8201.36	7070	9075
+Host-associated;Plant Rhizosphere	113	8246.14	7168	9078
+Host-associated;Plant Rhizosphere	114	8287.26	7171	9109
+Host-associated;Plant Rhizosphere	115	8318.34	7173	9164
+Host-associated;Plant Rhizosphere	116	8355.5	7187	9181
+Host-associated;Plant Rhizosphere	117	8398.58	7195	9204
+Host-associated;Plant Rhizosphere	118	8434.1	7513	9298
+Host-associated;Plant Rhizosphere	119	8499.92	7563	9324
+Host-associated;Plant Rhizosphere	120	8540.08	7570	9351
+Host-associated;Plant Rhizosphere	121	8589.88	7678	9355
+Host-associated;Plant Rhizosphere	122	8616.32	7679	9359
+Host-associated;Plant Rhizosphere	123	8641.18	7681	9433
+Host-associated;Plant Rhizosphere	124	8666.24	7683	9444
+Host-associated;Plant Rhizosphere	125	8704.16	7750	9444
+Host-associated;Plant Rhizosphere	126	8732.6	7753	9449
+Host-associated;Plant Rhizosphere	127	8756.46	7779	9455
+Host-associated;Plant Rhizosphere	128	8786.2	7785	9460
+Host-associated;Plant Rhizosphere	129	8831.78	7799	9462
+Host-associated;Plant Rhizosphere	130	8865.72	7816	9462
+Host-associated;Plant Rhizosphere	131	8898.38	7818	9467
+Host-associated;Plant Rhizosphere	132	8931.86	7820	9474
+Host-associated;Plant Rhizosphere	133	8965.56	7822	9500
+Host-associated;Plant Rhizosphere	134	9005.78	7828	9500
+Host-associated;Plant Rhizosphere	135	9056.18	7836	9635
+Host-associated;Plant Rhizosphere	136	9110.98	8413	9638
+Host-associated;Plant Rhizosphere	137	9146.16	8414	9669
+Host-associated;Plant Rhizosphere	138	9202.58	8464	9681
+Host-associated;Plant Rhizosphere	139	9247.6	8464	9719
+Host-associated;Plant Rhizosphere	140	9274.16	8466	9721
+Host-associated;Plant Rhizosphere	141	9303.82	8587	9763
+Host-associated;Plant Rhizosphere	142	9339.08	8587	9770
+Host-associated;Plant Rhizosphere	143	9384.72	8829	9770
+Host-associated;Plant Rhizosphere	144	9439.04	8853	9778
+Host-associated;Plant Rhizosphere	145	9475.68	8936	9782
+Host-associated;Plant Rhizosphere	146	9528.8	9053	9785
+Host-associated;Plant Rhizosphere	147	9562	9170	9788
+Host-associated;Plant Rhizosphere	148	9587.18	9202	9801
+Host-associated;Plant Rhizosphere	149	9618.08	9315	9803
+Host-associated;Plant Rhizosphere	150	9657.24	9344	9805
+Host-associated;Plant Rhizosphere	151	9704.9	9401	9812
+Host-associated;Plant Rhizosphere	152	9734.94	9415	9814
+Host-associated;Plant Rhizosphere	153	9769.3	9538	9814
+Host-associated;Plant Rhizosphere	154	9814	9814	9814
+Terrestrial;Plant litter and peat	0	0	0	0
+Terrestrial;Plant litter and peat	1	96.8	3	209
+Terrestrial;Plant litter and peat	2	170.7	63	331
+Terrestrial;Plant litter and peat	3	245.46	111	392
+Terrestrial;Plant litter and peat	4	306.62	172	479
+Terrestrial;Plant litter and peat	5	369.66	231	565
+Terrestrial;Plant litter and peat	6	424.98	296	668
+Terrestrial;Plant litter and peat	7	480.44	329	745
+Terrestrial;Plant litter and peat	8	529.36	361	784
+Terrestrial;Plant litter and peat	9	573.76	405	877
+Terrestrial;Plant litter and peat	10	618.96	426	887
+Terrestrial;Plant litter and peat	11	664.22	464	952
+Terrestrial;Plant litter and peat	12	707.66	499	972
+Terrestrial;Plant litter and peat	13	741.1	516	1003
+Terrestrial;Plant litter and peat	14	779.12	527	1033
+Terrestrial;Plant litter and peat	15	818.02	604	1075
+Terrestrial;Plant litter and peat	16	868.08	622	1153
+Terrestrial;Plant litter and peat	17	905.24	644	1188
+Terrestrial;Plant litter and peat	18	942.12	688	1234
+Terrestrial;Plant litter and peat	19	981.74	715	1293
+Terrestrial;Plant litter and peat	20	1019.16	738	1330
+Terrestrial;Plant litter and peat	21	1061.02	777	1362
+Terrestrial;Plant litter and peat	22	1093.2	796	1387
+Terrestrial;Plant litter and peat	23	1130.96	847	1433
+Terrestrial;Plant litter and peat	24	1162.22	869	1443
+Terrestrial;Plant litter and peat	25	1199	904	1480
+Terrestrial;Plant litter and peat	26	1238.58	917	1525
+Terrestrial;Plant litter and peat	27	1269.76	926	1540
+Terrestrial;Plant litter and peat	28	1305.72	950	1562
+Terrestrial;Plant litter and peat	29	1335.76	973	1603
+Terrestrial;Plant litter and peat	30	1367	994	1656
+Terrestrial;Plant litter and peat	31	1393.32	1011	1671
+Terrestrial;Plant litter and peat	32	1421.82	1051	1699
+Terrestrial;Plant litter and peat	33	1456.72	1089	1760
+Terrestrial;Plant litter and peat	34	1486.8	1095	1795
+Terrestrial;Plant litter and peat	35	1521.06	1112	1867
+Terrestrial;Plant litter and peat	36	1549.84	1131	1906
+Terrestrial;Plant litter and peat	37	1573.56	1203	1939
+Terrestrial;Plant litter and peat	38	1600.4	1246	1973
+Terrestrial;Plant litter and peat	39	1630.5	1260	1987
+Terrestrial;Plant litter and peat	40	1657.1	1285	2000
+Terrestrial;Plant litter and peat	41	1690.28	1371	2036
+Terrestrial;Plant litter and peat	42	1715.6	1377	2038
+Terrestrial;Plant litter and peat	43	1744.64	1401	2040
+Terrestrial;Plant litter and peat	44	1770.38	1419	2067
+Terrestrial;Plant litter and peat	45	1796.5	1444	2079
+Terrestrial;Plant litter and peat	46	1818.72	1475	2107
+Terrestrial;Plant litter and peat	47	1844.72	1515	2139
+Terrestrial;Plant litter and peat	48	1873.3	1536	2215
+Terrestrial;Plant litter and peat	49	1906.8	1555	2227
+Terrestrial;Plant litter and peat	50	1934.66	1644	2257
+Terrestrial;Plant litter and peat	51	1958.88	1651	2305
+Terrestrial;Plant litter and peat	52	1980.84	1661	2314
+Terrestrial;Plant litter and peat	53	2009.64	1718	2361
+Terrestrial;Plant litter and peat	54	2028.58	1735	2367
+Terrestrial;Plant litter and peat	55	2052.16	1756	2403
+Terrestrial;Plant litter and peat	56	2074.5	1787	2413
+Terrestrial;Plant litter and peat	57	2097.72	1803	2420
+Terrestrial;Plant litter and peat	58	2125.06	1818	2435
+Terrestrial;Plant litter and peat	59	2152.48	1847	2442
+Terrestrial;Plant litter and peat	60	2180.04	1864	2451
+Terrestrial;Plant litter and peat	61	2204.74	1875	2474
+Terrestrial;Plant litter and peat	62	2228.2	1888	2494
+Terrestrial;Plant litter and peat	63	2255.24	1927	2503
+Terrestrial;Plant litter and peat	64	2280.64	1941	2527
+Terrestrial;Plant litter and peat	65	2304.14	1947	2551
+Terrestrial;Plant litter and peat	66	2323.72	1973	2555
+Terrestrial;Plant litter and peat	67	2342.48	1984	2571
+Terrestrial;Plant litter and peat	68	2362.56	1995	2588
+Terrestrial;Plant litter and peat	69	2384.86	2034	2606
+Terrestrial;Plant litter and peat	70	2402.36	2047	2639
+Terrestrial;Plant litter and peat	71	2424.48	2047	2715
+Terrestrial;Plant litter and peat	72	2443.38	2049	2732
+Terrestrial;Plant litter and peat	73	2466.3	2065	2743
+Terrestrial;Plant litter and peat	74	2492.56	2159	2750
+Terrestrial;Plant litter and peat	75	2515.6	2167	2818
+Terrestrial;Plant litter and peat	76	2538.24	2180	2828
+Terrestrial;Plant litter and peat	77	2555.82	2214	2844
+Terrestrial;Plant litter and peat	78	2577.54	2233	2861
+Terrestrial;Plant litter and peat	79	2596.64	2279	2876
+Terrestrial;Plant litter and peat	80	2618.56	2284	2881
+Terrestrial;Plant litter and peat	81	2639.08	2298	2891
+Terrestrial;Plant litter and peat	82	2658.94	2360	2895
+Terrestrial;Plant litter and peat	83	2683.1	2369	2906
+Terrestrial;Plant litter and peat	84	2699.42	2372	2927
+Terrestrial;Plant litter and peat	85	2722.22	2387	2942
+Terrestrial;Plant litter and peat	86	2744.08	2410	2957
+Terrestrial;Plant litter and peat	87	2765.36	2420	2963
+Terrestrial;Plant litter and peat	88	2782.58	2445	2973
+Terrestrial;Plant litter and peat	89	2803.22	2449	3006
+Terrestrial;Plant litter and peat	90	2820.76	2477	3016
+Terrestrial;Plant litter and peat	91	2840.98	2498	3050
+Terrestrial;Plant litter and peat	92	2867.18	2622	3061
+Terrestrial;Plant litter and peat	93	2885.56	2636	3078
+Terrestrial;Plant litter and peat	94	2900.74	2636	3102
+Terrestrial;Plant litter and peat	95	2921.1	2646	3117
+Terrestrial;Plant litter and peat	96	2943.62	2676	3162
+Terrestrial;Plant litter and peat	97	2964.26	2704	3172
+Terrestrial;Plant litter and peat	98	2985.4	2715	3235
+Terrestrial;Plant litter and peat	99	3006.4	2723	3246
+Terrestrial;Plant litter and peat	100	3030.36	2726	3255
+Terrestrial;Plant litter and peat	101	3053.88	2730	3283
+Terrestrial;Plant litter and peat	102	3076.1	2738	3283
+Terrestrial;Plant litter and peat	103	3095.5	2746	3290
+Terrestrial;Plant litter and peat	104	3114.8	2765	3306
+Terrestrial;Plant litter and peat	105	3136.4	2781	3338
+Terrestrial;Plant litter and peat	106	3153.98	2796	3377
+Terrestrial;Plant litter and peat	107	3175	2804	3390
+Terrestrial;Plant litter and peat	108	3192.08	2804	3406
+Terrestrial;Plant litter and peat	109	3210.3	2807	3418
+Terrestrial;Plant litter and peat	110	3229.96	2894	3431
+Terrestrial;Plant litter and peat	111	3248.04	2912	3455
+Terrestrial;Plant litter and peat	112	3266.6	2971	3463
+Terrestrial;Plant litter and peat	113	3288.18	2998	3497
+Terrestrial;Plant litter and peat	114	3310.74	3001	3507
+Terrestrial;Plant litter and peat	115	3328.52	3013	3521
+Terrestrial;Plant litter and peat	116	3342.7	3063	3560
+Terrestrial;Plant litter and peat	117	3360.28	3107	3572
+Terrestrial;Plant litter and peat	118	3375.98	3113	3577
+Terrestrial;Plant litter and peat	119	3391.88	3128	3599
+Terrestrial;Plant litter and peat	120	3408.66	3135	3611
+Terrestrial;Plant litter and peat	121	3428.4	3171	3621
+Terrestrial;Plant litter and peat	122	3447.64	3174	3630
+Terrestrial;Plant litter and peat	123	3463.78	3180	3646
+Terrestrial;Plant litter and peat	124	3481.46	3188	3658
+Terrestrial;Plant litter and peat	125	3498.96	3271	3670
+Terrestrial;Plant litter and peat	126	3515.88	3293	3693
+Terrestrial;Plant litter and peat	127	3535.5	3305	3707
+Terrestrial;Plant litter and peat	128	3552.42	3353	3722
+Terrestrial;Plant litter and peat	129	3570.1	3361	3747
+Terrestrial;Plant litter and peat	130	3589.2	3369	3763
+Terrestrial;Plant litter and peat	131	3607.84	3384	3792
+Terrestrial;Plant litter and peat	132	3624.4	3391	3801
+Terrestrial;Plant litter and peat	133	3642.98	3417	3803
+Terrestrial;Plant litter and peat	134	3657.14	3439	3817
+Terrestrial;Plant litter and peat	135	3675.04	3455	3827
+Terrestrial;Plant litter and peat	136	3691.86	3457	3833
+Terrestrial;Plant litter and peat	137	3709.54	3492	3851
+Terrestrial;Plant litter and peat	138	3726.9	3494	3870
+Terrestrial;Plant litter and peat	139	3739.32	3506	3882
+Terrestrial;Plant litter and peat	140	3758.76	3525	3928
+Terrestrial;Plant litter and peat	141	3774.18	3536	3933
+Terrestrial;Plant litter and peat	142	3789.58	3544	3938
+Terrestrial;Plant litter and peat	143	3803.58	3558	3945
+Terrestrial;Plant litter and peat	144	3818.34	3568	3961
+Terrestrial;Plant litter and peat	145	3836.34	3630	4015
+Terrestrial;Plant litter and peat	146	3851.46	3680	4017
+Terrestrial;Plant litter and peat	147	3868.28	3694	4025
+Terrestrial;Plant litter and peat	148	3883.74	3719	4029
+Terrestrial;Plant litter and peat	149	3902.22	3752	4038
+Terrestrial;Plant litter and peat	150	3917.66	3763	4047
+Terrestrial;Plant litter and peat	151	3931.48	3773	4050
+Terrestrial;Plant litter and peat	152	3946.64	3786	4060
+Terrestrial;Plant litter and peat	153	3968.42	3840	4076
+Terrestrial;Plant litter and peat	154	3983.8	3850	4082
+Terrestrial;Plant litter and peat	155	3999.54	3862	4088
+Terrestrial;Plant litter and peat	156	4017	3903	4094
+Terrestrial;Plant litter and peat	157	4030.56	3923	4127
+Terrestrial;Plant litter and peat	158	4048.78	3933	4133
+Terrestrial;Plant litter and peat	159	4065.14	3961	4141
+Terrestrial;Plant litter and peat	160	4080.3	4013	4155
+Terrestrial;Plant litter and peat	161	4095.36	4025	4164
+Terrestrial;Plant litter and peat	162	4110.94	4035	4168
+Terrestrial;Plant litter and peat	163	4125.7	4044	4174
+Terrestrial;Plant litter and peat	164	4143.9	4079	4192
+Terrestrial;Plant litter and peat	165	4156.86	4087	4203
+Terrestrial;Plant litter and peat	166	4170.58	4094	4211
+Terrestrial;Plant litter and peat	167	4184.94	4122	4226
+Terrestrial;Plant litter and peat	168	4202.42	4147	4228
+Terrestrial;Plant litter and peat	169	4216.54	4164	4230
+Terrestrial;Plant litter and peat	170	4230	4230	4230
+Terrestrial;Soil	0	0	0	0
+Terrestrial;Soil	1	72.46	1	272
+Terrestrial;Soil	2	205.26	13	1002
+Terrestrial;Soil	3	356.96	16	1565
+Terrestrial;Soil	4	534.66	23	2104
+Terrestrial;Soil	5	702.52	48	2213
+Terrestrial;Soil	6	896.48	69	2227
+Terrestrial;Soil	7	1028.22	115	2250
+Terrestrial;Soil	8	1164.96	132	2424
+Terrestrial;Soil	9	1242.74	224	2468
+Terrestrial;Soil	10	1405.46	263	2550
+Terrestrial;Soil	11	1576.9	264	2759
+Terrestrial;Soil	12	1694.4	299	2998
+Terrestrial;Soil	13	1865.4	365	3207
+Terrestrial;Soil	14	1983.32	587	3589
+Terrestrial;Soil	15	2113.66	723	3623
+Terrestrial;Soil	16	2254.48	885	3801
+Terrestrial;Soil	17	2371.38	991	3826
+Terrestrial;Soil	18	2506.84	1023	3886
+Terrestrial;Soil	19	2637.08	1055	4288
+Terrestrial;Soil	20	2723.98	1100	4320
+Terrestrial;Soil	21	2854.06	1103	4833
+Terrestrial;Soil	22	2998.98	1310	5233
+Terrestrial;Soil	23	3100.98	1394	5234
+Terrestrial;Soil	24	3206.14	1397	5599
+Terrestrial;Soil	25	3302.24	1427	5609
+Terrestrial;Soil	26	3408.42	1443	5876
+Terrestrial;Soil	27	3539.84	1455	5885
+Terrestrial;Soil	28	3681.52	1491	6263
+Terrestrial;Soil	29	3790.36	1499	6335
+Terrestrial;Soil	30	3899	1861	6726
+Terrestrial;Soil	31	4009.62	1969	6816
+Terrestrial;Soil	32	4139.52	2040	7025
+Terrestrial;Soil	33	4219.16	2186	7032
+Terrestrial;Soil	34	4308.54	2260	7045
+Terrestrial;Soil	35	4425.16	2306	7132
+Terrestrial;Soil	36	4506	2687	7135
+Terrestrial;Soil	37	4659.9	2869	7187
+Terrestrial;Soil	38	4740.08	3082	7206
+Terrestrial;Soil	39	4835.28	3196	7214
+Terrestrial;Soil	40	4957	3273	7371
+Terrestrial;Soil	41	5051.9	3273	7473
+Terrestrial;Soil	42	5144.1	3356	7542
+Terrestrial;Soil	43	5254.98	3379	7874
+Terrestrial;Soil	44	5339.8	3381	7882
+Terrestrial;Soil	45	5417.44	3463	7975
+Terrestrial;Soil	46	5499.84	3493	8590
+Terrestrial;Soil	47	5574.04	3499	8600
+Terrestrial;Soil	48	5671.06	3514	8642
+Terrestrial;Soil	49	5759.32	3515	8664
+Terrestrial;Soil	50	5838.38	3638	8862
+Terrestrial;Soil	51	5934.98	3640	8989
+Terrestrial;Soil	52	6052.24	3640	9418
+Terrestrial;Soil	53	6137.4	3647	9425
+Terrestrial;Soil	54	6229.24	3788	9434
+Terrestrial;Soil	55	6294.12	4099	9519
+Terrestrial;Soil	56	6383.52	4104	9674
+Terrestrial;Soil	57	6481.18	4212	9859
+Terrestrial;Soil	58	6630.34	4730	9873
+Terrestrial;Soil	59	6743.48	4747	10144
+Terrestrial;Soil	60	6811.68	4747	10212
+Terrestrial;Soil	61	6899.66	4751	10466
+Terrestrial;Soil	62	7020.2	4755	10564
+Terrestrial;Soil	63	7129.32	4931	10629
+Terrestrial;Soil	64	7193.38	4976	10640
+Terrestrial;Soil	65	7282.8	5047	10679
+Terrestrial;Soil	66	7380.7	5050	10852
+Terrestrial;Soil	67	7442.9	5077	10868
+Terrestrial;Soil	68	7535.12	5080	10904
+Terrestrial;Soil	69	7593.56	5120	10904
+Terrestrial;Soil	70	7667.84	5125	10934
+Terrestrial;Soil	71	7730.16	5142	10938
+Terrestrial;Soil	72	7790.62	5143	10938
+Terrestrial;Soil	73	7874.72	5182	10949
+Terrestrial;Soil	74	7961.5	5210	10961
+Terrestrial;Soil	75	8037.46	5214	10980
+Terrestrial;Soil	76	8115.84	5241	11038
+Terrestrial;Soil	77	8193.7	5287	11294
+Terrestrial;Soil	78	8231.08	5287	11298
+Terrestrial;Soil	79	8307.68	5573	11298
+Terrestrial;Soil	80	8402.14	5594	11360
+Terrestrial;Soil	81	8470.86	5618	11389
+Terrestrial;Soil	82	8545.24	5624	11859
+Terrestrial;Soil	83	8657.52	5789	11884
+Terrestrial;Soil	84	8747.76	5799	12225
+Terrestrial;Soil	85	8822.38	5810	12394
+Terrestrial;Soil	86	8882.72	5810	12411
+Terrestrial;Soil	87	8981.12	6944	12451
+Terrestrial;Soil	88	9030.86	7007	12455
+Terrestrial;Soil	89	9121.98	7023	12790
+Terrestrial;Soil	90	9192.52	7141	13050
+Terrestrial;Soil	91	9228.2	7162	13052
+Terrestrial;Soil	92	9311.32	7163	13098
+Terrestrial;Soil	93	9407.16	7167	13173
+Terrestrial;Soil	94	9483.1	7264	13790
+Terrestrial;Soil	95	9569.08	7265	13792
+Terrestrial;Soil	96	9635.8	7283	13929
+Terrestrial;Soil	97	9706.88	7425	14010
+Terrestrial;Soil	98	9769	7430	14013
+Terrestrial;Soil	99	9867.54	7433	14039
+Terrestrial;Soil	100	9914.66	7434	14039
+Terrestrial;Soil	101	9989.78	7451	14039
+Terrestrial;Soil	102	10081.36	7467	14039
+Terrestrial;Soil	103	10162.84	7484	14043
+Terrestrial;Soil	104	10214.26	7517	14180
+Terrestrial;Soil	105	10305.42	7518	14218
+Terrestrial;Soil	106	10382.32	7532	14256
+Terrestrial;Soil	107	10464.82	7622	14261
+Terrestrial;Soil	108	10556.12	7628	14294
+Terrestrial;Soil	109	10624.56	7629	14315
+Terrestrial;Soil	110	10705.8	7635	14325
+Terrestrial;Soil	111	10767.36	8009	14376
+Terrestrial;Soil	112	10869.76	8017	14387
+Terrestrial;Soil	113	10918.42	8094	14493
+Terrestrial;Soil	114	10969.96	8096	14524
+Terrestrial;Soil	115	11048.84	8175	14564
+Terrestrial;Soil	116	11090.4	8206	14571
+Terrestrial;Soil	117	11154.56	8219	14571
+Terrestrial;Soil	118	11255.24	8428	14677
+Terrestrial;Soil	119	11331.64	8448	14697
+Terrestrial;Soil	120	11384.3	8453	14730
+Terrestrial;Soil	121	11447.12	8458	14736
+Terrestrial;Soil	122	11499.66	8553	14745
+Terrestrial;Soil	123	11563.82	8589	14751
+Terrestrial;Soil	124	11643.12	8728	14772
+Terrestrial;Soil	125	11672.28	8762	14782
+Terrestrial;Soil	126	11731.22	8773	14802
+Terrestrial;Soil	127	11781.58	8777	14831
+Terrestrial;Soil	128	11839.44	8910	14838
+Terrestrial;Soil	129	11935.9	9179	14838
+Terrestrial;Soil	130	11995.6	9194	14847
+Terrestrial;Soil	131	12046.88	9243	14994
+Terrestrial;Soil	132	12123.94	9292	15078
+Terrestrial;Soil	133	12163.92	9294	15079
+Terrestrial;Soil	134	12236.6	9314	15149
+Terrestrial;Soil	135	12282.98	9345	15149
+Terrestrial;Soil	136	12344.08	9355	15171
+Terrestrial;Soil	137	12402.46	9369	15302
+Terrestrial;Soil	138	12459.2	9496	15302
+Terrestrial;Soil	139	12494.28	9571	15423
+Terrestrial;Soil	140	12551.02	9849	15691
+Terrestrial;Soil	141	12609.64	10108	15701
+Terrestrial;Soil	142	12700.78	10114	15771
+Terrestrial;Soil	143	12757	10120	15778
+Terrestrial;Soil	144	12815.22	10213	16039
+Terrestrial;Soil	145	12882.64	10222	16358
+Terrestrial;Soil	146	12924.02	10276	16385
+Terrestrial;Soil	147	13013.2	10308	16712
+Terrestrial;Soil	148	13055.44	10340	16712
+Terrestrial;Soil	149	13111.66	10355	16714
+Terrestrial;Soil	150	13149.86	10355	16715
+Terrestrial;Soil	151	13205.76	10355	16776
+Terrestrial;Soil	152	13260.2	10387	16776
+Terrestrial;Soil	153	13299.68	10555	16786
+Terrestrial;Soil	154	13370.52	10560	16891
+Terrestrial;Soil	155	13424.08	10563	16932
+Terrestrial;Soil	156	13476	10577	17151
+Terrestrial;Soil	157	13527.46	10622	17185
+Terrestrial;Soil	158	13577.24	10658	17185
+Terrestrial;Soil	159	13649.92	10658	17205
+Terrestrial;Soil	160	13721.24	10680	17232
+Terrestrial;Soil	161	13765.82	10695	17232
+Terrestrial;Soil	162	13879.02	10697	17389
+Terrestrial;Soil	163	13917.04	10984	17410
+Terrestrial;Soil	164	13965.58	10985	17658
+Terrestrial;Soil	165	14031.12	10991	17908
+Terrestrial;Soil	166	14098.96	11038	17975
+Terrestrial;Soil	167	14174.08	11047	17976
+Terrestrial;Soil	168	14229.84	11053	17992
+Terrestrial;Soil	169	14277.74	11058	18027
+Terrestrial;Soil	170	14327.78	11134	18028
+Terrestrial;Soil	171	14402.92	11163	18052
+Terrestrial;Soil	172	14498.8	11168	18054
+Terrestrial;Soil	173	14566.8	11169	18278
+Terrestrial;Soil	174	14605.76	11173	18310
+Terrestrial;Soil	175	14685.7	11296	18323
+Terrestrial;Soil	176	14768.86	11299	18388
+Terrestrial;Soil	177	14824.46	11308	18418
+Terrestrial;Soil	178	14870.46	11327	18418
+Terrestrial;Soil	179	14926.58	11363	18419
+Terrestrial;Soil	180	15005.04	11369	18534
+Terrestrial;Soil	181	15082.6	11436	18790
+Terrestrial;Soil	182	15156.2	11705	19076
+Terrestrial;Soil	183	15197.6	11719	19079
+Terrestrial;Soil	184	15236.06	11742	19084
+Terrestrial;Soil	185	15310.14	11749	19783
+Terrestrial;Soil	186	15357.6	11749	19790
+Terrestrial;Soil	187	15441.22	11866	19820
+Terrestrial;Soil	188	15487.52	11882	19826
+Terrestrial;Soil	189	15566.44	11882	19827
+Terrestrial;Soil	190	15602.08	11993	19849
+Terrestrial;Soil	191	15652.86	12030	19911
+Terrestrial;Soil	192	15706.66	12071	20227
+Terrestrial;Soil	193	15763.26	12108	20366
+Terrestrial;Soil	194	15818.9	12202	20371
+Terrestrial;Soil	195	15861.46	12512	20414
+Terrestrial;Soil	196	15914.02	12519	20414
+Terrestrial;Soil	197	15951.08	12558	20449
+Terrestrial;Soil	198	15992.86	12564	20672
+Terrestrial;Soil	199	16046.1	12674	20687
+Terrestrial;Soil	200	16102.08	12680	20808
+Terrestrial;Soil	201	16155.38	12680	21355
+Terrestrial;Soil	202	16241.92	12780	21418
+Terrestrial;Soil	203	16273.66	12798	21421
+Terrestrial;Soil	204	16332.2	12807	21424
+Terrestrial;Soil	205	16385.56	12930	21427
+Terrestrial;Soil	206	16493.4	13247	21501
+Terrestrial;Soil	207	16535.8	13255	21538
+Terrestrial;Soil	208	16576.14	13312	21562
+Terrestrial;Soil	209	16627.52	13355	21685
+Terrestrial;Soil	210	16686.52	13357	21830
+Terrestrial;Soil	211	16737.42	13361	21830
+Terrestrial;Soil	212	16788.96	13362	21831
+Terrestrial;Soil	213	16828.04	13362	21831
+Terrestrial;Soil	214	16876.16	13366	21878
+Terrestrial;Soil	215	16936.78	13446	21922
+Terrestrial;Soil	216	16997.94	13451	22145
+Terrestrial;Soil	217	17053.46	13504	22199
+Terrestrial;Soil	218	17112.56	13513	22202
+Terrestrial;Soil	219	17155.34	13531	22223
+Terrestrial;Soil	220	17217.82	13605	22275
+Terrestrial;Soil	221	17285.36	13617	22278
+Terrestrial;Soil	222	17334.1	13885	22307
+Terrestrial;Soil	223	17379.5	14024	22457
+Terrestrial;Soil	224	17427.02	14241	22496
+Terrestrial;Soil	225	17472.84	14241	22531
+Terrestrial;Soil	226	17526.66	14257	22548
+Terrestrial;Soil	227	17580.24	14923	22551
+Terrestrial;Soil	228	17629.44	14938	22573
+Terrestrial;Soil	229	17693.08	14994	22590
+Terrestrial;Soil	230	17748.12	15105	22700
+Terrestrial;Soil	231	17796.64	15105	22709
+Terrestrial;Soil	232	17847.7	15277	22782
+Terrestrial;Soil	233	17903.16	15315	22846
+Terrestrial;Soil	234	17941.4	15435	22851
+Terrestrial;Soil	235	18030.14	15457	22915
+Terrestrial;Soil	236	18073.64	15496	23045
+Terrestrial;Soil	237	18134.72	15549	23058
+Terrestrial;Soil	238	18195.58	15915	23088
+Terrestrial;Soil	239	18235	15917	23103
+Terrestrial;Soil	240	18292.66	15954	23160
+Terrestrial;Soil	241	18351.84	15958	23278
+Terrestrial;Soil	242	18392.6	15981	23431
+Terrestrial;Soil	243	18443.7	16244	23432
+Terrestrial;Soil	244	18512.52	16332	23433
+Terrestrial;Soil	245	18575.5	16512	23464
+Terrestrial;Soil	246	18609.14	16526	23464
+Terrestrial;Soil	247	18662.64	16539	23517
+Terrestrial;Soil	248	18719.42	16671	23517
+Terrestrial;Soil	249	18752.16	16671	23525
+Terrestrial;Soil	250	18799.32	16694	23534
+Terrestrial;Soil	251	18837.32	16697	23565
+Terrestrial;Soil	252	18867.62	16699	23572
+Terrestrial;Soil	253	18952.18	16736	23573
+Terrestrial;Soil	254	19005.18	16743	23606
+Terrestrial;Soil	255	19088.96	16952	23607
+Terrestrial;Soil	256	19128.84	16960	23621
+Terrestrial;Soil	257	19165.96	16963	23718
+Terrestrial;Soil	258	19196.88	16965	23731
+Terrestrial;Soil	259	19227.92	16969	23731
+Terrestrial;Soil	260	19294.1	16972	23731
+Terrestrial;Soil	261	19337.92	17003	23828
+Terrestrial;Soil	262	19382.1	17013	23919
+Terrestrial;Soil	263	19435.42	17146	23990
+Terrestrial;Soil	264	19487.64	17174	24098
+Terrestrial;Soil	265	19544.28	17522	24114
+Terrestrial;Soil	266	19604.96	17523	24338
+Terrestrial;Soil	267	19667.3	17541	24339
+Terrestrial;Soil	268	19750.4	17567	24339
+Terrestrial;Soil	269	19793.22	17632	24486
+Terrestrial;Soil	270	19863.54	17638	24495
+Terrestrial;Soil	271	19903.64	17666	24509
+Terrestrial;Soil	272	19956.54	17669	24513
+Terrestrial;Soil	273	20063.04	17679	24565
+Terrestrial;Soil	274	20103	17730	24565
+Terrestrial;Soil	275	20171.94	17837	24580
+Terrestrial;Soil	276	20214.8	17854	24590
+Terrestrial;Soil	277	20267.32	17864	24594
+Terrestrial;Soil	278	20334.1	17864	24671
+Terrestrial;Soil	279	20379.18	17864	24869
+Terrestrial;Soil	280	20424.42	17874	24975
+Terrestrial;Soil	281	20466.9	17889	24996
+Terrestrial;Soil	282	20501.2	17897	24998
+Terrestrial;Soil	283	20556.58	17927	25008
+Terrestrial;Soil	284	20605.74	18096	25009
+Terrestrial;Soil	285	20645.34	18098	25021
+Terrestrial;Soil	286	20680.98	18106	25046
+Terrestrial;Soil	287	20731.74	18116	25046
+Terrestrial;Soil	288	20802.32	18156	25058
+Terrestrial;Soil	289	20855.3	18162	25199
+Terrestrial;Soil	290	20920.82	18212	25200
+Terrestrial;Soil	291	20969.9	18212	25216
+Terrestrial;Soil	292	20998.22	18215	25260
+Terrestrial;Soil	293	21047.48	18289	25268
+Terrestrial;Soil	294	21084.1	18311	25307
+Terrestrial;Soil	295	21128.12	18312	25324
+Terrestrial;Soil	296	21199.5	18322	25332
+Terrestrial;Soil	297	21243.34	18340	25345
+Terrestrial;Soil	298	21319.96	18389	25359
+Terrestrial;Soil	299	21368.82	19069	25560
+Terrestrial;Soil	300	21405.16	19088	25641
+Terrestrial;Soil	301	21452.9	19088	25652
+Terrestrial;Soil	302	21504.42	19089	25652
+Terrestrial;Soil	303	21540.96	19095	25733
+Terrestrial;Soil	304	21591.16	19101	25739
+Terrestrial;Soil	305	21647.48	19115	25765
+Terrestrial;Soil	306	21686.5	19131	25766
+Terrestrial;Soil	307	21724.58	19149	25784
+Terrestrial;Soil	308	21796.42	19163	25788
+Terrestrial;Soil	309	21833.98	19204	25790
+Terrestrial;Soil	310	21887.38	19206	25961
+Terrestrial;Soil	311	21925.92	19206	25963
+Terrestrial;Soil	312	21971.34	19222	26076
+Terrestrial;Soil	313	22009.76	19254	26081
+Terrestrial;Soil	314	22043.8	19256	26109
+Terrestrial;Soil	315	22066.48	19286	26113
+Terrestrial;Soil	316	22102.34	19288	26130
+Terrestrial;Soil	317	22156.08	19288	26176
+Terrestrial;Soil	318	22207.94	19338	26189
+Terrestrial;Soil	319	22247.78	19522	26291
+Terrestrial;Soil	320	22287.38	19713	26299
+Terrestrial;Soil	321	22335.88	19771	26318
+Terrestrial;Soil	322	22376.44	19776	26426
+Terrestrial;Soil	323	22444.14	19875	26543
+Terrestrial;Soil	324	22492.14	19890	26546
+Terrestrial;Soil	325	22563.76	19893	26546
+Terrestrial;Soil	326	22615.82	19964	26574
+Terrestrial;Soil	327	22637.08	19966	26577
+Terrestrial;Soil	328	22739	20018	26602
+Terrestrial;Soil	329	22784.98	20044	26607
+Terrestrial;Soil	330	22833.84	20052	26614
+Terrestrial;Soil	331	22870.86	20055	26621
+Terrestrial;Soil	332	22951	20235	26632
+Terrestrial;Soil	333	22995.02	20363	26634
+Terrestrial;Soil	334	23047.46	20499	26647
+Terrestrial;Soil	335	23102.84	20499	26648
+Terrestrial;Soil	336	23159.46	20513	26652
+Terrestrial;Soil	337	23193.62	20684	26745
+Terrestrial;Soil	338	23239.02	20684	26754
+Terrestrial;Soil	339	23286.92	20701	26759
+Terrestrial;Soil	340	23324.54	20710	26759
+Terrestrial;Soil	341	23361.54	20769	26801
+Terrestrial;Soil	342	23448.76	20772	26842
+Terrestrial;Soil	343	23496.84	20968	26921
+Terrestrial;Soil	344	23535.16	20993	26922
+Terrestrial;Soil	345	23592.4	20998	26922
+Terrestrial;Soil	346	23637.4	21048	26923
+Terrestrial;Soil	347	23672.36	21069	26930
+Terrestrial;Soil	348	23702.14	21076	26933
+Terrestrial;Soil	349	23768.32	21105	26994
+Terrestrial;Soil	350	23816.88	21105	27057
+Terrestrial;Soil	351	23865.56	21125	27058
+Terrestrial;Soil	352	23906.22	21150	27075
+Terrestrial;Soil	353	23947.9	21187	27123
+Terrestrial;Soil	354	24014.28	21366	27131
+Terrestrial;Soil	355	24051.22	21366	27134
+Terrestrial;Soil	356	24100.54	21390	27193
+Terrestrial;Soil	357	24153.8	21551	27271
+Terrestrial;Soil	358	24188.96	21557	27460
+Terrestrial;Soil	359	24214.08	21585	27502
+Terrestrial;Soil	360	24286.58	21621	27524
+Terrestrial;Soil	361	24327.66	21621	27525
+Terrestrial;Soil	362	24397.94	21642	27612
+Terrestrial;Soil	363	24455.3	21663	27612
+Terrestrial;Soil	364	24500.62	21719	27618
+Terrestrial;Soil	365	24564.66	21723	27619
+Terrestrial;Soil	366	24599.58	21726	27688
+Terrestrial;Soil	367	24649.3	21726	27689
+Terrestrial;Soil	368	24693.72	21759	27730
+Terrestrial;Soil	369	24728.54	21835	27841
+Terrestrial;Soil	370	24774.04	21849	27847
+Terrestrial;Soil	371	24816.36	21863	27856
+Terrestrial;Soil	372	24860.76	21863	27857
+Terrestrial;Soil	373	24882.5	21864	27886
+Terrestrial;Soil	374	24918.56	21864	27901
+Terrestrial;Soil	375	24945.32	21864	27908
+Terrestrial;Soil	376	24980.08	21869	27977
+Terrestrial;Soil	377	25010.4	21885	27984
+Terrestrial;Soil	378	25083.66	21909	27985
+Terrestrial;Soil	379	25118.14	21935	28071
+Terrestrial;Soil	380	25154.4	21991	28094
+Terrestrial;Soil	381	25224.2	22025	28098
+Terrestrial;Soil	382	25278.92	22055	28296
+Terrestrial;Soil	383	25301.9	22056	28400
+Terrestrial;Soil	384	25339.32	22057	28400
+Terrestrial;Soil	385	25362.04	22057	28436
+Terrestrial;Soil	386	25397.88	22110	28436
+Terrestrial;Soil	387	25435.64	22111	28465
+Terrestrial;Soil	388	25472.1	22246	28477
+Terrestrial;Soil	389	25504.58	22249	28482
+Terrestrial;Soil	390	25553.72	22273	28495
+Terrestrial;Soil	391	25591.34	22280	28645
+Terrestrial;Soil	392	25636.96	22323	28702
+Terrestrial;Soil	393	25674.7	22329	28716
+Terrestrial;Soil	394	25706.46	22655	28716
+Terrestrial;Soil	395	25744.12	22791	28718
+Terrestrial;Soil	396	25799.36	22870	28745
+Terrestrial;Soil	397	25847.16	22903	29233
+Terrestrial;Soil	398	25878.12	22903	29233
+Terrestrial;Soil	399	25917.14	22939	29238
+Terrestrial;Soil	400	25965.92	22979	29262
+Terrestrial;Soil	401	26016.44	22996	29304
+Terrestrial;Soil	402	26047.68	22996	29331
+Terrestrial;Soil	403	26082.12	23115	29331
+Terrestrial;Soil	404	26123.86	23195	29441
+Terrestrial;Soil	405	26169.2	23199	29453
+Terrestrial;Soil	406	26210.2	23202	29459
+Terrestrial;Soil	407	26258.66	23416	29460
+Terrestrial;Soil	408	26289.9	23419	29461
+Terrestrial;Soil	409	26322.28	23423	29467
+Terrestrial;Soil	410	26361.46	23434	29467
+Terrestrial;Soil	411	26408.12	23640	29472
+Terrestrial;Soil	412	26445.04	23648	29491
+Terrestrial;Soil	413	26489.64	23672	29503
+Terrestrial;Soil	414	26523.58	23684	29577
+Terrestrial;Soil	415	26564.8	23734	29581
+Terrestrial;Soil	416	26594.42	23750	29589
+Terrestrial;Soil	417	26636.34	23803	29740
+Terrestrial;Soil	418	26680.42	23868	29753
+Terrestrial;Soil	419	26706.24	23902	29755
+Terrestrial;Soil	420	26741.06	23940	29755
+Terrestrial;Soil	421	26784.84	24009	29759
+Terrestrial;Soil	422	26817.64	24019	29759
+Terrestrial;Soil	423	26856.72	24026	29771
+Terrestrial;Soil	424	26893.06	24050	29782
+Terrestrial;Soil	425	26934.48	24050	29878
+Terrestrial;Soil	426	26963.72	24050	29892
+Terrestrial;Soil	427	27006.22	24050	29906
+Terrestrial;Soil	428	27057.78	24058	30015
+Terrestrial;Soil	429	27105.4	24058	30019
+Terrestrial;Soil	430	27180.86	24086	30022
+Terrestrial;Soil	431	27211.72	24195	30241
+Terrestrial;Soil	432	27247.06	24206	30241
+Terrestrial;Soil	433	27294.56	24331	30241
+Terrestrial;Soil	434	27324.96	24464	30484
+Terrestrial;Soil	435	27355.66	24464	30490
+Terrestrial;Soil	436	27411.58	24494	30490
+Terrestrial;Soil	437	27449.24	24506	30606
+Terrestrial;Soil	438	27476.56	24507	30607
+Terrestrial;Soil	439	27511.36	24517	30621
+Terrestrial;Soil	440	27550.26	24517	30737
+Terrestrial;Soil	441	27570.44	24630	30737
+Terrestrial;Soil	442	27603.08	24666	30810
+Terrestrial;Soil	443	27640.42	24750	30910
+Terrestrial;Soil	444	27677.58	24751	30929
+Terrestrial;Soil	445	27721.52	24810	31179
+Terrestrial;Soil	446	27753.1	24818	31180
+Terrestrial;Soil	447	27785.96	24829	31194
+Terrestrial;Soil	448	27824.6	24867	31333
+Terrestrial;Soil	449	27864.98	24906	31333
+Terrestrial;Soil	450	27918.74	24937	31362
+Terrestrial;Soil	451	27953.48	24974	31363
+Terrestrial;Soil	452	27991.7	25028	31377
+Terrestrial;Soil	453	28032.52	25031	31391
+Terrestrial;Soil	454	28057.12	25045	31416
+Terrestrial;Soil	455	28075.8	25051	31416
+Terrestrial;Soil	456	28117.94	25051	31418
+Terrestrial;Soil	457	28163.08	25065	31420
+Terrestrial;Soil	458	28211.04	25065	31630
+Terrestrial;Soil	459	28236.16	25065	31643
+Terrestrial;Soil	460	28272.04	25082	31662
+Terrestrial;Soil	461	28307.36	25082	31667
+Terrestrial;Soil	462	28336.88	25090	31674
+Terrestrial;Soil	463	28376.96	25103	31674
+Terrestrial;Soil	464	28432.32	25105	31675
+Terrestrial;Soil	465	28476.2	25105	31675
+Terrestrial;Soil	466	28526.24	25114	31676
+Terrestrial;Soil	467	28567.14	25185	31692
+Terrestrial;Soil	468	28614.54	25698	31715
+Terrestrial;Soil	469	28653.88	25716	31779
+Terrestrial;Soil	470	28723.24	25716	31816
+Terrestrial;Soil	471	28752.1	25761	31831
+Terrestrial;Soil	472	28806	25764	31832
+Terrestrial;Soil	473	28839.26	25769	31835
+Terrestrial;Soil	474	28894.22	25776	31857
+Terrestrial;Soil	475	28938.08	25792	32029
+Terrestrial;Soil	476	28985.62	25819	32169
+Terrestrial;Soil	477	29040.76	25956	32180
+Terrestrial;Soil	478	29089.42	25988	32183
+Terrestrial;Soil	479	29130.4	26065	32184
+Terrestrial;Soil	480	29206.34	26081	32185
+Terrestrial;Soil	481	29270.88	26082	32203
+Terrestrial;Soil	482	29302	26082	32203
+Terrestrial;Soil	483	29331.56	26083	32204
+Terrestrial;Soil	484	29365.22	26083	32224
+Terrestrial;Soil	485	29422.22	26088	32282
+Terrestrial;Soil	486	29456.88	26112	32400
+Terrestrial;Soil	487	29508.58	26113	32412
+Terrestrial;Soil	488	29555.5	26114	32412
+Terrestrial;Soil	489	29581.64	26157	32412
+Terrestrial;Soil	490	29621.02	26166	32537
+Terrestrial;Soil	491	29661.94	26169	32565
+Terrestrial;Soil	492	29724.06	26173	32570
+Terrestrial;Soil	493	29761.22	26191	32584
+Terrestrial;Soil	494	29810.26	26888	32584
+Terrestrial;Soil	495	29835.08	26898	32594
+Terrestrial;Soil	496	29887.48	26914	32596
+Terrestrial;Soil	497	29949.6	26926	32611
+Terrestrial;Soil	498	30004.86	26936	32615
+Terrestrial;Soil	499	30038.34	26938	32615
+Terrestrial;Soil	500	30070.48	26943	32750
+Terrestrial;Soil	501	30097.44	26945	32767
+Terrestrial;Soil	502	30128.52	26948	32775
+Terrestrial;Soil	503	30174.74	27258	32926
+Terrestrial;Soil	504	30208.48	27261	33075
+Terrestrial;Soil	505	30228.42	27272	33157
+Terrestrial;Soil	506	30264.26	27349	33157
+Terrestrial;Soil	507	30311.68	27351	33165
+Terrestrial;Soil	508	30346.32	27376	33168
+Terrestrial;Soil	509	30391.1	27384	33200
+Terrestrial;Soil	510	30421.98	27385	33200
+Terrestrial;Soil	511	30479.44	27407	33234
+Terrestrial;Soil	512	30506.56	27463	33243
+Terrestrial;Soil	513	30548.06	27502	33243
+Terrestrial;Soil	514	30574.1	27543	33244
+Terrestrial;Soil	515	30613.08	27615	33434
+Terrestrial;Soil	516	30644.86	27682	33519
+Terrestrial;Soil	517	30681.36	27692	33535
+Terrestrial;Soil	518	30726.16	27695	33657
+Terrestrial;Soil	519	30752.14	27713	33681
+Terrestrial;Soil	520	30784.06	27713	33685
+Terrestrial;Soil	521	30827.26	27714	33686
+Terrestrial;Soil	522	30858.42	27714	33699
+Terrestrial;Soil	523	30897.32	27722	33727
+Terrestrial;Soil	524	30922.12	27727	33737
+Terrestrial;Soil	525	30948.7	27740	33759
+Terrestrial;Soil	526	30981.18	27794	33774
+Terrestrial;Soil	527	31022.36	27796	33784
+Terrestrial;Soil	528	31056.32	27805	33823
+Terrestrial;Soil	529	31081.7	27893	33836
+Terrestrial;Soil	530	31123.66	27921	34096
+Terrestrial;Soil	531	31165.12	28038	34118
+Terrestrial;Soil	532	31196.32	28099	34118
+Terrestrial;Soil	533	31226.14	28104	34216
+Terrestrial;Soil	534	31258.64	28110	34235
+Terrestrial;Soil	535	31294.7	28111	34244
+Terrestrial;Soil	536	31328.6	28152	34270
+Terrestrial;Soil	537	31365.96	28152	34293
+Terrestrial;Soil	538	31402.08	28154	34665
+Terrestrial;Soil	539	31435.12	28164	34666
+Terrestrial;Soil	540	31467.58	28237	34671
+Terrestrial;Soil	541	31515.28	28241	34720
+Terrestrial;Soil	542	31554.74	28245	34795
+Terrestrial;Soil	543	31613.14	28476	34798
+Terrestrial;Soil	544	31649.98	28506	34800
+Terrestrial;Soil	545	31687.08	28534	34828
+Terrestrial;Soil	546	31727.26	28544	35034
+Terrestrial;Soil	547	31767.48	28554	35037
+Terrestrial;Soil	548	31839.88	29796	35037
+Terrestrial;Soil	549	31870.36	29808	35043
+Terrestrial;Soil	550	31898.84	29826	35064
+Terrestrial;Soil	551	31940.98	29864	35119
+Terrestrial;Soil	552	31958.86	29883	35120
+Terrestrial;Soil	553	31983.36	29914	35154
+Terrestrial;Soil	554	32032.34	29914	35203
+Terrestrial;Soil	555	32081.42	29964	35203
+Terrestrial;Soil	556	32121.32	29980	35307
+Terrestrial;Soil	557	32157.48	30076	35320
+Terrestrial;Soil	558	32194.9	30091	35333
+Terrestrial;Soil	559	32234.16	30094	35364
+Terrestrial;Soil	560	32262.1	30216	35446
+Terrestrial;Soil	561	32279.8	30218	35446
+Terrestrial;Soil	562	32308.62	30227	35453
+Terrestrial;Soil	563	32352.6	30251	35457
+Terrestrial;Soil	564	32382.7	30253	35459
+Terrestrial;Soil	565	32411.72	30314	35477
+Terrestrial;Soil	566	32443.86	30346	35477
+Terrestrial;Soil	567	32477.3	30414	35492
+Terrestrial;Soil	568	32519.38	30463	35569
+Terrestrial;Soil	569	32591.2	30482	35583
+Terrestrial;Soil	570	32622.1	30676	35620
+Terrestrial;Soil	571	32651.52	30687	35756
+Terrestrial;Soil	572	32691.04	30692	35760
+Terrestrial;Soil	573	32741.52	30793	35797
+Terrestrial;Soil	574	32793.12	30818	35801
+Terrestrial;Soil	575	32815.1	30834	35801
+Terrestrial;Soil	576	32874.84	30868	35809
+Terrestrial;Soil	577	32910.68	30872	35814
+Terrestrial;Soil	578	32969.9	30889	35827
+Terrestrial;Soil	579	33001.96	30916	35837
+Terrestrial;Soil	580	33046.6	30968	35941
+Terrestrial;Soil	581	33076.74	30996	36052
+Terrestrial;Soil	582	33117.68	30996	36057
+Terrestrial;Soil	583	33147.28	31062	36086
+Terrestrial;Soil	584	33172.38	31109	36117
+Terrestrial;Soil	585	33216.78	31110	36155
+Terrestrial;Soil	586	33263	31116	36206
+Terrestrial;Soil	587	33297.76	31122	36234
+Terrestrial;Soil	588	33329.5	31126	36269
+Terrestrial;Soil	589	33372.14	31216	36369
+Terrestrial;Soil	590	33406.22	31351	36387
+Terrestrial;Soil	591	33449.74	31458	36387
+Terrestrial;Soil	592	33474.3	31590	36387
+Terrestrial;Soil	593	33497.28	31591	36389
+Terrestrial;Soil	594	33519.8	31593	36390
+Terrestrial;Soil	595	33545.72	31614	36402
+Terrestrial;Soil	596	33571.44	31619	36409
+Terrestrial;Soil	597	33587.2	31622	36422
+Terrestrial;Soil	598	33616.26	31629	36423
+Terrestrial;Soil	599	33648.24	31653	36462
+Terrestrial;Soil	600	33684.66	31673	36466
+Terrestrial;Soil	601	33722.38	31841	36473
+Terrestrial;Soil	602	33770.64	31841	36475
+Terrestrial;Soil	603	33797.5	31848	36480
+Terrestrial;Soil	604	33837.92	31861	36489
+Terrestrial;Soil	605	33868.72	31861	36603
+Terrestrial;Soil	606	33885.08	31861	36605
+Terrestrial;Soil	607	33907.68	31935	36735
+Terrestrial;Soil	608	33930.44	31954	36747
+Terrestrial;Soil	609	33968.62	31965	36767
+Terrestrial;Soil	610	34004.22	31965	36804
+Terrestrial;Soil	611	34062.58	31967	36893
+Terrestrial;Soil	612	34096.62	31987	36905
+Terrestrial;Soil	613	34136.42	32092	36924
+Terrestrial;Soil	614	34172.08	32108	36926
+Terrestrial;Soil	615	34205.12	32144	36975
+Terrestrial;Soil	616	34223.64	32145	36999
+Terrestrial;Soil	617	34251.84	32145	37001
+Terrestrial;Soil	618	34294.8	32298	37012
+Terrestrial;Soil	619	34313.76	32314	37035
+Terrestrial;Soil	620	34338.78	32323	37046
+Terrestrial;Soil	621	34370.66	32329	37047
+Terrestrial;Soil	622	34402.12	32359	37049
+Terrestrial;Soil	623	34434.9	32370	37052
+Terrestrial;Soil	624	34456.64	32456	37068
+Terrestrial;Soil	625	34489.38	32514	37095
+Terrestrial;Soil	626	34550.16	32515	37095
+Terrestrial;Soil	627	34580.88	32661	37112
+Terrestrial;Soil	628	34608.24	32661	37112
+Terrestrial;Soil	629	34643.94	32717	37120
+Terrestrial;Soil	630	34669.52	32727	37125
+Terrestrial;Soil	631	34704.24	32727	37224
+Terrestrial;Soil	632	34738.52	32732	37259
+Terrestrial;Soil	633	34769.12	32740	37259
+Terrestrial;Soil	634	34799.6	32749	37261
+Terrestrial;Soil	635	34830.66	32756	37261
+Terrestrial;Soil	636	34852.56	32765	37307
+Terrestrial;Soil	637	34905.34	32857	37325
+Terrestrial;Soil	638	34940.16	32887	37427
+Terrestrial;Soil	639	34966.86	32887	37448
+Terrestrial;Soil	640	34994.94	32896	37450
+Terrestrial;Soil	641	35049.84	32896	37458
+Terrestrial;Soil	642	35085.38	32896	37459
+Terrestrial;Soil	643	35106.98	32916	37472
+Terrestrial;Soil	644	35145.68	32933	37476
+Terrestrial;Soil	645	35198.22	33197	37486
+Terrestrial;Soil	646	35224.88	33214	37486
+Terrestrial;Soil	647	35254.36	33214	37486
+Terrestrial;Soil	648	35277.1	33251	37501
+Terrestrial;Soil	649	35323.72	33340	37515
+Terrestrial;Soil	650	35354.6	33344	37516
+Terrestrial;Soil	651	35388.46	33346	37666
+Terrestrial;Soil	652	35412.9	33346	37725
+Terrestrial;Soil	653	35435.58	33355	37728
+Terrestrial;Soil	654	35456.42	33359	37728
+Terrestrial;Soil	655	35478.72	33378	37750
+Terrestrial;Soil	656	35507.54	33380	37769
+Terrestrial;Soil	657	35533.48	33380	37770
+Terrestrial;Soil	658	35570.58	33516	37803
+Terrestrial;Soil	659	35607.42	33536	37805
+Terrestrial;Soil	660	35655.9	33546	37934
+Terrestrial;Soil	661	35685.28	33546	37938
+Terrestrial;Soil	662	35713.3	33559	37943
+Terrestrial;Soil	663	35740.94	33577	37968
+Terrestrial;Soil	664	35770.68	33624	37972
+Terrestrial;Soil	665	35792.6	33654	37981
+Terrestrial;Soil	666	35834.5	33694	37981
+Terrestrial;Soil	667	35857.9	33696	37989
+Terrestrial;Soil	668	35922.74	33698	37989
+Terrestrial;Soil	669	35948.96	33723	37989
+Terrestrial;Soil	670	35986.22	33840	37997
+Terrestrial;Soil	671	36004.74	33859	38005
+Terrestrial;Soil	672	36048.24	34090	38007
+Terrestrial;Soil	673	36072.64	34133	38011
+Terrestrial;Soil	674	36109.92	34136	38027
+Terrestrial;Soil	675	36153.36	34201	38027
+Terrestrial;Soil	676	36187.02	34210	38048
+Terrestrial;Soil	677	36219.2	34221	38050
+Terrestrial;Soil	678	36254.86	34257	38050
+Terrestrial;Soil	679	36269.44	34260	38052
+Terrestrial;Soil	680	36301.66	34274	38096
+Terrestrial;Soil	681	36349.08	34303	38121
+Terrestrial;Soil	682	36367.52	34385	38126
+Terrestrial;Soil	683	36402.98	34419	38392
+Terrestrial;Soil	684	36432.42	34425	38425
+Terrestrial;Soil	685	36451.78	34425	38435
+Terrestrial;Soil	686	36502.9	34460	38438
+Terrestrial;Soil	687	36530.02	34479	38440
+Terrestrial;Soil	688	36574.94	34492	38484
+Terrestrial;Soil	689	36613.1	34502	38485
+Terrestrial;Soil	690	36661.3	34541	38490
+Terrestrial;Soil	691	36686.32	34548	38522
+Terrestrial;Soil	692	36735.32	34549	38523
+Terrestrial;Soil	693	36760.24	34626	38627
+Terrestrial;Soil	694	36799.26	34628	38648
+Terrestrial;Soil	695	36828.62	34664	38669
+Terrestrial;Soil	696	36853.66	34665	38669
+Terrestrial;Soil	697	36880.82	34681	38669
+Terrestrial;Soil	698	36906	34686	38728
+Terrestrial;Soil	699	36958.52	34767	38743
+Terrestrial;Soil	700	36986.64	34769	38756
+Terrestrial;Soil	701	37018.48	34774	38794
+Terrestrial;Soil	702	37058.16	34793	38795
+Terrestrial;Soil	703	37081.42	34823	38821
+Terrestrial;Soil	704	37117.34	34825	38827
+Terrestrial;Soil	705	37136.84	34833	38827
+Terrestrial;Soil	706	37173.16	34834	38827
+Terrestrial;Soil	707	37196.72	34846	38843
+Terrestrial;Soil	708	37221.6	34854	38844
+Terrestrial;Soil	709	37250.98	34868	38868
+Terrestrial;Soil	710	37275.3	34872	38877
+Terrestrial;Soil	711	37306.7	34872	38894
+Terrestrial;Soil	712	37327.36	34884	38930
+Terrestrial;Soil	713	37364.2	34908	38954
+Terrestrial;Soil	714	37410.74	34908	38959
+Terrestrial;Soil	715	37432.6	34935	38966
+Terrestrial;Soil	716	37473.36	34943	38967
+Terrestrial;Soil	717	37504	34945	39003
+Terrestrial;Soil	718	37534.58	34960	39004
+Terrestrial;Soil	719	37566.08	34995	39004
+Terrestrial;Soil	720	37597.72	34997	39008
+Terrestrial;Soil	721	37625.04	35013	39090
+Terrestrial;Soil	722	37672.28	35020	39103
+Terrestrial;Soil	723	37692.34	35023	39107
+Terrestrial;Soil	724	37716.3	35031	39107
+Terrestrial;Soil	725	37744.6	35043	39121
+Terrestrial;Soil	726	37760.62	35076	39123
+Terrestrial;Soil	727	37805.88	35076	39142
+Terrestrial;Soil	728	37853.96	35171	39315
+Terrestrial;Soil	729	37902.12	35179	39322
+Terrestrial;Soil	730	37932.3	35179	39323
+Terrestrial;Soil	731	37959.92	35182	39328
+Terrestrial;Soil	732	37988	35186	39334
+Terrestrial;Soil	733	38019.48	35189	39371
+Terrestrial;Soil	734	38064.26	35413	39651
+Terrestrial;Soil	735	38095.18	35662	39676
+Terrestrial;Soil	736	38134	35699	39689
+Terrestrial;Soil	737	38151.72	35700	39702
+Terrestrial;Soil	738	38204.34	35732	39705
+Terrestrial;Soil	739	38242.4	35856	39710
+Terrestrial;Soil	740	38278.06	36100	39714
+Terrestrial;Soil	741	38309.96	36101	39722
+Terrestrial;Soil	742	38333.4	36121	39730
+Terrestrial;Soil	743	38351.28	36121	39752
+Terrestrial;Soil	744	38400.5	36121	39764
+Terrestrial;Soil	745	38433.92	36123	39765
+Terrestrial;Soil	746	38471.38	36123	39808
+Terrestrial;Soil	747	38503.56	36156	39819
+Terrestrial;Soil	748	38528.08	36251	39820
+Terrestrial;Soil	749	38550.06	36258	39828
+Terrestrial;Soil	750	38579.2	36276	39895
+Terrestrial;Soil	751	38609.26	36304	39899
+Terrestrial;Soil	752	38646.66	36319	40016
+Terrestrial;Soil	753	38671.36	36325	40030
+Terrestrial;Soil	754	38702.24	36325	40041
+Terrestrial;Soil	755	38733.16	36328	40041
+Terrestrial;Soil	756	38784.08	36436	40042
+Terrestrial;Soil	757	38807.84	36451	40071
+Terrestrial;Soil	758	38835.9	36453	40077
+Terrestrial;Soil	759	38873.48	36460	40161
+Terrestrial;Soil	760	38896.28	36565	40163
+Terrestrial;Soil	761	38925.46	36598	40166
+Terrestrial;Soil	762	38950.06	36614	40166
+Terrestrial;Soil	763	38989.8	36627	40206
+Terrestrial;Soil	764	39030.14	36676	40553
+Terrestrial;Soil	765	39061.86	36682	40655
+Terrestrial;Soil	766	39080.56	36721	40658
+Terrestrial;Soil	767	39104	36864	40658
+Terrestrial;Soil	768	39131.18	36900	40658
+Terrestrial;Soil	769	39147.24	36900	40674
+Terrestrial;Soil	770	39185.86	36908	40681
+Terrestrial;Soil	771	39207.46	36917	40687
+Terrestrial;Soil	772	39230.58	36938	40689
+Terrestrial;Soil	773	39261.76	36938	40700
+Terrestrial;Soil	774	39299.26	36939	40705
+Terrestrial;Soil	775	39348.66	36979	40724
+Terrestrial;Soil	776	39388.68	37036	40745
+Terrestrial;Soil	777	39415.34	37067	40748
+Terrestrial;Soil	778	39457	37068	41005
+Terrestrial;Soil	779	39492.46	37104	41022
+Terrestrial;Soil	780	39525.72	37263	41024
+Terrestrial;Soil	781	39563.5	37269	41073
+Terrestrial;Soil	782	39580.54	37278	41074
+Terrestrial;Soil	783	39601.88	37291	41084
+Terrestrial;Soil	784	39620.9	37311	41090
+Terrestrial;Soil	785	39656.96	37421	41093
+Terrestrial;Soil	786	39678.92	37449	41093
+Terrestrial;Soil	787	39699.74	37474	41099
+Terrestrial;Soil	788	39755.36	37477	41099
+Terrestrial;Soil	789	39783.04	37478	41099
+Terrestrial;Soil	790	39813.3	37537	41099
+Terrestrial;Soil	791	39864.16	38231	41099
+Terrestrial;Soil	792	39887.12	38231	41103
+Terrestrial;Soil	793	39903.66	38360	41113
+Terrestrial;Soil	794	39928.9	38697	41123
+Terrestrial;Soil	795	39950.58	38753	41138
+Terrestrial;Soil	796	39990.58	38753	41138
+Terrestrial;Soil	797	40008.86	38753	41152
+Terrestrial;Soil	798	40052.54	38832	41168
+Terrestrial;Soil	799	40101.38	38833	41288
+Terrestrial;Soil	800	40130.02	38950	41361
+Terrestrial;Soil	801	40158.06	38954	41370
+Terrestrial;Soil	802	40182.44	38966	41452
+Terrestrial;Soil	803	40221.38	38972	41464
+Terrestrial;Soil	804	40242.86	38975	41492
+Terrestrial;Soil	805	40282.62	38975	41500
+Terrestrial;Soil	806	40308.28	38990	41513
+Terrestrial;Soil	807	40332.18	39010	41537
+Terrestrial;Soil	808	40369.94	39012	41540
+Terrestrial;Soil	809	40389.14	39027	41580
+Terrestrial;Soil	810	40420.98	39034	41597
+Terrestrial;Soil	811	40444.96	39043	41635
+Terrestrial;Soil	812	40470.98	39048	41646
+Terrestrial;Soil	813	40510.32	39335	41652
+Terrestrial;Soil	814	40536.46	39335	41690
+Terrestrial;Soil	815	40584.52	39341	41780
+Terrestrial;Soil	816	40613.82	39347	41804
+Terrestrial;Soil	817	40637.94	39392	41812
+Terrestrial;Soil	818	40669.62	39470	41824
+Terrestrial;Soil	819	40688.14	39485	41926
+Terrestrial;Soil	820	40722.14	39485	41927
+Terrestrial;Soil	821	40755.04	39486	41964
+Terrestrial;Soil	822	40785.28	39545	41964
+Terrestrial;Soil	823	40811.98	39549	41983
+Terrestrial;Soil	824	40846.84	39552	41983
+Terrestrial;Soil	825	40868.56	39627	41994
+Terrestrial;Soil	826	40895.04	39648	42066
+Terrestrial;Soil	827	40955.62	39795	42066
+Terrestrial;Soil	828	40985.26	39795	42074
+Terrestrial;Soil	829	41015.78	39808	42074
+Terrestrial;Soil	830	41050.48	39880	42077
+Terrestrial;Soil	831	41077.26	39880	42087
+Terrestrial;Soil	832	41094.26	39916	42087
+Terrestrial;Soil	833	41120.2	39925	42088
+Terrestrial;Soil	834	41158.82	39934	42092
+Terrestrial;Soil	835	41187.28	39938	42100
+Terrestrial;Soil	836	41218.92	39954	42112
+Terrestrial;Soil	837	41253.54	39954	42118
+Terrestrial;Soil	838	41283.4	39954	42149
+Terrestrial;Soil	839	41331.38	40037	42162
+Terrestrial;Soil	840	41358.78	40048	42163
+Terrestrial;Soil	841	41388.96	40212	42173
+Terrestrial;Soil	842	41418.86	40212	42216
+Terrestrial;Soil	843	41449.22	40212	42224
+Terrestrial;Soil	844	41473.84	40220	42236
+Terrestrial;Soil	845	41491.4	40221	42238
+Terrestrial;Soil	846	41513.56	40222	42241
+Terrestrial;Soil	847	41540.94	40232	42305
+Terrestrial;Soil	848	41562.24	40238	42307
+Terrestrial;Soil	849	41592.1	40239	42310
+Terrestrial;Soil	850	41620.56	40244	42310
+Terrestrial;Soil	851	41652.04	40267	42313
+Terrestrial;Soil	852	41674.92	40269	42329
+Terrestrial;Soil	853	41711.84	40269	42329
+Terrestrial;Soil	854	41748.58	40273	42329
+Terrestrial;Soil	855	41765.86	40280	42329
+Terrestrial;Soil	856	41786.16	40285	42332
+Terrestrial;Soil	857	41807.46	40292	42336
+Terrestrial;Soil	858	41843.38	40293	42374
+Terrestrial;Soil	859	41875.92	40299	42418
+Terrestrial;Soil	860	41902.72	40303	42438
+Terrestrial;Soil	861	41935.42	40327	42439
+Terrestrial;Soil	862	41950.28	40330	42541
+Terrestrial;Soil	863	41983.62	41025	42542
+Terrestrial;Soil	864	42007.9	41047	42550
+Terrestrial;Soil	865	42047.18	41106	42554
+Terrestrial;Soil	866	42066.94	41126	42564
+Terrestrial;Soil	867	42090.26	41133	42574
+Terrestrial;Soil	868	42118.18	41141	42602
+Terrestrial;Soil	869	42134.64	41145	42604
+Terrestrial;Soil	870	42152.76	41158	42630
+Terrestrial;Soil	871	42184.14	41209	42678
+Terrestrial;Soil	872	42217.18	41209	42685
+Terrestrial;Soil	873	42256.08	41351	42685
+Terrestrial;Soil	874	42286.92	41521	42685
+Terrestrial;Soil	875	42312.96	41521	42693
+Terrestrial;Soil	876	42333.74	41538	42693
+Terrestrial;Soil	877	42351.52	41576	42694
+Terrestrial;Soil	878	42374.72	41590	42714
+Terrestrial;Soil	879	42412.1	41929	42719
+Terrestrial;Soil	880	42446.7	41956	42751
+Terrestrial;Soil	881	42489.46	41989	42782
+Terrestrial;Soil	882	42518.8	41997	42790
+Terrestrial;Soil	883	42552.38	41998	42805
+Terrestrial;Soil	884	42566.82	41998	42806
+Terrestrial;Soil	885	42595.38	42110	42836
+Terrestrial;Soil	886	42620.6	42243	42841
+Terrestrial;Soil	887	42638.12	42346	42886
+Terrestrial;Soil	888	42666.08	42369	42895
+Terrestrial;Soil	889	42695.68	42376	42896
+Terrestrial;Soil	890	42722.28	42378	42906
+Terrestrial;Soil	891	42738.92	42381	42907
+Terrestrial;Soil	892	42762.6	42392	42909
+Terrestrial;Soil	893	42781.74	42392	42915
+Terrestrial;Soil	894	42807.22	42458	42915
+Terrestrial;Soil	895	42827.92	42577	42916
+Terrestrial;Soil	896	42857.08	42578	42921
+Terrestrial;Soil	897	42877.44	42584	42925
+Terrestrial;Soil	898	42901.42	42769	42925
+Terrestrial;Soil	899	42925	42925	42925
